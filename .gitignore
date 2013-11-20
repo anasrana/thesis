@@ -1,0 +1,5 @@
+auto/*
+*.fdb_latexmk
+*.pdfsync
+*.fls
+*.org
