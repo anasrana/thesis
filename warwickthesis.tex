@@ -59,17 +59,18 @@
 % \usepackage{newtxtext,newtxmath}
 \usepackage{libertine}
 % \usepackage[libertine]{newtxmath}
-
+\usepackage[hang,bf]{caption}
+\usepackage{hyperref}
 % \mastersthesis                     %% Uncomment one of these; if you don't
-% \phdthesis                         %% use either, the default is \phdthesis.
+\phdthesis                         %% use either, the default is \phdthesis.
 
 %\thesisdraft                       %% Uncomment this if you want a draft
                                      %% version; this will print a timestamp
                                      %% on each page of your thesis.
 
- \leftchapter                       %% Uncomment one of these if you want
-% \centerchapter                     %% left-justified, centered or
-% \rightchapter                      %% right-justified chapter headings.
+ % \leftchapter                       %% Uncomment one of these if you want
+ % \centerchapter                     %% left-justified, centered or
+ \rightchapter                      %% right-justified chapter headings.
                                      %% Chapter headings includes the
                                      %% Contents, Acknowledgments, Lists
                                      %% of Tables and Figures and the Vita.
@@ -86,7 +87,7 @@
 \onehalfspacing                      %! This is the default and gives an acceptable "double spaced" thesis
                                      %! It is the minimum spacing accepted by the graduate school, and there is no reason to increase the spacing.
 % \singlespacing                     %! Uncomment if you want single-spacing, 
-%\doublespacing                     %! uncomment if you want real double-spacing for some perverse reason. 
+% \doublespacing                     %! uncomment if you want real double-spacing for some perverse reason. 
 
 %\setlength{\textheight}{9.0in}      %! Uncomment this for a slightly
                                      %! longer page. The default is now 8.5in (from Feb 2010)
@@ -100,7 +101,7 @@
                                       %! The default is {0.7in} for single sided.
 %! Double sided printing is no longer allowed (March 2008), it caused too many problems at binding,
 \DeclareMathOperator{\arcsinh}{arcsinh}
-\renewcommand{\thesisdepartmentname}{.........}    %! The name of
+\renewcommand{\thesisdepartmentname}{Physics and Complexity Science}    %! The name of
                                                   %   the department
 
 %! \renewcommand{\thesissubmission}{Submitted to the University of Warwick\\
@@ -267,17 +268,21 @@ constructs.
                             %% More chapters.
 
 \chapter{Background}
-\input{background.tex}
+\input background-math.tex
 
-\chapter{STAMM}
+\input background-bio.tex
+
+\chapter{State transitions using aggregated Markov models}
 \label{cha:stamm}
 \input stamm.tex
 
 \chapter{Oncogenic Transformation}
 \label{cha:oncog-transf}
+\input mcf10a.tex
 
 \chapter{Stem cells}
 \label{cha:stem-cells}
+\input reprogramming.tex
 
 \chapter{Cell cycle}
 \label{cha:cell-cycle}
@@ -285,8 +290,8 @@ constructs.
 \input cell-cycle.tex
 
 \begin{appendices}
-  \input appendix.tex
-  
+  \input appendix-stamm.tex
+  \input appendix-oncogenic.tex
 
 \end{appendices}
 
@@ -314,7 +319,7 @@ constructs.
 
 \bibliographystyle{plainnat}
 
-\bibliography{man,fullbib}            %% Start your bibliography here;
+\bibliography{fullbib}            %% Start your bibliography here;
                                  %! with sample.bib as your bibliography file. You can
                                %% also use:
                 %! \begin{thebibliography}
