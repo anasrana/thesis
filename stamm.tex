@@ -1,10 +1,12 @@
 \section{Introduction}
 \label{sec:intro-stamm}
 
-Diverse biological have been observed to undergo transitions under influence of a stimulus, leading to phenotypic
-changes on a cellular level.  
+Diverse biological processes have been observed to undergo transitions under influence of a stimuli. These transitions lead to changes on a cellular level between distinct phenotypic states. These changes can be morphological, epigenetic, or on a protein level.
 
-Cells go from one phenotype to another
+Phenotypic changes occurring on a single cell level are not observed at the single cell level although it is only possible to perform observations on a population level. This restriction is experimental in nature and although sometimes it is possible to make observations on a single cell level there are limitations in these experiments. 
+
+{\color{red} Hidden Markov models (HMMs) are widely used to describe latent processes in biological applications and have previously been used to describe cell populations [26] and model the cell cycle [27, 28, 29, 30]. It is interesting to contrast our model with a classical HMM. The key differences are twofold. First, our model involves aggregation of single-cell level Markov chains, thus it deals with states that are not only hidden, but whose connection to population-level observables necessarily involves averaging over multiple instances of the latent process. In contrast, a HMM applied to time-course data from a transition process does not provide a model at the single-cell level. Second, our model operates in continuous time and applies naturally to non- uniformly sampled data. In contrast, in a HMM the underlying Markov process operates in discrete time, such that the probability of a state transition is the same between successive time points regardless of the intervening time period. This assumption generally will not hold at all under uneven time sampling of a heterogenous population. Due to these reasons, in our view HMMs are intrinsically ill-suited to the study of transition processes of the type we consider here.
+}
 
 \section{Model outline}
 \label{sec:method}
@@ -12,23 +14,20 @@ Cells go from one phenotype to another
 \subsection{The STAMM model}
 \label{sec:mast-model}
 
-% TODO abbreviation source Model-based Analysis of State Transitions
+First we provide a detailed description of a model using 'State Transitions using Aggregated Markov Models' (STAMM), following and expanding on work done by \cite{Armond:2013}. The model attempts to discern single cell parameters from observations performed on a population level.  
 
-First I provide a detailed description of the STAMM model, following and expanding upon  
-\cite{Armond:2013}.
+STAMM defines a latent stochastic process on the single cell level that isn't directly observed. Using the latent stochastic processes and aggregating across cells we can obtain a cell-population level likelihood. The latent single cell process is described using a Markov chain with a discrete and finite state space but it is continuous in time. Biological states in the system are identified with the state space, indexed by $k \in \lbrace 1, ..., K \rbrace$, is identified with biological states of the system. Transitions between states $k$ and $k'$ are determined by transition rates between these states denoted by $\mathbf{w} = \lbrace w_{k,k'} \rbrace $. Assuming that cell death and cell doubling compensate each other, i.e. the number of cells is conserved at all time $t$; the probability for any cell to be in state $k$ at any given time $t$ can be obtained by solving Master equation of the Markov chain. The resulting state occupation probability for the population $p_k(t;\mathbf{w})$ is a function of time and also the state transitions.
 
-STAMM defines a latent stochastic process on the single cell level that isn't directly observed. We can obtain a cell-population level likelihood from this. We describe the latent single cell process using a Markov chain with discrete and finite state space and continuous in time. The state space, indexed by $k \in \lbrace 1, ..., K \rbrace$, is identified with biological states of the system. We denote transition rates between states $k$ and $k'$ by $\mathbf{w} = \lbrace w_{k,k'} \rbrace $. Assuming that rates of cell death and cell doubling cancel, the probability for any cell to be in state $k$ at any given time $t$ can be obtained by solving Master equation of the Markov chain. The resulting state occupation probability, denoted by $p_k(t;\mathbf{w})$, is a function of time and also the state transitions.
-
-\begin{figure}[h]
+\begin{figure}[!t]
   \centering
   \includegraphics[width=0.6\textwidth]{pics/model_fig.pdf}
-  \caption{SOME TEXT}
+  \caption{Model description. (a) In any biological system undergoing transitions between multiple states where the time of transition is stochastic, cells states are heterogeneous in the population at any given time.  (b) Assays performed on homogenates of that cell population will only yield data averaged over sampled sub-populations. (c) We describe this system with 'State Transitions using Aggregated Markov Models' (STAMM) where single cell level processes are described by a latent continuous-time Markov chain which is aggregated over cells to give a likelihood (see Section \ref{sec:mast-model}). The Markov chain has a discrete state space which corresponds to biological states of the system (shown in different colours). Estimation of parameters in STAMM is performed using population level data. (Figure adapted from \cite{Armond:2013}.)  }
   \label{fig:model-sketch}
 \end{figure}
 
-This model can in essence be applied to any type of time-course data, including transcript or protein abundance. Here we will focus the description without loss of generality on gene expression data, unless otherwise stated. Let $x_j(t)$ be the cell-population-averaged gene expression of gene $j$ at time $t$, obtained from assay
+This model can fundamentally be applied to any type of time-course data, including transcript or protein abundance. Here unless otherwise stated we will focus the description, without loss of generality, on gene expression data. Let $x_j(t)$ be the cell-population-averaged gene expression of gene $j$ at time $t$, obtained from assay
 % TODO what is homogenate assay?
-such as RNA-seq or microarray expression. We assume that initially all cells in the population occupy the same state, this is often part of the experimental design of investigating changes from an initial homogeneous starting population. At any subsequent time point cells exist in a mixture of states, hence any measurement $x_j(t)$ made on a population level is an average over multiple states. We further assume that there is a mean expression level per gene constant across a state. This is denoted by $\beta_{kj}$, the gene expression level for gene $j \in \lbrace 1 \ldots p \rbrace$ in state $k$.
+such as RNA-seq or microarray expression. When investigating transitions it is prudent to design experiments with an initial state that is reasonably homogeneous, therefore our model assumes that initially all cells in the population occupy the same state, this is often part of the experimental design of investigating changes from an initial homogeneous starting population. At any subsequent time point cells exist in a mixture of states, hence any measurement $x_j(t)$ made on a population level is an average over multiple states. We further assume that there is a mean expression level per gene constant across a state. This is denoted by $\beta_{kj}$, the gene expression level for gene $j \in \lbrace 1 \ldots p \rbrace$ in state $k$.
 
 In the limit of large numbers of cells the fraction of cells in any state $k$ is given by the state occupation probability $p_k(t;\mathbf{w})$. We can now write the observed average gene expression, $x_j(t)$ for gene $j$ at time $t$, as the sum of all occupation probabilities weighted by their respective gene expression signatures. The resulting model for the average gene expression from a latent Markov chain model is written as:
 
@@ -47,9 +46,7 @@ where the right hand side is the vectorized form of the model, with the row vect
 
 where $\mathcal{N}(\cdot | \mu,\sigma^2)$ denotes a Normal density with mean $\mu$ and variance $\sigma^2$ and the function $g$ denotes a transformation whose choice depends on the data type under investigation.
 
-% TODO Dodoit reference and normalization
-
-When investigating RNA-seq data we use $\arcsinh$ as the transformation \citep{Hoffman:2012gn,Johnson:1949uq}, defined as $\arcsinh(x) = \ln(x + \sqrt(x^2 +1))$. RNA-seq data cannot be normalised in the same way as microarray data most importantly because it contains measurements which are exactly zero. The $\arcsinh$ normalisation is useful here, because unlike the log transformation it does not have a singularity at zero but has the same variance-normalisation properties.
+Applied to microarray experiment which use fluorescence intensities to measure expression the transformation $g$ used is $\log_2$. This is of course applied to data which has been normalised for fluorescent intensities \cite{Dudoit:2002va}. When investigating RNA-seq data we use $\arcsinh$ as the transformation \citep{Hoffman:2012gn,Johnson:1949uq}, defined as $\arcsinh(x) = \ln(x + \sqrt(x^2 +1))$ (for more details see Section \ref{sec:norm-stand}). RNA-seq data cannot be normalised in the same way as microarray data most importantly because it contains measurements which are exactly zero. The $\arcsinh$ normalisation is useful here, because unlike the log transformation it does not have a singularity at zero but has the same variance-normalisation properties.
 
 To use the likelihood it is necessary to compute the state occupation probabilities at any time $t$ observations are made.
 % We discuss below how to compute these from latent Markov chain process.
@@ -407,12 +404,6 @@ Finally in this section we investigate the latent Markov process and consider a 
 
 Lastly we want to check how well the two-step estimation pipeline outlined in Section \ref{sec:estim-pipe} works applied to simulated data. We simulate $p=120$ genes as described above with $K=4$ states. To mirror real data where genes are on different scales, we sample $12$ scale parameters $tau$. To get to $p=120$ genes we sample from all scale parameter $10$ sets of $\beta$ values. All other parameters are as set out in Section \ref{sec:sim-study}. We follow the procedure set out above and start by clustering simulated trajectories into $m$ clusters. Then we estimated transition rates $\mathbf{w}$ from cluster centroids and keep them fixed for the second step. Next we use these transition rates and estimate expression signatures $\beta_j$ independently for each gene $j$.
 
-
-\subsection{Number of states}
-\label{sec:number-states-res}
-
-Applying the first step we cluster the simulated data using a k-means clustering algorithm. We use the relative decrease in the objective function $\Delta J(m)$ to determine the number of clusters and vary $m$ in the range $[2, 30]$, see Figure \ref{fig:lrg-sim-clust}. The relative decrease is smaller than $0.1$ for $m=12$ therefore we choose $\hat{m} = 13$. Note that for larger $m$ the objective function $J(m)$ is small and we observe that $\Delta J(m)$ has large fluctuations due to slight deviations in the objective function. Then we test if for this set of data penalisation is necessary using stability of estimated gene expression signatures under deletion of time points. Figure \ref{fig:lrg-sim-stab-l1} shows that for all deletions estimated parameters are stable, therefore we conclude that there is no need for a penalty term. Then we perform a model selection step to determine the number of states $K$ of the latent Markov chain. We compute the $\mathrm{MSE_{CV}}$ score for $K=\lbrace 2, \ldots, 5 \rbrace$ states, see Figure \ref{fig:lrg-sim-k}; we see a clear minimum for $K=4$ which is also the correct number of states. In the final step of the pipeline we perform a post-estimation stability test to ensure the number of clusters chosen is not too small (see Section \ref{sec:estim-pipe}). We compute the correlation for expression parameters estimated with increasing number of clusters, see Figure \ref{fig:lrg-sim-mStab}. We carry out this test for all models $K = \lbrace 2 \ldots 5\rbrace $ and the estimated parameters are stable therefore we conclude that the choice of $\hat{m}$ was sensible. 
-
 \begin{figure}
   \centering
   \subfigure[k-means clustering]{
@@ -427,6 +418,15 @@ Applying the first step we cluster the simulated data using a k-means clustering
   \label{fig:lrg-sim-clust}
 \end{figure}
 
+
+
+\subsection{Number of states}
+\label{sec:number-states-res}
+
+Applying the first step we cluster the simulated data using a k-means clustering algorithm. We use the relative decrease in the objective function $\Delta J(m)$ to determine the number of clusters and vary $m$ in the range $[2, 30]$, see Figure \ref{fig:lrg-sim-clust}. The relative decrease is smaller than $0.1$ for $m=12$ therefore we choose $\hat{m} = 13$. Note that for larger $m$ the objective function $J(m)$ is small and we observe that $\Delta J(m)$ has large fluctuations due to slight deviations in the objective function. Then we test if for this set of data penalisation is necessary using stability of estimated gene expression signatures under deletion of time points. Figure \ref{fig:lrg-sim-stab-l1} shows that for all deletions estimated parameters are stable, therefore we conclude that there is no need for a penalty term. Then we perform a model selection step to determine the number of states $K$ of the latent Markov chain. We compute the $\mathrm{MSE_{CV}}$ score for $K=\lbrace 2, \ldots, 5 \rbrace$ states, see Figure \ref{fig:lrg-sim-k}; we see a clear minimum for $K=4$ which is also the correct number of states. In the final step of the pipeline we perform a post-estimation stability test to ensure the number of clusters chosen is not too small (see Section \ref{sec:estim-pipe}). We compute the correlation for expression parameters estimated with increasing number of clusters, see Figure \ref{fig:lrg-sim-mStab}. We carry out this test for all models $K = \lbrace 2 \ldots 5\rbrace $ and the estimated parameters are stable therefore we conclude that the choice of $\hat{m}$ was sensible. 
+
+A question that arises from these results is to what extent they are indicative of estimation or if states are only estimated because the model assumes there are states in data. One good way of addressing this question is to permute data and compare  $\mathrm{MSE_{CV}}$ estimated for permuted data and the original data. Here we distinguish between two ways of permuting data: first we perform a coordinated permutation where all simulated trajectories are permuted in the same way. Then we perform a permutation for each trajectory independently. In Figure \ref{fig:larg-sim-permute} we show the results and we can see that with both types of permutations the $\mathrm{MSE_{CV}}$ values are significantly larger than the original data set.
+
 \begin{figure}
   \centering
   \includegraphics[width=0.6\textwidth]{pics/no-pen-sim.pdf}
@@ -437,12 +437,16 @@ Applying the first step we cluster the simulated data using a k-means clustering
 \begin{figure}
   \centering
   \subfigure[Number of states]{
-    \includegraphics[width=0.47\textwidth]{pics/loocv-sim.pdf}
+    \includegraphics[width=0.48\textwidth]{pics/loocv-sim.pdf}
     \label{fig:lrg-sim-k}
   }
   \subfigure[Stability number of clusters]{
-    \includegraphics[width=0.47\textwidth]{pics/stab-m-sim.pdf}
+    \includegraphics[width=0.48\textwidth]{pics/stab-m-sim.pdf}
     \label{fig:lrg-sim-mStab}
+  }
+  \subfigure[Permuted time points]{
+    \includegraphics[width=0.48\textwidth]{pics/sim_permute.pdf}
+    \label{fig:larg-sim-permute}
   }
   \caption{Large scale simulation. }
   \label{fig:lrg-sim-k-m}

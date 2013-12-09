@@ -1,0 +1,108 @@
+\section{Mathematical background}
+\label{sec:math-backgr}
+
+This section starts off by examining Markov chains the main building block of the model introduced in Chapter \ref{cha:stamm}. Then in Section \ref{sec:hmm} we introduce the slightly more advanced hidden Markov models before carrying on to a precursor to a model discussed in Chapter \ref{cha:stamm}: the Aggregated Markov chain in discrete time. Then in Section \ref{sec:least-squares} the estimation procedure is introduced and briefly discussed followed by a discussion on penalisation of estimation in Section \ref{sec:penalisation}. The concept of identifiability of a model and what it means in a context for estimation is outlined in Section \ref{sec:identifiability-back}. Then we move on to a discussion on model selection and various techniques for distinguishing between models. Finally in Section \ref{sec:monte-carlo-integr} we discuss a very useful method for numerical integration used in the second model put forward in Section \ref{cha:cell-cycle}.
+
+\subsection{Markov Chains}
+\label{sec:markov-chains}
+
+In Physics prior to the advent of Statistical Physics and Quantum Mechanics in the early 20th century the world was modelled as deterministic. Of course we now know that despite many aspects of the observable world being deterministic there is an even larger set of objects which does not lend itself to a deterministic description. Stochastic processes are often used to describe such systems evolving with a time-dependant stochastic parts. One of the first such attempts was the modelling of Brownian motion by \cite{Einstein:2005ww} which paved the way for further research on this topic. {\color{red} Example applications}. Let $X(t)$ be a time dependant random variable and $x_1, x_2 \ldots $ observations at $t_1, t_2, \ldots$ with joint probability $p(x_1, t_1; x_2, t_2; \ldots)$. The conditional probability is written as:
+
+\begin{equation}
+  \label{eq:stoch-joint}
+  p(x_1, t_1; x_2, t_2; \ldots | y_1, \tau_1; y_2,\tau_2, \ldots).
+\end{equation}
+
+Here we consider a special case of a stochastic process the Markov chain. We can write the Markov assumption in terms of the conditional probability. If the current state at $t_n$ of the system is $x_n$ and we write the probability of this measurement conditional on all preceding measurements $x_{n-1}, x_{n-2}, \ldots x_1$:
+
+\begin{equation}
+  \label{eq:stoch-joint}
+  p(x_1, t_1 | x_{n-1}, t_{n-1}; x_{n-2} t_{n-2}, \ldots x_1 t_1 \ldots) = p(x_{n},t_{n}| x_{n-1},t_{n-1}),
+\end{equation}
+
+where $t_1 \le t_1 \le \ldots t_n$. This means that in a Markov process an observation is only conditionally dependant on the observation immediately preceding it. Using this property it is possible 
+
+UNIQUELY DETERMINED (1.1)
+
+*CONTINOUS TIME MC*
+
+1.29
+
+MASTER EQUATION
+
+STATE OCCUPATION
+
+\subsection{HMM}
+\label{sec:hmm}
+
+SOME TEXT
+
+\subsection{Aggregated Markov chain}
+\label{sec:aggr-mark-chain}
+
+SOME TEXT
+
+\subsection{Least squares}
+\label{sec:least-squares}
+
+Parameter estimation in such a model is the next question to be addressed. The most widely spread method for this is to maximise the likelihood function $ \mathcal{L}(\theta) = f(X; \theta) $, where $X$ is a random variable and $\theta$ is a set of parameters. Often it is more convenient to work with the log-likelihood function with $\ell (\theta) = \log \mathcal{L}(\theta)$. Since the logarithm is a monotone function the maximum of $\ell (\theta)$ is the same as the maximum of $\mathcal{L} (\theta)$. The advantage of working with the log-likelihood is that it can be easier to work with. In some cases it is possible to obtain the maximum likelihood estimator (MLE) $\hat{\theta}$ that maximises $\mathcal{L}{\theta}$ and $\ell (\theta)$ in closed form. Often, especially in real world applications, this is not possible and in such cases we need to use a more numerical approach. 
+
+Now we present a simple application of these ideas and choose a common statistical model to illustrate the idea. Say there exists a model which predicts variable $Y$ from a set of variables $X_1 \ldots X_n$. For simplicity here we choose the simplest possible case, the simple linear regression model:
+% TODO
+
+{\color{red} CHECK IF LOWER OR UPPER CASE}
+
+\begin{equation}
+  \label{eq:simple-regression}
+  y_i = \beta_0 + \beta_1 \, x_i + \epsilon_i,
+\end{equation}
+
+where $\epsilon_i \sim \mathcal{N}(0, \sigma_i^2)$ and is independent of observations, $\beta_0$ and $\beta_1$ are parameters
+
+\subsection{Penalisation}
+\label{sec:penalisation}
+
+\begin{itemize}
+\item Why
+\item Possible penalisation
+\item Tibshirani
+\end{itemize}
+\subsection{Identifiability}
+\label{sec:identifiability-back}
+
+SOME TEXT
+
+\subsection{Model selection}
+\label{sec:model-selection-1}
+
+Any statistical or even mechanistic model includes in its core some assumptions and simplification of the real world problem it is attempting to describe. The aim of a model is to enable description of a complex (sometimes not even fully understood) phenomenon in way tractable by mathematics. Often experiments are sufficient to distinguish between models and identify the one closest to the real world problem. In some cases of course this is not the case and two distinct models appear feasible. This is a problem very often found when employing statistical models and comparing observed data with predictions from models. The ubiquitous problem encountered is that one wishes to compare models to a set of noisy data. Even in cases where the problem itself is identifiable (see above) the existence of noise in observations poses a real difficulty. In such cases the question that one is really trying to answer is one of prediction. 
+
+\subsubsection{Cross-validation}
+\label{sec:cross-validation}
+
+One method that uses this idea in a data driven fashion is cross-validation. The basic principle is quite simple, the data is split into two independent subsets (the training set and the validation set) and model parameters are estimated on the training set and prediction using these parameters are compared with the validation set resulting in a performance score. A practical approach is called k-fold cross-validation. Here the data set is split into $k$ randomly chosen equally sized subsets, one subset is retained as the validation set and the remaining $k-1$ subsets are used as training data. This step is repeated for each of the $k$ subsets and the performance score is combined giving one score for a model. In some applications as the ones discussed in later chapters of this work it is only feasible to leave out one data point at a time due to limitation in data. This procedure is then repeated for every model that is considered and the optimal model is chosen based on the best score. It is clear that such an approach has drawbacks; When dealing with large data sets computation times can quickly become unfeasible since estimations is performed for $k$ subsets and for all possible models. An additional problem can be that due to the random splits in data the choice of this split influences results. Therefore it is advisable to try multiple splits and compare results.
+
+\subsubsection{AIC and BIC}
+\label{sec:aic}
+
+Therefore there are many methods to approximate model selection results based on information obtained when estimating parameters using the whole data set only once. The advantages are obvious since it reduces computation time considerably but it is a further approximation hence one has to be careful interpreting results. In all such approaches the goodness of fit is juxtaposed to model complexity i.e. since more complicated models will perform better we want to penalise these. Such methods are historically referred to as information criteria (IC). Here we will briefly introduce two such models; One of the most widespread is the Akaike information criterion (AIC) formulated by \cite{Akaike:1974ih} and the other is the Bayesian information criterion (BIC) presented by \cite{Schwarz:1978uv}. The derivation of AIC is based on Kullback–Leibler divergence 
+
+-'information-based'??
+
+-AIC KL distence
+
+
+
+
+\subsection{Monte Carlo integration}
+\label{sec:monte-carlo-integr}
+
+SOME TEXT
+
+
+
+
+
+%%% Local Variables:
+%%% TeX-master: "warwickthesis"
+%%% End:
