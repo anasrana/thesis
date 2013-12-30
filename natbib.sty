@@ -5,29 +5,31 @@
 %% The original source files were:
 %%
 %% natbib.dtx  (with options: `package,all')
-%% =============================================
-%% IMPORTANT NOTICE:
 %% 
-%% This program can be redistributed and/or modified under the terms
-%% of the LaTeX Project Public License Distributed from CTAN
-%% archives in directory macros/latex/base/lppl.txt; either
-%% version 1 of the License, or any later version.
+%% Full documentation can be obtained by LaTeXing the source file:
+%%   natbib.dtx.
 %% 
-%% This is a generated file.
-%% It may not be distributed without the original source file natbib.dtx.
-%% 
-%% Full documentation can be obtained by LaTeXing that original file.
 %% Only a few abbreviated comments remain here to describe the usage.
-%% =============================================
-%% Copyright 1993-2000 Patrick W Daly
+%% 
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{natbib}
+        [1998/07/14 6.8c (PWD)]
+%%-------------------------------------------------------------------
+%% NOTICE:
+%% This file may be used for non-profit purposes.
+%% It may not be distributed in exchange for money,
+%%   other than distribution costs.
+%%
+%% The author provides it `as is' and does not guarantee it in any way.
+%%
+%% Natbib coding copyright (C) 1994--1998 Patrick W. Daly
 %% Max-Planck-Institut f\"ur Aeronomie
 %% Max-Planck-Str. 2
 %% D-37191 Katlenburg-Lindau
 %% Germany
+%%
 %% E-mail: daly@linmpi.mpg.de
-\NeedsTeXFormat{LaTeX2e}[1995/06/01]
-\ProvidesPackage{natbib}
-        [2000/07/24 7.0a (PWD)]
+%%-----------------------------------------------------------
  % This package reimplements the LaTeX \cite command to be used for various
  % citation styles, both author-year and numerical. It accepts BibTeX
  % output intended for many other packages, and therefore acts as a
@@ -81,17 +83,6 @@
  % Note: full author lists depends on whether the bib style supports them;
  %       if not, the abbreviated list is printed even when full requested.
  %
- % For names like della Robbia at the start of a sentence, use
- %   \Citet{dRob98}         ==>> Della Robbia (1998)
- %   \Citep{dRob98}         ==>> (Della Robbia, 1998)
- %   \Citeauthor{dRob98}    ==>> Della Robbia
- %
- %
- % Citation aliasing is achieved with
- %   \defcitealias{key}{text}
- %   \citetalias{key}  ==>> text
- %   \citepalias{key}  ==>> (text)
- %
  % Defining the citation style of a given bib style:
  % Use \bibpunct (in the preamble only) with 6 mandatory arguments:
  %    1. opening bracket for citation
@@ -103,7 +94,7 @@
  %    6. punctuation between years (or numbers) when common authors missing
  % One optional argument is the character coming before post-notes. It
  %   appears in square braces before all other arguments. May be left off.
- % Example (and default) \bibpunct[, ]{(}{)}{;}{a}{,}{,}
+ % Example (and default) \bibpunct[,]{(}{)}{;}{a}{,}{,}
  %
  % To make this automatic for a given bib style, named newbib, say, make
  % a local configuration file, natbib.cfg, with the definition
@@ -174,8 +165,11 @@
  % Define citation punctuation for some numerical styles
 \newcommand\bibstyle@cospar{\bibpunct{/}{/}{,}{n}{}{}%
      \gdef\NAT@biblabelnum##1{##1.}}
-\newcommand\bibstyle@esa{\bibpunct{(Ref.~}{)}{,}{n}{}{}%
-     \gdef\NAT@biblabelnum##1{##1.\hspace{1em}}}
+\newcommand\bibstyle@esa{\bibpunct{(}{)}{,}{n}{}{}%
+     \gdef\NAT@biblabelnum##1{##1.\hspace{1em}}%
+     \gdef\NAT@citenum##1##2##3{\NAT@@open \if\relax##2\relax\else
+       ##2\ \fi Ref.~##1\if\relax##3\relax\else\NAT@cmt\
+       ##3\fi\NAT@@close\endgroup}}
 \newcommand\bibstyle@nature{\bibpunct{}{}{,}{s}{}{\textsuperscript{,}}%
      \gdef\NAT@biblabelnum##1{##1.}}
  % The standard LaTeX styles
@@ -192,7 +186,6 @@
 \DeclareOption{numbers}{\NAT@numberstrue
    \ExecuteOptions{square,comma,nobibstyle}}
 \DeclareOption{super}{\NAT@supertrue\NAT@numberstrue
-   \renewcommand\NAT@open{}\renewcommand\NAT@close{}
    \ExecuteOptions{nobibstyle}}
 \DeclareOption{authoryear}{\NAT@numbersfalse
    \ExecuteOptions{round,colon,bibstyle}}
@@ -225,15 +218,15 @@
    with natbib. Use option `sort' instead}\ExecuteOptions{sort}}{}
 \newif\ifNAT@longnames\NAT@longnamesfalse
 \DeclareOption{longnamesfirst}{\NAT@longnamestrue}
-\DeclareOption{nonamebreak}{\def\NAT@nmfmt#1{\mbox{\NAT@up#1}}}
-\def\NAT@nmfmt#1{{\NAT@up#1}}
+\DeclareOption{nonamebreak}{\def\NAT@nmfmt#1{\mbox{#1}}}
+\def\NAT@nmfmt#1{{#1}}
 \renewcommand\bibstyle[1]{\@ifundefined{bibstyle@#1}{\relax}
      {\csname bibstyle@#1\endcsname}}
 \AtBeginDocument{\global\let\bibstyle=\@gobble}
 \let\@citestyle\bibstyle
 \newcommand\citestyle[1]{\@citestyle{#1}\let\bibstyle\@gobble}
 \@onlypreamble{\citestyle}\@onlypreamble{\@citestyle}
-\newcommand\bibpunct[7][, ]%
+\newcommand\bibpunct[7][,]%
   {\gdef\NAT@open{#2}\gdef\NAT@close{#3}\gdef
    \NAT@sep{#4}\global\NAT@numbersfalse\ifx #5n\global\NAT@numberstrue
    \else
@@ -248,16 +241,16 @@
 \newcommand\NAT@sep{;}
 \ProcessOptions
 \newcommand\NAT@aysep{,} \newcommand\NAT@yrsep{,}
-\newcommand\NAT@cmt{, }
+\newcommand\NAT@cmt{,}
 \newcommand\NAT@cite%
-    [3]{\ifNAT@swa\NAT@@open\if*#2*\else#2\ \fi
-        #1\if*#3*\else\NAT@cmt#3\fi\NAT@@close\else#1\fi\endgroup}
+    [3]{\ifNAT@swa\NAT@@open\if\relax#2\relax\else#2\ \fi
+        #1\if\relax#3\relax\else\NAT@cmt\ #3\fi\NAT@@close\else#1\fi\endgroup}
 \newcommand\NAT@citenum%
-    [3]{\ifNAT@swa\NAT@@open\if*#2*\else#2\ \fi
-        #1\if*#3*\else\NAT@cmt#3\fi\NAT@@close\else#1\fi\endgroup}
+    [3]{\ifNAT@swa\NAT@@open\if\relax#2\relax\else#2\ \fi
+        #1\if\relax#3\relax\else\NAT@cmt\ #3\fi\NAT@@close\else#1\fi\endgroup}
 \newcommand\NAT@citesuper[3]{\ifNAT@swa
 \unskip\hspace{1\p@}\textsuperscript{#1}%
-   \if*#3*\else\ (#3)\fi\else #1\fi\endgroup}
+   \if\relax#3\relax\else\ (#3)\fi\else #1\fi\endgroup}
 \providecommand
   \textsuperscript[1]{\mbox{$^{\mbox{\scriptsize#1}}$}}
 \providecommand\@firstofone[1]{#1}
@@ -282,11 +275,9 @@
       \ifNAT@full\let\NAT@nm\NAT@all@names\else
         \let\NAT@nm\NAT@name\fi
       \ifNAT@swa
-       \ifnum\NAT@ctype>1\relax\@citea
+       \ifnum\NAT@ctype=2\relax\@citea
         \hyper@natlinkstart{\@citeb\@extra@b@citeb}%
-            \ifnum\NAT@ctype=2\relax\NAT@test{\NAT@ctype}%
-            \else\NAT@alias
-            \fi\hyper@natlinkend\else
+            \NAT@test{2}\hyper@natlinkend\else
        \ifnum\NAT@sort>1
          \begingroup\catcode`\_=8
             \ifcat _\ifnum\z@<0\NAT@num _\else A\fi
@@ -297,17 +288,17 @@
          \endgroup
          \ifnum\NAT@nm=\@tempcnta
            \ifx\NAT@last@yr\relax
-             \edef\NAT@last@yr{\@citea \mbox{\noexpand\citenumfont{\NAT@num}}}%
+             \edef\NAT@last@yr{\@citea \mbox{\NAT@num}}%
            \else
-             \edef\NAT@last@yr{--\penalty\@m\mbox{\noexpand\citenumfont{\NAT@num}}}%
+             \edef\NAT@last@yr{--\penalty\@m\mbox{\NAT@num}}%
            \fi
          \else
-           \NAT@last@yr \@citea \mbox{\citenumfont{\NAT@num}}%
+           \NAT@last@yr \@citea \mbox{\NAT@num}%
            \let\NAT@last@yr\relax
          \fi
        \else
-         \@citea \mbox{\hyper@natlinkstart{\@citeb\@extra@b@citeb}%
-           {\citenumfont{\NAT@num}}\hyper@natlinkend}%
+         \@citea \mbox{\hyper@natlinkstart{\@citeb\@extra@b@citeb}\NAT@num
+                    \hyper@natlinkend}%
        \fi
        \fi
        \def\@citea{\NAT@sep\penalty\@m\NAT@space}%
@@ -315,28 +306,24 @@
         \ifcase\NAT@ctype\relax
           \ifx\NAT@last@nm\NAT@nm \NAT@yrsep\penalty\@m\NAT@space\else
           \@citea \NAT@test{1}\ \NAT@@open
-          \if*#1*\else#1\ \fi\fi \NAT@mbox{%
+          \if\relax#1\relax\else#1\ \fi\fi \NAT@mbox{%
           \hyper@natlinkstart{\@citeb\@extra@b@citeb}%
-          {\citenumfont{\NAT@num}}\hyper@natlinkend}%
+          \NAT@num\hyper@natlinkend}%
           \def\@citea{\NAT@@close\NAT@sep\penalty\@m\ }%
         \or\@citea
           \hyper@natlinkstart{\@citeb\@extra@b@citeb}%
-           \NAT@test{\NAT@ctype}\hyper@natlinkend
+           \NAT@test{1}\hyper@natlinkend
           \def\@citea{\NAT@sep\penalty\@m\ }%
         \or\@citea
-          \hyper@natlinkstart{\@citeb\@extra@b@citeb}%
-           \NAT@test{\NAT@ctype}\hyper@natlinkend
-          \def\@citea{\NAT@sep\penalty\@m\ }%
-        \or\@citea
-          \hyper@natlinkstart{\@citeb\@extra@b@citeb}%
-           \NAT@alias\hyper@natlinkend
+          \hyper@natlinkstart{\@citeb\@extra@b@citeb}\NAT@test{2}%
+           \hyper@natlinkend
           \def\@citea{\NAT@sep\penalty\@m\ }%
         \fi
       \fi
       }}%
-      \ifnum\NAT@sort>1\relax\NAT@last@yr\fi
-      \ifNAT@swa\else\ifnum\NAT@ctype=0\if*#2*\else
-      \NAT@cmt#2\fi \NAT@@close\fi\fi}{#1}{#2}}
+      \ifnum\NAT@sort>1\NAT@last@yr\fi
+      \ifNAT@swa\else\ifnum\NAT@ctype=0\if\relax#2\relax\else
+      \NAT@cmt\ #2\fi \NAT@@close\fi\fi}{#1}{#2}}
 \newcommand\NAT@test[1]{\ifnum#1=1 \ifx\NAT@nm\NAT@noname
   {\reset@font\bfseries(author?)}\PackageWarning{natbib}
   {Author undefined for citation`\@citeb'
@@ -347,7 +334,6 @@
   {Year undefined for citation`\@citeb'
    \MessageBreak
    on page \thepage}\else \NAT@date \fi \fi}
-\let\citenumfont=\relax
 \newcommand\NAT@citex{}
 \def\NAT@citex%
   [#1][#2]#3{%
@@ -360,7 +346,7 @@
      \@ifundefined{b@\@citeb\@extra@b@citeb}{\@citea%
        {\reset@font\bfseries ?}\NAT@citeundefined
                  \PackageWarning{natbib}%
-       {Citation `\@citeb' on page \thepage \space undefined}\def\NAT@date{}}%
+       {Citation `\@citeb' on page \thepage \space undefined}}%
      {\let\NAT@last@nm=\NAT@nm\let\NAT@last@yr=\NAT@year
      \NAT@parse{\@citeb}%
       \ifNAT@longnames\@ifundefined{bv@\@citeb\@extra@b@citeb}{%
@@ -370,89 +356,62 @@
      \ifNAT@full\let\NAT@nm\NAT@all@names\else
        \let\NAT@nm\NAT@name\fi
      \ifNAT@swa\ifcase\NAT@ctype
-       \if\relax\NAT@date\relax
-         \@citea\hyper@natlinkstart{\@citeb\@extra@b@citeb}%
-         \NAT@nmfmt{\NAT@nm}\NAT@date\hyper@natlinkend
-       \else
-         \ifx\NAT@last@nm\NAT@nm\NAT@yrsep
-            \ifx\NAT@last@yr\NAT@year
-              \hyper@natlinkstart{\@citeb\@extra@b@citeb}\NAT@exlab
-              \hyper@natlinkend
-            \else\unskip\
-              \hyper@natlinkstart{\@citeb\@extra@b@citeb}\NAT@date
-              \hyper@natlinkend
-            \fi
-         \else\@citea\hyper@natlinkstart{\@citeb\@extra@b@citeb}%
-           \NAT@nmfmt{\NAT@nm}%
-           \hyper@natlinkbreak{\NAT@aysep\ }{\@citeb\@extra@b@citeb}%
-           \NAT@date\hyper@natlinkend
-         \fi
+       \ifx\NAT@last@nm\NAT@nm\NAT@yrsep
+          \ifx\NAT@last@yr\NAT@year
+            \hyper@natlinkstart{\@citeb\@extra@b@citeb}\NAT@exlab
+            \hyper@natlinkend
+          \else\unskip\
+            \hyper@natlinkstart{\@citeb\@extra@b@citeb}\NAT@date
+            \hyper@natlinkend
+          \fi
+       \else\@citea\hyper@natlinkstart{\@citeb\@extra@b@citeb}%
+         \NAT@nmfmt{\NAT@nm}%
+         \hyper@natlinkbreak{\NAT@aysep\ }{\@citeb\@extra@b@citeb}%
+         \NAT@date\hyper@natlinkend
        \fi
      \or\@citea\hyper@natlinkstart{\@citeb\@extra@b@citeb}%
          \NAT@nmfmt{\NAT@nm}\hyper@natlinkend
      \or\@citea\hyper@natlinkstart{\@citeb\@extra@b@citeb}%
          \NAT@date\hyper@natlinkend
-     \or\@citea\hyper@natlinkstart{\@citeb\@extra@b@citeb}%
-         \NAT@alias\hyper@natlinkend
      \fi \def\@citea{\NAT@sep\ }%
      \else\ifcase\NAT@ctype
-        \if\relax\NAT@date\relax
-          \@citea\hyper@natlinkstart{\@citeb\@extra@b@citeb}%
-          \NAT@nmfmt{\NAT@nm}\hyper@natlinkend
-        \else
-         \ifx\NAT@last@nm\NAT@nm\NAT@yrsep
-            \ifx\NAT@last@yr\NAT@year
-              \hyper@natlinkstart{\@citeb\@extra@b@citeb}\NAT@exlab
-              \hyper@natlinkend
-            \else\unskip\
-              \hyper@natlinkstart{\@citeb\@extra@b@citeb}\NAT@date
-              \hyper@natlinkend
-            \fi
-         \else\@citea\hyper@natlinkstart{\@citeb\@extra@b@citeb}%
-           \NAT@nmfmt{\NAT@nm}%
-           \hyper@natlinkbreak{\ \NAT@@open\if*#1*\else#1\ \fi}%
-              {\@citeb\@extra@b@citeb}%
-           \NAT@date\hyper@natlinkend\fi
-        \fi
+       \ifx\NAT@last@nm\NAT@nm\NAT@yrsep
+          \ifx\NAT@last@yr\NAT@year
+            \hyper@natlinkstart{\@citeb\@extra@b@citeb}\NAT@exlab
+            \hyper@natlinkend
+          \else\unskip\
+            \hyper@natlinkstart{\@citeb\@extra@b@citeb}\NAT@date
+            \hyper@natlinkend
+          \fi
+       \else\@citea\hyper@natlinkstart{\@citeb\@extra@b@citeb}%
+         \NAT@nmfmt{\NAT@nm}%
+         \hyper@natlinkbreak{\ \NAT@@open\if\relax#1\relax\else#1\ \fi}%
+            {\@citeb\@extra@b@citeb}%
+         \NAT@date\hyper@natlinkend\fi
        \or\@citea\hyper@natlinkstart{\@citeb\@extra@b@citeb}%
          \NAT@nmfmt{\NAT@nm}\hyper@natlinkend
        \or\@citea\hyper@natlinkstart{\@citeb\@extra@b@citeb}%
-         \NAT@date\hyper@natlinkend
-       \or\@citea\hyper@natlinkstart{\@citeb\@extra@b@citeb}%
-         \NAT@alias\hyper@natlinkend
-       \fi \if\relax\NAT@date\relax\def\@citea{\NAT@sep\ }%
-           \else\def\@citea{\NAT@@close\NAT@sep\ }\fi
+         \NAT@date\hyper@natlinkend\fi \def\@citea{\NAT@@close\NAT@sep\ }%
      \fi
-     }}\ifNAT@swa\else\if*#2*\else\NAT@cmt#2\fi
-     \if\relax\NAT@date\relax\else\NAT@@close\fi\fi}{#1}{#2}}
+     }}\ifNAT@swa\else\if\relax#2\relax\else\NAT@cmt\ #2\fi
+     \NAT@@close\fi}{#1}{#2}}
 \newif\ifNAT@par \NAT@partrue
 \newcommand\NAT@@open{\ifNAT@par\NAT@open\fi}
 \newcommand\NAT@@close{\ifNAT@par\NAT@close\fi}
-\newcommand\NAT@alias{\@ifundefined{al@\@citeb\@extra@b@citeb}{%
-  {\reset@font\bfseries(alias?)}\PackageWarning{natbib}
-  {Alias undefined for citation `\@citeb'
-  \MessageBreak on page \thepage}}{\@nameuse{al@\@citeb\@extra@b@citeb}}}
-\let\NAT@up\relax
-\newcommand\NAT@Up[1]{{\let\protect\@unexpandable@protect\let~\relax
-  \expandafter\NAT@deftemp#1}\expandafter\NAT@UP\NAT@temp}
-\newcommand\NAT@deftemp[1]{\xdef\NAT@temp{#1}}
-\newcommand\NAT@UP[1]{\let\@tempa\NAT@UP\ifcat a#1\MakeUppercase{#1}%
-  \let\@tempa\relax\else#1\fi\@tempa}
 \newcommand\shortcites[1]{%
   \@bsphack\@for\@citeb:=#1\do
   {\edef\@citeb{\expandafter\@firstofone\@citeb}%
    \global\@namedef{bv@\@citeb\@extra@b@citeb}{}}\@esphack}
 \newcommand\NAT@biblabel[1]{\hfill}
-\newcommand\NAT@biblabelnum[1]{\bibnumfmt{#1}}
-\newcommand\bibnumfmt[1]{[#1]}
+\newcommand\NAT@biblabelnum[1]{[#1]}
 \def\@tempa#1{[#1]}
 \ifx\@tempa\@biblabel\let\@biblabel\@empty\fi
 \newcommand\NAT@bibsetnum[1]{\settowidth\labelwidth{\@biblabel{#1}}%
    \setlength{\leftmargin}{\labelwidth}\addtolength{\leftmargin}{\labelsep}%
    \setlength{\itemsep}{\bibsep}\setlength{\parsep}{\z@}%
    \ifNAT@openbib
-     \addtolength{\leftmargin}{4mm}%
-     \setlength{\itemindent}{-4mm}%
+     \addtolength{\leftmargin}{\bibindent}%
+     \setlength{\itemindent}{-\bibindent}%
      \setlength{\listparindent}{\itemindent}%
      \setlength{\parsep}{0pt}%
    \fi
@@ -522,26 +481,6 @@
 \DeclareRobustCommand\citeauthor
    {\begingroup\NAT@swafalse\def\NAT@ctype{1}\NAT@parfalse
     \@ifstar{\NAT@fulltrue\NAT@citetp}{\NAT@fullfalse\NAT@citetp}}
-\DeclareRobustCommand\Citet
-   {\begingroup\NAT@swafalse\def\NAT@ctype{0}\NAT@partrue
-     \let\NAT@up\NAT@Up
-     \@ifstar{\NAT@fulltrue\NAT@citetp}{\NAT@fullfalse\NAT@citetp}}
-\DeclareRobustCommand\Citep
-   {\begingroup\NAT@swatrue\def\NAT@ctype{0}\NAT@partrue
-     \let\NAT@up\NAT@Up
-         \@ifstar{\NAT@fulltrue\NAT@citetp}{\NAT@fullfalse\NAT@citetp}}
-\DeclareRobustCommand\Citealt
-   {\begingroup\NAT@swafalse\def\NAT@ctype{0}\NAT@parfalse
-     \let\NAT@up\NAT@Up
-         \@ifstar{\NAT@fulltrue\NAT@citetp}{\NAT@fullfalse\NAT@citetp}}
-\DeclareRobustCommand\Citealp
-   {\begingroup\NAT@swatrue\def\NAT@ctype{0}\NAT@parfalse
-     \let\NAT@up\NAT@Up
-         \@ifstar{\NAT@fulltrue\NAT@citetp}{\NAT@fullfalse\NAT@citetp}}
-\DeclareRobustCommand\Citeauthor
-   {\begingroup\NAT@swafalse\def\NAT@ctype{1}\NAT@parfalse
-     \let\NAT@up\NAT@Up
-    \@ifstar{\NAT@fulltrue\NAT@citetp}{\NAT@fullfalse\NAT@citetp}}
 \DeclareRobustCommand\citeyear
    {\begingroup\NAT@swafalse\def\NAT@ctype{2}\NAT@parfalse\NAT@citetp}
 \DeclareRobustCommand\citeyearpar
@@ -549,14 +488,6 @@
 \newcommand\citetext[1]{\NAT@open#1\NAT@close}
 \DeclareRobustCommand\citefullauthor
    {\citeauthor*}
-\newcommand\defcitealias[2]{%
-   \@ifundefined{al@#1\@extra@b@citeb}{}
-   {\PackageWarning{natbib}{Overwriting existing alias for citation #1}}
-   \@namedef{al@#1\@extra@b@citeb}{#2}}
-\DeclareRobustCommand\citetalias{\begingroup
-   \NAT@swafalse\def\NAT@ctype{3}\NAT@parfalse\NAT@citetp}
-\DeclareRobustCommand\citepalias{\begingroup
-   \NAT@swatrue\def\NAT@ctype{3}\NAT@partrue\NAT@citetp}
 \renewcommand\nocite[1]{\@bsphack
   \@for\@citeb:=#1\do{%
     \edef\@citeb{\expandafter\@firstofone\@citeb}%
@@ -591,20 +522,19 @@
   \renewcommand\NAT@index{\@bsphack\begingroup
      \def~{\string~}\@wrindex{\NAT@idxtxt}}}
 \newcommand\NAT@idxtxt{\NAT@name\ \NAT@open\NAT@date\NAT@close}
-\@ifundefined{@indexfile}{}{\let\NAT@makeindex\relax\makeindex}
 \newif\ifciteindex \citeindexfalse
 \newcommand\citeindextype{default}
 \newcommand\NAT@index@alt{{\let\protect=\noexpand\let~\relax
   \xdef\NAT@temp{\NAT@idxtxt}}\expandafter\NAT@exp\NAT@temp\@nil}
 \newcommand\NAT@exp{}
-\def\NAT@exp#1\@nil{\mbox{}\index[\citeindextype]{#1}}
+\def\NAT@exp#1\@nil{\index[\citeindextype]{#1}}
 
 \AtBeginDocument{%
 \@ifpackageloaded{index}{\let\NAT@index=\NAT@index@alt}{}}
 \newcommand\NAT@ifcmd{\futurelet\NAT@temp\NAT@ifxcmd}
 \newcommand\NAT@ifxcmd{\ifx\NAT@temp\relax\else\expandafter\NAT@bare\fi}
-\def\NAT@bare#1(#2)#3(@)#4\@nil#5{%
-  \if @#2
+\def\NAT@bare#1(#2)#3()#4\@nil#5{%
+  \if\relax#2\relax
   \expandafter\NAT@apalk#1, , \@nil{#5}\else
   \stepcounter{NAT@ctr}%
   \NAT@wrout{\arabic {NAT@ctr}}{#2}{#1}{#3}{#5}
@@ -628,7 +558,7 @@
    \@ifundefined{b@#2\@extra@b@citeb}{\def\NAT@num{}}{\NAT@parse{#2}}%
    \item[\hfil\hyper@natanchorstart{#2\@extra@b@citeb}\@biblabel{\NAT@num}%
     \hyper@natanchorend]%
-    \NAT@ifcmd#1(@)(@)\@nil{#2}}
+    \NAT@ifcmd#1()()\@nil{#2}}
 \ifx\SK@lbibitem\@undefined\else
    \let\SK@lbibitem\@lbibitem
    \def\@lbibitem[#1]#2{%
@@ -644,7 +574,8 @@
      {\NAT@citemultiple
       \PackageWarningNoLine{natbib}{Citation `#1' multiply defined}}%
   \global\@namedef{b@#1\@extra@binfo}{#2}}
-\AtEndDocument{\NAT@swatrue\let\bibcite\NAT@testdef}
+\AtEndDocument{\NAT@swatrue\renewcommand\bibcite[2]%
+                         {\NAT@testdef{#1}{#2}}}
 \newcommand\NAT@testdef[2]{%
   \def\NAT@temp{#2}\expandafter \ifx \csname b@#1\@extra@binfo\endcsname
     \NAT@temp \else \ifNAT@swa \NAT@swafalse
@@ -658,17 +589,17 @@
   \stepcounter{NAT@ctr}%
   \NAT@wrout{\arabic {NAT@ctr}}{#2}{#1}{}{#4}\fi}
 \newcommand\citeauthoryear{}
-\def\citeauthoryear#1#2#3(@)(@)\@nil#4{\stepcounter{NAT@ctr}\if\relax#3\relax
+\def\citeauthoryear#1#2#3()()\@nil#4{\stepcounter{NAT@ctr}\if\relax#3\relax
    \NAT@wrout{\arabic {NAT@ctr}}{#2}{#1}{}{#4}\else
    \NAT@wrout{\arabic {NAT@ctr}}{#3}{#2}{#1}{#4}\fi}
 \newcommand\citestarts{\NAT@open}
 \newcommand\citeends{\NAT@close}
 \newcommand\betweenauthors{and}
 \newcommand\astroncite{}
-\def\astroncite#1#2(@)(@)\@nil#3{\stepcounter{NAT@ctr}\NAT@wrout{\arabic
+\def\astroncite#1#2()()\@nil#3{\stepcounter{NAT@ctr}\NAT@wrout{\arabic
 {NAT@ctr}}{#2}{#1}{}{#3}}
 \newcommand\citename{}
-\def\citename#1#2(@)(@)\@nil#3{\expandafter\NAT@apalk#1#2, \@nil{#3}}
+\def\citename#1#2()()\@nil#3{\expandafter\NAT@apalk#1#2, \@nil{#3}}
 \newcommand\harvarditem[4][]%
     {\if\relax#1\relax\bibitem[#2(#3)]{#4}\else
         \bibitem[#1(#3)#2]{#4}\fi }
@@ -688,14 +619,13 @@
     {\renewcommand\bibsection{\section*{\bibname
      \ifx\@mkboth\@gobbletwo\else\markright{\MakeUppercase{\bibname}}\fi}}}}
 \@ifclassloaded{amsart}%
-  {\renewcommand\bibsection{\section*{\refname}}}{}
+  {\renewcommand\bibsection{\section*{\refname}}{}}{}
 \@ifclassloaded{amsbook}%
-  {\renewcommand\bibsection{\chapter*{\bibname}}}{}
+  {\renewcommand\bibsection{\section*{\bibname}}{}}{}
 \@ifundefined{bib@heading}{}{\let\bibsection\bib@heading}
 \newcounter{NAT@ctr}
 \renewenvironment{thebibliography}[1]{%
- \bibsection
- \vspace{1\p@}\parindent \z@\bibpreamble\bibfont\list
+ \bibfont\bibsection\parindent \z@\list
    {\@biblabel{\arabic{NAT@ctr}}}{\@bibsetup{#1}%
     \setcounter{NAT@ctr}{0}}%
     \ifNAT@openbib
@@ -706,13 +636,12 @@
     \sloppy\clubpenalty4000\widowpenalty4000
     \sfcode`\.=1000\relax
     \let\citeN\cite \let\shortcite\cite
-    \let\citeasnoun\cite\fontsize{7}{9}\selectfont
+    \let\citeasnoun\cite
  }{\def\@noitemerr{%
   \PackageWarning{natbib}
      {Empty `thebibliography' environment}}%
   \endlist\vskip-\lastskip}
-\let\bibfont\relax
-\let\bibpreamble\relax
+\let\bibfont=\relax
 \providecommand\reset@font{\relax}
 \providecommand\bibname{Bibliography}
 \providecommand\refname{References}
@@ -732,21 +661,13 @@
 \providecommand\hyper@natlinkstart[1]{}
 \providecommand\hyper@natlinkend{}
 \providecommand\hyper@natlinkbreak[2]{#1}
-\@ifundefined{bbl@redefine}{}{%
- \bbl@redefine\nocite#1{%
-  \@safe@activestrue\org@nocite{#1}\@safe@activesfalse}%
-\bbl@redefine\@lbibitem[#1]#2{%
-  \@safe@activestrue\org@@lbibitem[#1]{#2}\@safe@activesfalse}%
-}
-\AtBeginDocument{\@ifundefined{bbl@redefine}{}{%
+\@ifpackageloaded{babel}{\PackageWarningNoLine{natbib}{%
+If you use both babel and natbib\MessageBreak
+then load babel AFTER natbib}}{}
+\AtBeginDocument{\@ifpackageloaded{babel}{%
 \bbl@redefine\@citex[#1][#2]#3{%
   \@safe@activestrue\org@@citex[#1][#2]{#3}\@safe@activesfalse}%
-\bbl@redefine\NAT@testdef#1#2{%
-  \@safe@activestrue\org@NAT@testdef{#1}{#2}\@safe@activesfalse}%
-\@ifundefined{org@@lbibitem}{%
-\bbl@redefine\@lbibitem[#1]#2{%
-  \@safe@activestrue\org@@lbibitem[#1]{#2}\@safe@activesfalse}}{}%
-}}
+}{}}
 \ifnum\NAT@sort>0
 \newcommand\NAT@sort@cites[1]{%
 \@tempcntb\m@ne
@@ -798,6 +719,6 @@
 \InputIfFileExists{natbib.cfg}
        {\typeout{Local config file natbib.cfg used}}{}
 %% 
-%% <<<<< End of generated file <<<<<<
+%% <<<<< End of decommented file <<<<<<
 %%
 %% End of file `natbib.sty'.

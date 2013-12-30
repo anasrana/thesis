@@ -1,22 +1,15 @@
 \section{Introduction}
 \label{sec:intro-stamm}
 
-Diverse biological processes have been observed to undergo transitions under influence of a stimuli. These transitions lead to changes on a cellular level between distinct phenotypic states. These changes can be morphological, epigenetic, or on a protein level.
+Diverse biological processes have been observed to undergo transitions under influence of a stimulus. These transitions lead to changes on a cellular level between distinct phenotypic states. The source of these phenotypic changes can be morphological, epigenetic, or even at a protein interaction level.
 
-Phenotypic changes occurring on a single cell level are not observed at the single cell level although it is only possible to perform observations on a population level. This restriction is experimental in nature and although sometimes it is possible to make observations on a single cell level there are limitations in these experiments. 
+One big obstacle in understanding the source of such phenotypic changes at a single cell level are that observations are gnerally not at the single cell level although it is only possible to perform observations on a population level. This restriction is experimental in nature and although sometimes it is possible to make observations on a single cell level there are limitations often on the amount of information that can be obtained as discussed in detail in Chapter \ref{cha:introduction}. 
 
-{\color{red} Hidden Markov models (HMMs) are widely used to describe latent processes in biological applications and have previously been used to describe cell populations [26] and model the cell cycle [27, 28, 29, 30]. It is interesting to contrast our model with a classical HMM. The key differences are twofold. First, our model involves aggregation of single-cell level Markov chains, thus it deals with states that are not only hidden, but whose connection to population-level observables necessarily involves averaging over multiple instances of the latent process. In contrast, a HMM applied to time-course data from a transition process does not provide a model at the single-cell level. Second, our model operates in continuous time and applies naturally to non- uniformly sampled data. In contrast, in a HMM the underlying Markov process operates in discrete time, such that the probability of a state transition is the same between successive time points regardless of the intervening time period. This assumption generally will not hold at all under uneven time sampling of a heterogenous population. Due to these reasons, in our view HMMs are intrinsically ill-suited to the study of transition processes of the type we consider here.
-}
+The model we explore is called State transitions using aggregated Markov models (STAMM) initially proposed by \cite{Armond:2013}. This is a stochastic model identifying  state level information for single-cell transformations using population level data. Single-cell level dynamics, latent in the model, is described by a Markov chain which is then aggregated over multiple cells. Although this model has been applied to cancer cell lines as well \cite{Casale:2013} and stem cell reprogramming (see Chapter \ref{cha:stem-cells}) there is still work needed to obtain a better understanding of this model. We use single cell level simulations to probe model properties and model assumptions. 
 
-\section{Model outline}
-\label{sec:method}
+A type of model that has found widespread application in the description and has shares certain characteristics with STAMM is the Hidden Markov model (HMM). Many examples of real world applications of HMMs exist including the deconvolution of population level microarray data \citep{Roy:2006ik}; some models also use simpler deconvolution algorithms for the cell cycle and for microarray data involving additional information \citep{Bar-Joseph04082004, BarJoseph:2008bx}. The main advantage of STAMM is that the latent model is in continuous time and therefore application to time-course data with uneven time-points is quite simple. This is discussed in more detail in Section \ref{cha:introduction}. Another type of model that is even closer to STAMM was studied by \cite{Kalbfleisch:1983vd} but this model investigates panel data and often near or at equilibrium. 
 
-\subsection{The STAMM model}
-\label{sec:mast-model}
-
-First we provide a detailed description of a model using 'State Transitions using Aggregated Markov Models' (STAMM), following and expanding on work done by \cite{Armond:2013}. The model attempts to discern single cell parameters from observations performed on a population level.  
-
-STAMM defines a latent stochastic process on the single cell level that isn't directly observed. Using the latent stochastic processes and aggregating across cells we can obtain a cell-population level likelihood. The latent single cell process is described using a Markov chain with a discrete and finite state space but it is continuous in time. Biological states in the system are identified with the state space, indexed by $k \in \lbrace 1, ..., K \rbrace$, is identified with biological states of the system. Transitions between states $k$ and $k'$ are determined by transition rates between these states denoted by $\mathbf{w} = \lbrace w_{k,k'} \rbrace $. Assuming that cell death and cell doubling compensate each other, i.e. the number of cells is conserved at all time $t$; the probability for any cell to be in state $k$ at any given time $t$ can be obtained by solving Master equation of the Markov chain. The resulting state occupation probability for the population $p_k(t;\mathbf{w})$ is a function of time and also the state transitions.
+In this chapter we follow and expanding on the previous work done starting with a detailed description of STAMM Section \ref{sec:method} including a detailed description of model assumptions. In Section \ref{sec:estimation} we outline parameter estimation including a way to perform model selection as well as an efficient and unbiased estimation pipeline. Then we specify the single cell simulation setup (Section \ref{sec:sim-study})  before moving on to the results from single-cell simulation data in Section \ref{sec:results}. These are split up into results from performing a small scale simulation to probe the model and to test sensitivity to breaking assumptions; and large scale simulation results to demonstrate the whole pipeline.
 
 \begin{figure}[!t]
   \centering
@@ -25,17 +18,23 @@ STAMM defines a latent stochastic process on the single cell level that isn't di
   \label{fig:model-sketch}
 \end{figure}
 
-This model can fundamentally be applied to any type of time-course data, including transcript or protein abundance. Here unless otherwise stated we will focus the description, without loss of generality, on gene expression data. Let $x_j(t)$ be the cell-population-averaged gene expression of gene $j$ at time $t$, obtained from assay
-% TODO what is homogenate assay?
-such as RNA-seq or microarray expression. When investigating transitions it is prudent to design experiments with an initial state that is reasonably homogeneous, therefore our model assumes that initially all cells in the population occupy the same state, this is often part of the experimental design of investigating changes from an initial homogeneous starting population. At any subsequent time point cells exist in a mixture of states, hence any measurement $x_j(t)$ made on a population level is an average over multiple states. We further assume that there is a mean expression level per gene constant across a state. This is denoted by $\beta_{kj}$, the gene expression level for gene $j \in \lbrace 1 \ldots p \rbrace$ in state $k$.
+\section{Model outline}
+\label{sec:method}
+
+\subsection{The STAMM model}
+\label{sec:mast-model}
+
+
+STAMM defines a latent stochastic process on the single cell level that isn't directly observed. Using the latent stochastic processes and aggregating across cells we can obtain a cell-population level likelihood. The latent single cell process is described using a Markov chain with a discrete and finite state space but it is continuous in time. Biological states in the system are identified with the state space, indexed by $k \in \lbrace 1, ..., K \rbrace$, is identified with biological states of the system. Transitions between states $k$ and $k'$ are determined by transition rates between these states denoted by $\mathbf{w} = \lbrace w_{k,k'} \rbrace $. Assuming that cell death and cell doubling compensate each other, i.e. the number of cells is conserved at all time $t$; the probability for any cell to be in state $k$ at any given time $t$ can be obtained by solving Master equation of the Markov chain. The resulting state occupation probability for the population $p_k(t;\mathbf{w})$ is a function of time and also the state transitions.
+
+This model can fundamentally be applied to any type of time-course data, including transcript or protein abundance. Here unless otherwise stated we will focus the description, without loss of generality, on gene expression data. Let $x_j(t)$ be the cell-population-averaged gene expression of gene $j$ at time $t$, obtained from a homogenate assay such as RNA-seq or microarray expression. When investigating transitions it is prudent to design experiments with an initial state that is reasonably homogeneous, therefore our model assumes that initially all cells in the population occupy the same state, this is often part of the experimental design of investigating changes from an initial homogeneous starting population. At any subsequent time point cells exist in a mixture of states, hence any measurement $x_j(t)$ made on a population level is an average over multiple states. We further assume that there is a mean expression level per gene constant across a state. This is denoted by $\beta_{kj}$, the gene expression level for gene $j \in \lbrace 1 \ldots p \rbrace$ in state $k$.
 
 In the limit of large numbers of cells the fraction of cells in any state $k$ is given by the state occupation probability $p_k(t;\mathbf{w})$. We can now write the observed average gene expression, $x_j(t)$ for gene $j$ at time $t$, as the sum of all occupation probabilities weighted by their respective gene expression signatures. The resulting model for the average gene expression from a latent Markov chain model is written as:
 
 \begin{equation}
-  x_j(t) = \sum_k p_k(t;\mathbf(w))\beta_{kj} = P(t;\mathbf{w}) \, \beta_j,
+  x_j(t) = \sum_k p_k(t;\mathbf{w})\beta_{kj} = P(t;\mathbf{w}) \, \beta_j,
   \label{eq:model}
 \end{equation}
-
 where the right hand side is the vectorized form of the model, with the row vector $P(t;\mathbf{w}) = [p_1(t,\mathbf{w}), \ldots , p_K(t,\mathbf{w})]$ and column vector $\beta_j = [\beta_{1j}, \ldots , \beta_{Kj}]^T$. Assuming an additive Gaussian noise model with gene-specific noise variance $\sigma_j^2 $ we arrive at the likelihood:
 
 \begin{equation}
@@ -43,10 +42,9 @@ where the right hand side is the vectorized form of the model, with the row vect
     \mathcal{L} \left(\mathbf{w}, \beta_j, \sigma_j \;|\; \lbrace x_j(t)\rbrace\right) = 
 \prod_{t=1}^T \mathcal{N}\left(g(x_j(t)) | g\left(P(t; \mathbf{w})\,\beta_j\right),\; \sigma_j^2 \right),
 \end{equation}
-
 where $\mathcal{N}(\cdot | \mu,\sigma^2)$ denotes a Normal density with mean $\mu$ and variance $\sigma^2$ and the function $g$ denotes a transformation whose choice depends on the data type under investigation.
 
-Applied to microarray experiment which use fluorescence intensities to measure expression the transformation $g$ used is $\log_2$. This is of course applied to data which has been normalised for fluorescent intensities \cite{Dudoit:2002va}. When investigating RNA-seq data we use $\arcsinh$ as the transformation \citep{Hoffman:2012gn,Johnson:1949uq}, defined as $\arcsinh(x) = \ln(x + \sqrt(x^2 +1))$ (for more details see Section \ref{sec:norm-stand}). RNA-seq data cannot be normalised in the same way as microarray data most importantly because it contains measurements which are exactly zero. The $\arcsinh$ normalisation is useful here, because unlike the log transformation it does not have a singularity at zero but has the same variance-normalisation properties.
+Applied to microarray experiment which use ratios of fluorescence intensities between measurements in the red spectrum $R$ and green spectrum $G$. The transformation $g$ used is $\log_2$ \cite{Dudoit:2002va}, for further details see Section \ref{sec:microarray}. When investigating RNA-seq data we use $\arcsinh$ as the transformation \citep{Hoffman:2012gn,Johnson:1949uq}, defined as $\arcsinh(x) = \ln(x + \sqrt(x^2 +1))$ (for more details see Section \ref{sec:norm-stand}). RNA-seq data cannot be normalised in the same way as microarray data most importantly because it contains measurements which are exactly zero. The $\arcsinh$ normalisation is useful here, because unlike the log transformation it does not have a singularity at zero but has the same variance-normalisation properties.
 
 To use the likelihood it is necessary to compute the state occupation probabilities at any time $t$ observations are made.
 % We discuss below how to compute these from latent Markov chain process.
@@ -63,12 +61,12 @@ The topology of the Markov chain has implication on identifiability of the model
   \frac{d p_k(t)}{dt} = w_{k-1,k}\, p_{k-1}(t) - w_{k,k+1}\, p_k(t).
 \end{equation}
 
-To simplify further calculations the master equation is rewritten in matrix notation. Let $\mathbf{G}(\mathbf{w})$ be a $K \times K$ matrix whose only non-zero entries are on the diagonal, $g_{kk}=-w_{k,k+1}$, and the subdiagonal $ g_{k\,k-w}=w_{k-1,k}$. Now we can write the master equation as
+To simplify further calculations the master equation is rewritten in matrix notation. Let $\mathbf{G}(\mathbf{w})$ be a $K \times K$ matrix whose only non-zero entries are on the diagonal, $g_{kk}=-w_{k,k+1}$, and the subdiagonal $ g_{k\,k-1}=w_{k-1,k}$. Now we can write the solution to the master equation as
 \begin{eqnarray}
   \label{eq:masterMat}
   P(t; \mathbf{w}) &=& \exp{\left(\mathbf{G}(\mathbf{w})\,t \right) } {P}(0)
-\end{eqnarray} % TODO insert reference
-In investigating transition processes (such as Section REFERENCE HERE) in general an experimental design is chosen such that the initial cell population is in the same state. Therefore we can set the initial conditions for the state occupation probability, $P(0) = (1, 0 , 0, \ldots)$. This means all cells are in state $k=1$ at $t=0$ just before the cell population is perturbed. This allows us to write the closed form solution for the state occupation probability as:
+\end{eqnarray} 
+In investigating transition processes (such as Chapters \ref{cha:oncog-transf}, \ref{cha:stem-cells}) in general an experimental design is chosen such that the initial cell population is in the same state. Therefore we can set the initial conditions for the state occupation probability, $P(0) = (1, 0 , 0, \ldots)$. This means all cells are in state $k=1$ at $t=0$ just before the cell population is perturbed. This allows us to write the closed form solution for the state occupation probability as:
 \begin{eqnarray}
   \label{eq:state-occ}
   P(t; \mathbf{w}) &= & \exp{\left(\mathbf{G}(\mathbf{w})\,t \right) } {P}(0).
@@ -81,9 +79,7 @@ This expression is also used to evaluate the likelihood (equation (\ref{eq:likel
 
 We make a number of assumptions in the above model derivation. Here, we focus on some of the key assumptions made regarding the transition process on a single cell level and investigate them further. Ensuring an analytically tractable latent state change model makes these assumptions necessary. In the discussion below we discuss how legitimate these assumptions are, if and how they can be relaxed and how they can be justified.
 
-First, we assume expression of a gene remains constant while it remains inside a given state. The single cell expression of each gene is modeled by a piecewise flat trajectory where expression changes are instantaneous due to a change in state. It also has the effect that the only time-dependence in the likelihood is due to the state occupation probabilities of the Markov chain. In this simple approximation, interaction between genes are ignored; allowing us to formulate a computationally efficient pipeline to estimate parameters for time courses with many genes, see Section \ref{sec:estim-pipe} for further details. It is a very strong assumption and apart from the noise that is prevalent in most biological systems
-% TODO add reference to noise
-this does not hold in general. Temporal changes within a state should be much smaller than the difference between biologically distinct states for genes influential in such a transition. This case is illustrated in Figure \ref{fig:influential-schematic} and \ref{fig:influential1-schematic}. Therefore this is still a good first approximation in the case of transition processes. 
+First, we assume expression of a gene remains constant while it remains inside a given state. The single cell expression of each gene is modeled by a piecewise flat trajectory where expression changes are instantaneous due to a change in state. It also has the effect that the only time-dependence in the likelihood is due to the state occupation probabilities of the Markov chain. In this simple approximation, interaction between genes are ignored; allowing us to formulate a computationally efficient pipeline to estimate parameters for time courses with many genes, see Section \ref{sec:estim-pipe} for further details. It is a very strong assumption and apart from the noise that is prevalent in most biological systems gene expression also changes inside a state due to cell internal mechanisms e.g. the cell-cycle. The slightly more relaxed but sufficient assumption here is: Temporal changes within a state should be much smaller than the difference between biologically distinct states for genes influential in such a transition. This case is illustrated in Figure \ref{fig:influential-schematic} and \ref{fig:influential1-schematic}. Therefore this is still a good first approximation in the case of transition processes. 
 
 \begin{figure}
   \centering
@@ -106,7 +102,6 @@ this does not hold in general. Temporal changes within a state should be much sm
 \end{figure}
 
 A second assumptions relates to the topology of the Markov chain. To ensure parameter identifiability (see Discussion Section \ref{sec:identifiability}) we have to restrict the latent process to a linear pure birth process. This restricts the topology of the Markov chain quite drastically, but is arguably defensible when applied to externally driven transition processes. The external drive can take many different forms, in the two examples we investigate it is genetic induction. Of course back transitions are likely, for such cases our model is mis-specified and the forward transitions are only effective values where the back transitions have been absorbed into the model. Consequently estimated forward transitions rates are lower than the real values. On occasion back transitions or topologies of the latent process are of interest.
-% Maybe add semicolon
 The likelihood eqn. (\ref{eq:likelihood}) is general and does not make any assumptions about the topology of the Markov chain, but additional data or constraints would be required for identifiability of more complex transition topologies. Often the limiting factor is available data hence we focus here on the more useful but special case where only time-course data is available and the latent stochastic process is a linear birth process. In Section \ref{sec:sim-study} we include a detailed investigation the impact of breaking this assumption in a simulation. 
 % TODO refine ref to
 
@@ -115,6 +110,7 @@ Finally, we assume rates of cell death and cell duplication cancel each other ou
 \subsection{Identifiability}
 \label{sec:identifiability}
 
+Parameter identifiability is a very important concept in STAMM since parameters represent physical properties of cells. A result for the identifiability of such a model with a discrete time latent process was present by \cite{Clifford:1977wa}. Unfortunately there do not exist a conclusive results on identifiability for latent stochastic model with a continuous time latent process. To establish if STAMM is identifiable analytically his highly non-trivial therefore we perform tests for empirical identifiability using single-cell simulations in Section \ref{sec:small-scale-model}. 
 
 \section{Estimation}
 \label{sec:estimation}
@@ -129,8 +125,7 @@ We begin by stating the maximum likelihood estimates (MLEs) based on the likelih
   (\lbrace\hat{\beta}_j\rbrace, \hat{\mathbf{w}}) =  \underset{\lbrace\beta_j\rbrace, \mathbf{w}}{\operatorname{argmin}} \, \sum_{j=1}^p \sum_{t=1}^T \lVert g(x_j(t)) - g\left(P(t; \mathbf{w})\,\beta_j \right) \rVert_2^2,%+ \lambda \lVert \beta_j \rVert_1,
 \end{equation}
 where $\lVert \cdot \rVert_q$ denotes the $\ell_q$ norm with respect to its argument.
-The transformation $g$ is in general non-linear as discussed above (e.g. $\log$ in microarrays or $\arcsinh$ in RNA-seq); for such transformations the MLE (\ref{eq:leastSqrs}) cannot be obtained in closed form. Genome wide measurements yield readings with number of genes, $p$, of up to $~10^4$. Directly optimising eqn. (\ref{eq:leastSqrs}) is not practical for a problem with large $p$. {\color{red} TODO include  plot}. We adopt a two-step estimation procedure proposed by \cite{Armond:2013}. The first step is based on the observation that many genes have similarities in their measured time-courses; this allows us to cluster genes obtaining $m$ clusters describing typical temporal patterns. Details for choosing the parameter $m$ are discussed in Section \ref{sec:estim-pipe}. The $m$ cluster centroids are used to estimate the transition rates $\mathbf{w}$ via eqn. (\ref{eq:leastSqrs}), instead of all genes. This approach reduces computation time significantly when $m << p$. 
-% TODO add a curve for times taken to fit for increasing number of data
+The transformation $g$ is in general non-linear as discussed above (e.g. $\log$ in microarrays or $\arcsinh$ in RNA-seq); for such transformations the MLE (\ref{eq:leastSqrs}) cannot be obtained in closed form. Genome wide measurements yield readings with number of genes, $p$, of up to $~10^4$. Directly optimising eqn. (\ref{eq:leastSqrs}) is not practical for a problem with large $p$ as the parameter space rapidly increases. We adopt a two-step estimation procedure proposed by \cite{Armond:2013}. The first step is based on the observation that many genes have similarities in their measured time-courses; this allows us to cluster genes obtaining $m$ clusters describing typical temporal patterns. Details for choosing the parameter $m$ are discussed in Section \ref{sec:estim-pipe}. The $m$ cluster centroids are used to estimate the transition rates $\mathbf{w}$ via eqn. (\ref{eq:leastSqrs}), instead of all genes. This approach reduces computation time significantly when $m << p$. 
 The transition rates estimated using cluster centroids, $\hat{\mathbf{w}}$, are fixed and the $\beta$ values for all remaining genes are estimated. The MLE is now written as:
 \begin{equation}
   \label{eq:leastSqrs.indep}
@@ -145,7 +140,7 @@ The optimisation eqn. (\ref{eq:leastSqrs.indep}) greatly simplifies estimation (
 
 The estimation steps described in Section \ref{sec:parameter-estimation} apply to a model with a fixed number of states $K$. Here we present a procedure to determine the number of states $K$ that best represent a data set under investigation. Depending on the application $K$ itself can be of scientific interest. In general estimated state-specific expression signatures, $\beta$, are influenced by the number of states. Underestimating number of states results in distinct states being merged. Overestimating the number of states introduces artificial states in the transformation. Both scenarios lead to poor estimation of parameters. 
 
-In general model selection can be performed using a form of cross-validation (CV) by leaving out part of the data as a validation set.  {\color{red} TODO include BIC AIC reference move to supplement}. In applications to time-series, cross-validation is often non-trivial due to discrete and irregularly spaced observations. The STAMM model has an underlying continuous-time latent process, which allows for prediction of any time points from estimated parameters; therefore comparison between predicted time-points from estimated parameters and the corresponding held-out time-points. In this application due to poor time resolution it is often not possible to include more than one time point in the validation data; this variant is called leave-one-out cross-validation (LOOCV). If $t$ is the held-out time point let the estimated parameters for the remaining subset be rates $\hat{\bf{w}}^{-t}$, state specific expression $\lbrace \hat{\beta}_j^{-t} \rbrace$ and gene-specific standard deviation $\lbrace \hat{\sigma}_j^{-t} \rbrace$. State occupation probabilities at the held-out time point  $P(t; \hat{\bf{w}}^{(-t)})$ are obtained by solving the master equation using estimates derived from the training data. There we can now write a prediction for the expression of gene $j$ at the held-out time point $\hat{x}^{\mathrm{CV}}_j(t) = P(t; \hat{\bf{w}}^{(-t)})\, \hat{\beta}_j^{(-t)}$ and the cross-validation 
+In general model selection can be performed using a form of cross-validation (CV) by leaving out part of the data as a validation set. In some cases it is also possible to use BIC when the number e.g. when the number of genes is small, but this quickly breaks down as $p$ increases therefore we restrict ourselves to CV (see Section \ref{sec:model-selection-with} for further details). In applications to time-series, cross-validation is often non-trivial due to discrete and irregularly spaced observations. The STAMM model has an underlying continuous-time latent process, which allows for prediction of any time points from estimated parameters; therefore comparison between predicted time-points from estimated parameters and the corresponding held-out time-points. In this application due to poor time resolution it is often not possible to include more than one time point in the validation data; this variant is called leave-one-out cross-validation (LOOCV). If $t$ is the held-out time point let the estimated parameters for the remaining subset be rates $\hat{\bf{w}}^{-t}$, state specific expression $\lbrace \hat{\beta}_j^{-t} \rbrace$ and gene-specific standard deviation $\lbrace \hat{\sigma}_j^{-t} \rbrace$. State occupation probabilities at the held-out time point  $P(t; \hat{\bf{w}}^{(-t)})$ are obtained by solving the master equation using estimates derived from the training data. There we can now write a prediction for the expression of gene $j$ at the held-out time point $\hat{x}^{\mathrm{CV}}_j(t) = P(t; \hat{\bf{w}}^{(-t)})\, \hat{\beta}_j^{(-t)}$ and the cross-validation 
 mean squared error ($\mathrm{MSE_{CV}}$) is simply
 \begin{equation}
   \mathrm{MSE_{CV}}  =  \sum_{t=2}^T \sum_{j=1}^p \frac{1}{\hat{\sigma}_j^{(-t)}}\bigl( g(\hat{x}^{\mathrm{CV}}_j(t)) - g(x_j(t)) \bigr)^2.
@@ -157,7 +152,7 @@ The strength of this type of model selection in comparison to the Bayesian appro
 \begin{figure}
   \centering
   \includegraphics[width=0.9\textwidth]{pics/pipeline.pdf}
-  \caption{Schematic of estimation pipeline.}
+  \caption{Schematic of estimation pipeline. Clustering of normalised gene trajectories provides an optimum number of clusters $\hat{m}$, the centroids of the clusters summarise typical trajectories contained in data. Fitting the model to centroids we can find transition rates $w$. Stability of estimate test is performed to determine the need for penalisation of model parameters with strength $\lambda$. State-specific gene expression signatures $\beta_{kj}$ are estimated by varying the number of states in the model $K$ and $\lambda$ (if applicable). Optimum number of states are determined by performing a form of cross-validation. Finally sensitivity of estimation to change in $\hat{m}$ is performed. If necessary the pipeline is rerun with a better choice of $\hat{m}$.}
   \label{fig:pipeline}
 \end{figure}
 
@@ -202,17 +197,17 @@ To test the validity of the model we need to test it with simulated data where t
 
 Here we describe the step by step simulation procedure for a $K$ state model independent of the number of genes simulated:
 
-\paragraph{State transitions.}
-\label{sec:state-transitions}
-
-When setting transition rates between discrete states of the Markov chain we need to keep a few things in mind. Firstly the smallest sampled (observed in real data) time step needs to be smaller than the transition rates. Just like in typical experimental designs for transition processes. Additionally the model won't be able to extract information about a process taking place on a time-scale smaller than gaps between observations. Secondly we are considering transitions processes driven towards an established final state (e.g. oncogenic transformation, pluripotency); so to mimic this behaviour in simulated data we need to insure the occupation probability for the final state is higher than the others at the final time point. Of course in realistic experiments even at the final time point the cell population will still be heterogeneous In the discussion that follows in Section \ref{sec:results} we use the three transition rates $[1/5, 1/8, 1/15]$ for four state model. In Figure \ref{fig:transition-rates} we show the state occupation probabilities for these parameters and $k=4$ has an occupation probability of $\approx 0.64$ at the final time point. For every cell in the simulation, state transitions are simulated by drawing jump-times from exponential distribution with parameters given by transition rates as defined for a continuous-time Markov chain.
-
 \begin{figure}
   \centering
   \includegraphics[width=0.7\textwidth]{pics/trans-rates.pdf}
-  \caption{Simulation study. State occupation probabilities for a four state model.}
+  \caption{Simulation study. State occupation probabilities for a four state model with transition rates $[1/5, 1/8, 1/15]$. The transition rates are set to these values for all simulations, the values are chosen to allow $k=4$ to have a high occupation probability at the final time-point of the simulation.}
   \label{fig:transition-rates}
 \end{figure}
+
+\paragraph{State transitions.}
+\label{sec:state-transitions}
+
+When setting transition rates between discrete states of the Markov chain we need to keep a few things in mind. Firstly the smallest sampled (observed in real data) time step needs to be smaller than the transition rates. Just like in typical experimental designs for transition processes. Additionally the model won't be able to extract information about a process taking place on a time-scale smaller than gaps between observations. Secondly we are considering transitions processes driven towards an established final state (e.g. oncogenic transformation, pluripotency); so to mimic this behaviour in simulated data we need to insure the occupation probability for the final state is higher than the others at the final time point. Of course in realistic experiments even at the final time point the cell population will still be heterogeneous In the discussion that follows in Section \ref{sec:results} we use the three transition rates $[1/5, 1/8, 1/15]$ for four state model. In Figure \ref{fig:transition-rates} we show the state occupation probabilities for these parameters and $k=4$ has an occupation probability of $\approx 0.89$ at the final time point. For every cell in the simulation, state transitions are simulated by drawing jump-times from exponential distribution with parameters given by transition rates as defined for a continuous-time Markov chain.
 
 \paragraph{State-specific expression levels.}
 \label{sec:state-spec-expr}
@@ -331,8 +326,8 @@ Here number of parameters increase with number of states, and as a result model 
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{pics/hist-all.pdf}
-  \caption{Simulation study. We perform fifty independent small scale simulation with $p=9$. }
+  \includegraphics[width=0.9\textwidth]{pics/hist-all.pdf}
+  \caption{Simulation study. We perform fifty independent small scale simulation with $p=9$ at four different noise levels $\sigma = \lbrace 0.05, 0.1, 0.15, 0.2\rbrace$ for $K=4$. We perform model selection using a form of cross-validation and find the state $K$ that minimises the $MSE_{CV}$ score, top row. As a comparison we also show fit to data and find the state $K$ that minimises $MSE$. We find that at even at very high noise levels using $MSE_{CV}$ it is possible to identify the right model. An example trajectory and parameters can be seen in Figure \ref{fig:small-scale-sim}.}
   \label{fig:small-scale-modelSlct}
 \end{figure}
 
@@ -358,51 +353,53 @@ the probability calculated from true values. The average is taken over both the 
 \subsubsection{Cell death and cell doubling}
 \label{sec:death-duplication}
 
-An assumption we make in STAMM is that cell death and cell duplication happens at a constant rate across all states in the transformation process. This is of course not the case in the discussed example of oncogenic transformation, since transformed tumorous cells have a much higher proliferation rate than the initially healthy cells. In the single cell simulation setup we sample a time of death, $t_i^{d}$, and a time for cell doubling, $t_i^{dup}$, from an exponential distribution. If sampled rates for a cell are outside of the time range of the simulation, the cell remains unchanged. If they are both in the range there are two possible scenarios. Firstly if the death rate is the smaller of the two, cell $i$ is taken out of the simulation $t>t_i^d$. Secondly if $t_i^{dup}<t_i^d$, cell $i$ is taken out of the simulation at $t > t_i^{dup}$ and two new cells are simulated with new sampled state transitions. The simulation and estimate is performed $10$ times. Investigating the oncogenic transformation discussed in the paper it was observed that generally cells have a doubling rate of close to $0.05$ i.e. doubling of cells is roughly every 20 hours. In Figure \ref{fig:dupl-realistic} we fix the doubling rate and since cells in this experiment rarely die, we choose very small death rates. The left panel shows the average as a dark line and the shaded area represents the standard deviation for the $10$ repeated simulations. The middle panel shows boxplots for the estimated average transition times. The right panel shows the mean differences between estimated and true probabilities averaged over $10$ trajectories as a solid line and the shaded area represents the standard deviation.
-
-In Figure \ref{fig:dupl-all} we include additional cell doubling rates. In general gene expression signatures are estimated well, but the transition rates are not. During estimation transition rates only enter as probabilities hence badly estimated transition rates don't have a significant negative effect on the estimation of expression signatures. To see what effect the different parameters have on the number of cells simulated at any given time Figure \ref{fig:no-cells-dupl} show the number of cells as a function of time for different cell death and cell doubling rates.
-
-\begin{figure}[b]
+\begin{figure}
   \centering
   \includegraphics[width=0.9\textwidth]{pics/realist-dupl.pdf}
-  \caption{Simulation study. Testing assumption about cell death and cell doubling. For each cell a time of death, $t_i^{d}$, and a time for cell doubling, $t_i^{dup}$, is sampled from an exponential distribution with varying average rates. If the sampled rates for a cell are outside of the time range of the simulation, the cell remains unchanged. If they are both in the range there are two options. The first option is that the death rate is the smaller of the two in that case the cell $i$ is taken out of the simulation $t>t_i^d$. If $t_i^{dup}<t_i^d$, cell $i$ is taken out of the simulation at $t > t_i^{dup}$ and two new cells are simulated with new state transitions. The simulation and fit is performed $10$ times.  In experiments we observe cell doubling time to be roughly 18 hours and very few dead cells. Therefore we simulation with a cell doubling rate of $0.05$ and a variety of death rates. The left panel shows the average as a dark line and the shaded area represents the standard deviation for the $10$ repeated simulations. The middle panel shows boxplots for the estimated average transition times. The right panel shows the mean differences between estimated and true probabilities averaged over $10$ trajectories as a solid line and the shaded area represents the standard deviation.}
+  \caption{Simulation study. Testing assumption about cell death and cell doubling. For each cell a time of death, $t_i^{d}$, and a time for cell doubling, $t_i^{dup}$, is sampled from an exponential distribution with varying average rates. If the sampled rates for a cell are outside of the time range of the simulation, the cell remains unchanged. If they are both in the range there are two options. The first option is that the death rate is the smaller of the two in that case the cell $i$ is taken out of the simulation $t>t_i^d$. If $t_i^{dup}<t_i^d$, cell $i$ is taken out of the simulation at $t > t_i^{dup}$ and two new cells are simulated with new state transitions. The simulation and fit is performed $10$ times. In experiments we observe cell doubling time to be roughly 18 hours and very few dead cells. Therefore we simulation with a cell doubling rate of $0.05$ and a variety of death rates. The left panel shows the average as a dark line and the shaded area represents the standard deviation for the $10$ repeated simulations. The middle panel shows boxplots for the estimated average transition times. The right panel shows the mean differences between estimated and true probabilities averaged over $10$ trajectories as a solid line and the shaded area represents the standard deviation.}
   \label{fig:dupl-realistic}
 \end{figure}
 
-
-  \begin{figure}[h]
+\begin{figure}
     \centering \includegraphics[width=1\textwidth]{pics/n-cell.pdf}
     \caption{Simulation study. Testing assumptions about cell death and cell doubling. Plots show number of cells at different time during the simulation for one of the $10$ simulations. Each panel represents different death rates and each colour different doubling rates.}
 \label{fig:no-cells-dupl}
 \end{figure}
 
+An assumption implicit in STAMM is that cell death and cell duplication happens at a constant rate across all states in the transformation process. This is of course not the case in the discussed example of oncogenic transformation, since transformed tumorous cells have a much higher proliferation rate than the initially healthy cells. In the single cell simulation setup we sample a time of death, $t_i^{d}$, and a time for cell doubling, $t_i^{dup}$, from an exponential distribution. If sampled rates for a cell are outside of the time range of the simulation, the cell remains unchanged. If they are both in the range there are two possible scenarios. Firstly if the death rate is the smaller of the two, cell $i$ is taken out of the simulation $t>t_i^d$. Secondly if $t_i^{dup}<t_i^d$, cell $i$ is taken out of the simulation at $t > t_i^{dup}$ and two new cells are simulated with new sampled state transitions. The simulation and estimate is performed $10$ times. Investigating the oncogenic transformation discussed in the paper it was observed that generally cells have a doubling rate of close to $0.05$ i.e. doubling of cells is roughly every 20 hours. In Figure \ref{fig:dupl-realistic} we fix the doubling rate and since cells in this experiment rarely die, we choose very small death rates. The left panel shows the average as a dark line and the shaded area represents the standard deviation for the $10$ repeated simulations. The middle panel shows boxplots for the estimated average transition times. The right panel shows the mean differences between estimated and true probabilities averaged over $10$ trajectories as a solid line and the shaded area represents the standard deviation.
+
+In Figure \ref{fig:dupl-all} we include additional cell doubling rates. In general gene expression signatures are estimated well, but the transition rates are not. During estimation transition rates only enter as probabilities hence badly estimated transition rates don't have a significant negative effect on the estimation of expression signatures. To see what effect the different parameters have on the number of cells simulated at any given time Figure \ref{fig:no-cells-dupl} show the number of cells as a function of time for different cell death and cell doubling rates.
+
+
+
 \paragraph{Back transitions}
 \label{sec:back-transitions}
 
-The second assumption we test is the inclusion of back transitions in the single cell. We simulate trajectories with back transition from $k=4$ to $k=3$; they are sampled from exponential distributions with different means. In Figure \ref{fig:back} we show comparisons between estimated and true values of parameters as a function of the average back transition time from state $k=$. In the left panel we plot the average correlation for $10$ independent runs, between true and estimated $\beta_{kj}$ parameters as a solid line. The shaded area shows the standard deviation. The vertical dashed red line shows the average forward transition time for $k=3$. The middle panel shows boxplots for the average transition rate estimated from the model for a system with $K=4$ and only forward transitions. The right panel shows the mean differences between estimated and true probabilities averaged over $10$ trajectories as a solid line and the shaded area represents the standard deviation.
-
-\begin{figure}[h]
+\begin{figure}
   \centering \includegraphics[width=1\textwidth]{pics/back-trans.pdf}
   \caption{Simulation study. To test the affect of back transition on the estimation, we simulate trajectories with back transition at $k=4$ with different transition times. In the left panel we plot the average correlation for $10$ independent runs, between true and estimated $\beta_{kj}$ parameters for different average time for the back transition as a solid line. The shaded area shows the standard deviation. The vertical dashed red line shows the average forward transition time for $k=3$. The middle panel shows boxplots for the average transition rate estimated from the model for a system with $K=4$ and only forward transitions. The right panel shows the mean differences between estimated and true probabilities averaged over $10$ trajectories as a solid line and the shaded area represents the standard deviation.}
     \label{fig:back}
 \end{figure}
 
+
+The second assumption we test is the inclusion of back transitions in the single cell. We simulate trajectories with back transition from $k=4$ to $k=3$; they are sampled from exponential distributions with different means. In Figure \ref{fig:back} we show comparisons between estimated and true values of parameters as a function of the average back transition time from state $k=$. In the left panel we plot the average correlation for $10$ independent runs, between true and estimated $\beta_{kj}$ parameters as a solid line. The shaded area shows the standard deviation. The vertical dashed red line shows the average forward transition time for $k=3$. The middle panel shows boxplots for the average transition rate estimated from the model for a system with $K=4$ and only forward transitions. The right panel shows the mean differences between estimated and true probabilities averaged over $10$ trajectories as a solid line and the shaded area represents the standard deviation.
+
 \paragraph{Markovian assumption}
 \label{sec:stud-t-distr}
 
-Finally in this section we investigate the latent Markov process and consider a case where jumps are non-Markovian. We want to consider the more realistic case that the transition time is fat tailed; therefore we choose a truncated Student t-distribution with a variety since transition rates are positive. We sample using the \emph{tmvtnorm} package in R with degrees of freedom, $df$, as the varied parameter. We perform the simulation as before, but sample transition rates from the t-distribution with means $(1/5, 1/8, 1/15)$ and consider a range of $df$ parameters in \emph{tmvtnorm}. The results are shown in Figure \ref{fig:student}; the left panel shows the mean correlation between true and estimated $\beta_{kj}$ as a solid line and the shaded area constrains the standard deviation. The middle panel shows boxplots for the average transition rate estimated from the model for a system with $K=4$ and only forward transitions. The right panel shows the mean differences between estimated and true probabilities averaged over $10$ trajectories as a solid line and the shaded area represents the standard deviation.
 
-\begin{figure}[h]
+\begin{figure}
   \centering \includegraphics[width=1\textwidth]{pics/student-t.pdf}
   \caption{Simulation study. We simulate from a non-Markovian system, one where average transition rates are heavy tailed. Here we sample from a truncated Student t-distribution using the \emph{tmvtnorm} package in R. It is truncated at zero since transition rates are always positive. The transition rates are sampled to have means $(1/5, 1/8, 1/15)$ and we vary the degrees of freedom $df$ parameter in the package used. In the left panel we show the average correlation between true and estimated $\beta_{kj}$, the mean is shown as a solid line and the standard deviation as a shaded area. The middle panel shows boxplots for the for the average transition time estimated from the model for a system with $K=4$ states. The right panel shows the mean differences between estimated and true state occupation probabilities averaged over $10$ trajectories as a solid line and the shaded area represents the standard deviation.}
 \label{fig:student}
 \end{figure}
 
 
+Finally in this section we investigate the latent Markov process and consider a case where jumps are non-Markovian. We want to consider the more realistic case that the transition time is fat tailed; therefore we choose a truncated Student t-distribution with a variety since transition rates are positive. We sample using the \emph{tmvtnorm} package in R with degrees of freedom, $df$, as the varied parameter. We perform the simulation as before, but sample transition rates from the t-distribution with means $(1/5, 1/8, 1/15)$ and consider a range of $df$ parameters in \emph{tmvtnorm}. The results are shown in Figure \ref{fig:student}; the left panel shows the mean correlation between true and estimated $\beta_{kj}$ as a solid line and the shaded area constrains the standard deviation. The middle panel shows boxplots for the average transition rate estimated from the model for a system with $K=4$ and only forward transitions. The right panel shows the mean differences between estimated and true probabilities averaged over $10$ trajectories as a solid line and the shaded area represents the standard deviation.
+
+
 \subsection{Large scale simulation}
 \label{sec:large-scale-model}
-
-Lastly we want to check how well the two-step estimation pipeline outlined in Section \ref{sec:estim-pipe} works applied to simulated data. We simulate $p=120$ genes as described above with $K=4$ states. To mirror real data where genes are on different scales, we sample $12$ scale parameters $tau$. To get to $p=120$ genes we sample from all scale parameter $10$ sets of $\beta$ values. All other parameters are as set out in Section \ref{sec:sim-study}. We follow the procedure set out above and start by clustering simulated trajectories into $m$ clusters. Then we estimated transition rates $\mathbf{w}$ from cluster centroids and keep them fixed for the second step. Next we use these transition rates and estimate expression signatures $\beta_j$ independently for each gene $j$.
 
 \begin{figure}
   \centering
@@ -419,13 +416,13 @@ Lastly we want to check how well the two-step estimation pipeline outlined in Se
 \end{figure}
 
 
+Lastly we want to check how well the two-step estimation pipeline outlined in Section \ref{sec:estim-pipe} works applied to simulated data. We simulate $p=120$ genes as described above with $K=4$ states. To mirror real data where genes are on different scales, we sample $12$ scale parameters $tau$. To get to $p=120$ genes we sample from all scale parameter $10$ sets of $\beta$ values. All other parameters are as set out in Section \ref{sec:sim-study}. We follow the procedure set out above and start by clustering simulated trajectories into $m$ clusters. Then we estimated transition rates $\mathbf{w}$ from cluster centroids and keep them fixed for the second step. Next we use these transition rates and estimate expression signatures $\beta_j$ independently for each gene $j$.
+
+
+
 
 \subsection{Number of states}
 \label{sec:number-states-res}
-
-Applying the first step we cluster the simulated data using a k-means clustering algorithm. We use the relative decrease in the objective function $\Delta J(m)$ to determine the number of clusters and vary $m$ in the range $[2, 30]$, see Figure \ref{fig:lrg-sim-clust}. The relative decrease is smaller than $0.1$ for $m=12$ therefore we choose $\hat{m} = 13$. Note that for larger $m$ the objective function $J(m)$ is small and we observe that $\Delta J(m)$ has large fluctuations due to slight deviations in the objective function. Then we test if for this set of data penalisation is necessary using stability of estimated gene expression signatures under deletion of time points. Figure \ref{fig:lrg-sim-stab-l1} shows that for all deletions estimated parameters are stable, therefore we conclude that there is no need for a penalty term. Then we perform a model selection step to determine the number of states $K$ of the latent Markov chain. We compute the $\mathrm{MSE_{CV}}$ score for $K=\lbrace 2, \ldots, 5 \rbrace$ states, see Figure \ref{fig:lrg-sim-k}; we see a clear minimum for $K=4$ which is also the correct number of states. In the final step of the pipeline we perform a post-estimation stability test to ensure the number of clusters chosen is not too small (see Section \ref{sec:estim-pipe}). We compute the correlation for expression parameters estimated with increasing number of clusters, see Figure \ref{fig:lrg-sim-mStab}. We carry out this test for all models $K = \lbrace 2 \ldots 5\rbrace $ and the estimated parameters are stable therefore we conclude that the choice of $\hat{m}$ was sensible. 
-
-A question that arises from these results is to what extent they are indicative of estimation or if states are only estimated because the model assumes there are states in data. One good way of addressing this question is to permute data and compare  $\mathrm{MSE_{CV}}$ estimated for permuted data and the original data. Here we distinguish between two ways of permuting data: first we perform a coordinated permutation where all simulated trajectories are permuted in the same way. Then we perform a permutation for each trajectory independently. In Figure \ref{fig:larg-sim-permute} we show the results and we can see that with both types of permutations the $\mathrm{MSE_{CV}}$ values are significantly larger than the original data set.
 
 \begin{figure}
   \centering
@@ -437,40 +434,56 @@ A question that arises from these results is to what extent they are indicative 
 \begin{figure}
   \centering
   \subfigure[Number of states]{
-    \includegraphics[width=0.48\textwidth]{pics/loocv-sim.pdf}
+    \includegraphics[width=0.46\textwidth]{pics/loocv-sim.pdf}
     \label{fig:lrg-sim-k}
-  }
+      }
   \subfigure[Stability number of clusters]{
-    \includegraphics[width=0.48\textwidth]{pics/stab-m-sim.pdf}
+    \includegraphics[width=0.46\textwidth]{pics/stab-m-sim.pdf}
     \label{fig:lrg-sim-mStab}
   }
   \subfigure[Permuted time points]{
     \includegraphics[width=0.48\textwidth]{pics/sim_permute.pdf}
     \label{fig:larg-sim-permute}
   }
-  \caption{Large scale simulation. }
+  \caption{Large scale simulation. Simulation performed for $p=150$ genes, $15$ time points and $K=4$. Figures summarise results obtained from applying the estimation pipeline (see Section \ref{sec:estim-pipe}) to the simulated data. \subref{fig:lrg-sim-k} $\mathrm{MSE_{CV}}$ score to determine optimal number of states in the model, the minimum is at $K = 4$. \subref{fig:lrg-sim-mStab} Test to determine stability under perturbation of number of clusters $\hat{m}$. Estimation is stable therefore the choice of parameters is reasonable. \subref{fig:larg-sim-permute} To determine dependence on structure of data we perform a permutation test, first by permuting time-points of all trajectories in a coordinated fashion and then by permuting trajectories independently. The $\mathrm{MSE_{CV}}$ score for permuted data is significantly higher for all $K$ other than $K=1$ and data permuted in a coordinated fashion perform better than independently permuted data.}
   \label{fig:lrg-sim-k-m}
 \end{figure}
+
+
+Applying the first step we cluster the simulated data using a k-means clustering algorithm. We use the relative decrease in the objective function $\Delta J(m)$ to determine the number of clusters and vary $m$ in the range $[2, 30]$, see Figure \ref{fig:lrg-sim-clust}. The relative decrease is smaller than $0.1$ for $m=12$ therefore we choose $\hat{m} = 13$. Note that for larger $m$ the objective function $J(m)$ is small and we observe that $\Delta J(m)$ has large fluctuations due to slight deviations in the objective function. Then we test if for this set of data penalisation is necessary using stability of estimated gene expression signatures under deletion of time points. Figure \ref{fig:lrg-sim-stab-l1} shows that for all deletions estimated parameters are stable, therefore we conclude that there is no need for a penalty term. Then we perform a model selection step to determine the number of states $K$ of the latent Markov chain. We compute the $\mathrm{MSE_{CV}}$ score for $K=\lbrace 2, \ldots, 5 \rbrace$ states, see Figure \ref{fig:lrg-sim-k}; we see a clear minimum for $K=4$ which is also the correct number of states. In the final step of the pipeline we perform a post-estimation stability test to ensure the number of clusters chosen is not too small (see Section \ref{sec:estim-pipe}). We compute the correlation for expression parameters estimated with increasing number of clusters, see Figure \ref{fig:lrg-sim-mStab}. We carry out this test for all models $K = \lbrace 2 \ldots 5\rbrace $ and the estimated parameters are stable therefore we conclude that the choice of $\hat{m}$ was a reasonable choice. 
+
+A question that arises from these results is to what extent they are indicative of estimation or if states are only estimated because the model assumes there are states in data. One good way of addressing this question is to permute data and compare  $\mathrm{MSE_{CV}}$ estimated for permuted data and the original data. Here we distinguish between two ways of permuting data: first we perform a coordinated permutation where all simulated trajectories are permuted in the same way. Then we perform a permutation for each trajectory independently. In Figure \ref{fig:larg-sim-permute} we show the results and we can see that with both types of permutations the $\mathrm{MSE_{CV}}$ values are significantly larger than the original data set.
+
 
 \subsubsection{Estimated parameters}
 \label{sec:transition-rates}
 
 One of the strengths of using simulated data is that we can compare estimated and true parameters. Figure \ref{fig:lrg-sim-scatter-b} shows a scatter plot of estimated $\beta$ parameters against their true values used in the simulation. The parameters are in general well estimated with a Pearson correlation of $0.95$; despite that as the plot shows in certain cases the true value of $\beta$ is exactly zero but estimates are non-zero. 
 
-\begin{figure}
+\begin{figure}[!h]
   \centering
   \includegraphics[width=0.8\textwidth]{pics/beta-sim.pdf}
   \caption{Large scale simulation. Estimated gene expression signatures scattered against their true values. }
-
   \label{fig:lrg-sim-scatter-b}
 \end{figure}
 
 The first clustering step we take is crucial and has a considerable affect on parameter estimation of transition rates. Hence it is valuable to delve a bit deeper into the first estimation step and its sensitivity to the number of clusters. Figure \ref{fig:lrg-sim-mStab} shows that estimates expression signatures are very stable when increasing number of clusters. Figure \ref{fig:lrg-sim-trans} shows the three transition rates for a model with $K=4$ as a function of $m$. The horizontal dashed lines in the plot show true transition rates. We observe that estimated transition rates strongly fluctuate for small $m$ and with increasing number of clusters fluctuations decrease. are highly sensitive to changes in $m$,
 
-\section{Summary}
-\label{sec:summary}
+\section{Discussion}
+\label{sec:discussion}
+
+We present an extension to previous work with a detailed description of the model including its assumptions, an unbiased estimation pipeline and simulation based tests to investigate STAMM recently proposed in \cite{Armond:2013}. To address concerns about practical application we have made computation more efficient including the use of parallelisation which due the two-step estimation process allows much larger efficiency; the exploration of model behaviour under violation of underlying assumptions; and an extension to allow for application to RNA-seq data though more on that in Chapter \ref{cha:oncog-transf}.
 
 
+% sims and identifaibility
+
+Establishing investigating identifiability in a latent stochastic model aggregate over single-cells is highly non-trivial. Some relevant literature exists \citep{Kalbfleisch:1983vd, Kalbfleisch:1984wz, Kalbfleisch:1985tw}), but it is applied to panel data or the latent stochastic model is in discrete time. Identifiability results that can directly be applied to STAMM do not exist yet.  Therefore we present empirical results using single-cell simulations and show that true parameters used during simulation can be identified. However it is important to understand the explore restrictions on Markov chain topology. Especially if there is potential for allowing more complex topology (e.g. including branches or back transitions) by including additional single cell data. This would allow for precise experimental design in applications to ensure more details can be determined about transformation processes.
+  
+To allow for efficient estimation and to ensure identifiability of model parameters a number of simplifying assumptions are made in STAMM. Of course these assumptions do not hold in real biological systems. To investigate capabilities and limits of STAMM we simulated data by braking these assumptions in turn. In summary, we find the model relatively robust under violations of underlying assumptions, but especially transition rates under strong violations of the assumptions are estimated badly. This leads to the conclusion that even though state-specific gene expression signatures are often well estimated they should serve as hypothesis to be confirmed by experiment.
+
+% future prospects, how can be used to design experiments
+
+STAMM is versatile in its application as it can be used for a broad range of transition processes and data types. Two data types we investigate in this thesis are microarray data and RNA-seq data but it can also applied to transcript, protein and epigenetic time course assays. New development of cheaper bulk assays means it is a feasible first step to study a transforming biological system. STAMM could be used to identify a subset of genes important in transformation; to pinpoint cell surface markers that distinguish states facilitating a single cell separation; or discovery of transition to allow for targeted single-cell experiments. Using multiple types of data in iterative stages would allow for a step by step improvement in information gathered about the system. For instance once transition rates are known estimation of expression signatures is much more precise and vice versa. In future it would also be interesting to relax some of the assumptions made and extend them model.
 
 
 %%% Local Variables:

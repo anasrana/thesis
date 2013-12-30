@@ -1,7 +1,7 @@
 \section{Introduction}
 \label{sec:introduction-rep}
 
-Another application of the STAMM model is to reprogramming of somatic cell to a pluripotent state as investigated in \cite{Armond:2013}. In the experimental setup a mouse embryonic fibroblasts (MEFs) is used and transformed to a state of pluripotency \citep{Takahashi:2006hi,Jaenisch:2008cz} {\color{red} [15]}. More specifically we apply the model to the genome-wide microarray gene expression time-course data obtained by \cite{SamavarchiTehrani:2010cp}. It is a system that has been extensively studied in recent years and it is suggested that the reprogramming process is inherently stochastic \citep{Hanna:2009ix}. Progress has also been made on a single-cell investigations of the biological system \citep{Buganim:2012hp} {\color{red} ([20, 21, 22])}. Question still remain on genome-wide level including the number of intermediate state between the initial MEF state and the final pluripotent state. 
+Another application of the STAMM model is to reprogramming of somatic cell to a pluripotent state as investigated in \cite{Armond:2013}. In the experimental setup a mouse embryonic fibroblasts (MEFs) is used and transformed to a state of pluripotency \citep{Takahashi:2006hi,Jaenisch:2008cz}. More specifically we apply the model to the genome-wide microarray gene expression time-course data obtained by \cite{SamavarchiTehrani:2010cp}. It is a system that has been extensively studied in recent years and it is suggested that the reprogramming process is inherently stochastic \citep{Hanna:2009ix}. Progress has also been made on a single-cell investigations of the biological system \citep{Buganim:2012hp}. Question still remain on genome-wide level including the number of intermediate state between the initial MEF state and the final pluripotent state. 
 
 In this Chapter we start by briefly outlining results obtained \cite{Armond:2013} when applying STAMM to a microarray data set in Section \ref{sec:iPsc-results}. Then (in Section \ref{sec:test-single-cell}) we discuss the main contribution in detail which is a comparative study of parameters obtained from STAMM and single cell experiments performed by \cite{Buganim:2012hp}. The single cell data was obtained by a new kind of experimental technique called a Fluidigm assay. This also illustrates an example of a possible next step in investigating a biological system once parameters from STAMM have been obtained. 
 
@@ -85,6 +85,13 @@ Next we try to determine if state specific expression signatures estimated from 
 }
   \label{fig:buganim-heat}
 \end{figure}
+
+\section{Discussion}
+\label{sec:discussion-ips}
+
+We showed how STAMM can be applied to the transformation of differentiated cells from MEF to iPS cells with the help of reprogramming factors. The data used for the first part of the analysis was a population averaged microarray time-course. We outlined the procedure used in \cite{Armond:2013} highlighting differences to the estimation pipeline introduced in Section \ref{cha:stamm}. We present results from fitting STAMM to the data and we find that a four state model best describes stem-cell reprogramming which has also been corroborated by previous experiments \cite{SamavarchiTehrani:2010cp}. Additionally we showed that data indeed has underlying  structure that can be described by STAMM. To test this we performed estimation for ten samples with randomly permuted time points and compare RSS scores, condition number and Bayesian model selection. We found that RSS and condition number are always lower for the original data than the permuted data. The Bayesian model selection result show a very high concentration at $K=1$ states. 
+
+We also compared model predictions from STAMM to the single-cell data obtained in a different secondary MEF experiment measuring $48$ genes for $96$ single-cells \citep{Buganim:2012hp}. We used a standard clustering tool and determined only $3$ states in the data which can either mean that there is not sufficient information available or that intermediate states are characterised by genes not measured in this experiment. If we map single-cell measurements at different time points to gen expression signatures we find that single-cells measured at different times are close to the states predicted by our model at those times. These results are encouraging but for them to be conclusive as mentioned above we would need to carry out further experiments. 
 
 
 %%% Local Variables:

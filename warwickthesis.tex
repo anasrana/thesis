@@ -36,19 +36,22 @@
 %\documentclass[11pt,a4paper,twoside]{report}      %% LaTeX2e document.
 %%* Removed twoside option
 \documentclass[11pt,a4paper]{report}      %% LaTeX2e document.
-\usepackage{warwickthesis,setspace,graphicx,subfigure}     %!  setspace is used to control linepacing
+\usepackage{warwickthesis,setspace,subfigure,graphicx}     %!  setspace is used to control linepacing
 \usepackage[square]{natbib}                    %! needed for Harvard style of references.
-                                                %! for more notes see the bibliography section below
+% ! for more notes see the bibliography section below
+
 \usepackage{xcolor}
 \usepackage{algorithm}
 \usepackage{algorithmicx}
 \usepackage{algpseudocode}
-\usepackage{amsmath}
+\usepackage{amsmath, amsfonts}
 \usepackage{enumerate}
+\usepackage{amssymb}
+\renewcommand{\labelitemi}{\tiny$\blacksquare$}
 \usepackage{algorithm,algorithmicx,algpseudocode}
 \usepackage[toc,page]{appendix}
-\usepackage[T1]{fontenc}
-%% Choose one of the following (if not choosing the default,
+ % \usepackage[T1]{fontenc}
+ % Choose one of the following (if not choosing the default,
 %% viz., Computer Modern, font family):
 % \usepackage{lmodern}
 % \usepackage{mathpazo}
@@ -57,12 +60,14 @@
 % \usepackage{times,mtpro2}
 % \usepackage{txfonts}
 % \usepackage{newtxtext,newtxmath}
-\usepackage{libertine}
+% \usepackage{libertine}
 % \usepackage[libertine]{newtxmath}
 \usepackage[hang,bf]{caption}
 \usepackage{hyperref}
+
 % \mastersthesis                     %% Uncomment one of these; if you don't
 \phdthesis                         %% use either, the default is \phdthesis.
+
 
 %\thesisdraft                       %% Uncomment this if you want a draft
                                      %% version; this will print a timestamp
@@ -100,6 +105,8 @@
                                       %! allowed by the Graduate School (March 2003)
                                       %! The default is {0.7in} for single sided.
 %! Double sided printing is no longer allowed (March 2008), it caused too many problems at binding,
+\newcommand{\bibfont}{\normalsize}
+
 \DeclareMathOperator{\arcsinh}{arcsinh}
 \renewcommand{\thesisdepartmentname}{Physics and Complexity Science}    %! The name of
                                                   %   the department
@@ -219,13 +226,14 @@
 \end{thesisacknowledgments}
 
 \begin{thesisdeclaration}        %! Use this to declare the extent of
-                 %! the original work,
-                 %! collaboration, other published
-                                 %! material etc.it can be anything
-                                 %% allowed in LaTeX2e par-mode.
-Replace this text with a declaration of the extent of the original work,
-collaboration, other published material etc. You can use any \LaTeX\
-constructs.
+
+  The work contained here is my own except when otherwise stated. Any work based on collaborative efforts has been indicated including the extent of my contribution. The thesis has been written by myself has not been submitted for any other degree at another University or institution.
+
+  \begin{itemize}
+  \item All experimental data analysed in this thesis was obtained by others and excluding Chapter \ref{cha:oncog-transf} is all separately published work.
+  \item The work in Chapter \ref{cha:stamm} and the analysis of data in Chapter \ref{cha:oncog-transf} has been submitted for publication.
+  \item The work in Chapter \ref{cha:stem-cells} has been published in \emph{Scientific Reports} and my contributions to the work with some additional information are included here. 
+  \end{itemize}
 
 \end{thesisdeclaration}
 
@@ -261,11 +269,7 @@ constructs.
 %%* Start arabic numbering of main text here
 \pagenumbering{arabic} %! Begins arabic numerals start from page 1.
 
-\chapter{Introduction}
 \input introduction.tex
-
-
-                            %% More chapters.
 
 \chapter{Background}
 \input background.tex
@@ -282,20 +286,17 @@ constructs.
 \label{cha:oncog-transf}
 \input mcf10a.tex
 
-\chapter{Stem cells}
+\chapter{Stem cell reprogramming}
 \label{cha:stem-cells}
-\input reprogramming.tex
+ \input reprogramming.tex
 
 \chapter{Cell cycle}
 \label{cha:cell-cycle}
 
 \input cell-cycle.tex
 
-\begin{appendices}
-  \input appendix-stamm.tex
-  \input appendix-oncogenic.tex
 
-\end{appendices}
+\input discussion.tex
 
 %!
 %! There are a few variations of reference
@@ -313,14 +314,15 @@ constructs.
 %  \\
 %!!!!!!!!!!!!!!!
 
-%  \appendix                            %% this will do the appendices
-%  \chapter{Proof of Fred's theorem}
-%  \input{app1.tex}
-%  \chapter{listing of Fred's program}
-%  \input{app2.tex}
+\begin{appendices}
+  \input appendix-stamm.tex
+  %\input appendix-oncogenic.tex
+\end{appendices}
+
+
+
 
 \bibliographystyle{plainnat}
-
 \bibliography{fullbib}            %% Start your bibliography here;
                                  %! with sample.bib as your bibliography file. You can
                                %% also use:
@@ -332,5 +334,6 @@ constructs.
 %\begin{thesisauthorvita}             %% Write your vita here; it can be
 %                                     %% anything in LaTeX2e par-mode.
 %\end{thesisauthorvita}               %%
+
 
 \end{document}                       %% Done.

@@ -1,107 +1,164 @@
 \section{Mathematical background}
 \label{sec:math-backgr}
 
-This section starts off by examining Markov chains the main building block of the model introduced in Chapter \ref{cha:stamm}. Then in Section \ref{sec:hmm} we introduce the slightly more advanced hidden Markov models before carrying on to a precursor to a model discussed in Chapter \ref{cha:stamm}: the Aggregated Markov chain in discrete time. Then in Section \ref{sec:least-squares} the estimation procedure is introduced and briefly discussed followed by a discussion on penalisation of estimation in Section \ref{sec:penalisation}. The concept of identifiability of a model and what it means in a context for estimation is outlined in Section \ref{sec:identifiability-back}. Then we move on to a discussion on model selection and various techniques for distinguishing between models. Finally in Section \ref{sec:monte-carlo-integr} we discuss a very useful method for numerical integration used in the second model put forward in Section \ref{cha:cell-cycle}.
+This section contains the important basic principles we use to investigate biological systems. We start off by examining Markov chains and introduce basic principles for discrete time and continuous time Markov chains. They  are an essential part of the model introduced in Chapter \ref{cha:stamm} and applied in later chapters. Then in Section \ref{sec:hmm} we introduce the slightly more involved hidden Markov models which are often applied to biological systems and have similarities to the aggregate Markov chains introduced in Chapter \ref{cha:stamm}. Section \ref{sec:least-squares} contains a brief presentation to the estimation procedure used in our investigation followed by a discussion on regularisation during estimation in Section \ref{sec:penalisation} and outline two types of penalties commonly used to regularise estimated parameters. The concept of identifiability can of importance in estimation, in Section \ref{sec:identifiability-back} identifiability is defined. Then we move on to a discussion on model selection and various techniques for distinguishing between models. Finally in Section \ref{sec:monte-carlo-integr} a very useful numerical tool is present for integrating functions where a closed form solution is not possible. This method is employed in the second model put forward in this thesis, see Section \ref{cha:cell-cycle}.
 
 \subsection{Markov Chains}
 \label{sec:markov-chains}
 
-In Physics prior to the advent of Statistical Physics and Quantum Mechanics in the early 20th century the world was modelled as deterministic. Of course we now know that despite many aspects of the observable world being deterministic there is an even larger set of objects which does not lend itself to a deterministic description. Stochastic processes are often used to describe such systems evolving with a time-dependant stochastic parts. One of the first such attempts was the modelling of Brownian motion by \cite{Einstein:2005ww} which paved the way for further research on this topic. {\color{red} Example applications}. Let $X(t)$ be a time dependant random variable and $x_1, x_2 \ldots $ observations at $t_1, t_2, \ldots$ with joint probability $p(x_1, t_1; x_2, t_2; \ldots)$. The conditional probability is written as:
+In Physics prior to the advent of Statistical Physics and Quantum Mechanics in the early 20th century the world was modelled as deterministic. Of course we now know that despite many aspects of the observable world being deterministic there is an even larger set of objects which does not lend itself to a deterministic description. Objects or ideas that can be described using deterministic principles do at times derive from non deterministic affects cancelling out or being only important at a different scale. Stochastic processes are used to describe systems where deterministic principles fail. A concept share by many such systems is that they evolving with a time-dependant stochastic part. One of the first attempts to describe such a system was the modelling of Brownian motion by \cite{Einstein:2005ww} which paved the way for further research on this topic. Here we start by defining some variables and simple principles governing one simple model that has found widespread application.
+
+Let $X(t)$ be a time dependant random variable and $x_1, x_2 \ldots $ observations at $t=1, t =2, \ldots$ with joint probability $p(x_1, t=1; x_2, t=2; \ldots)$. The conditional probability for such a system given observations $y_1, y_2, \ldots$ at $\tau_1, \tau_2, \ldots $ is written as:
+
+\begin{equation}
+  \label{eq:stoch-joint-init}
+  p(x_1, t=1; x_2, t=2; \ldots | y_1, \tau=1; y_2,\tau=2, \ldots).
+\end{equation}
+
+The model we wish to consider is a special case of a stochastic process: a \emph{Markov chain}. The most important principle underlying a Markov chain is the \emph{Markov assumption} and it can be written in terms of the conditional probability. Say the current state at $t=n$ of a system is $x_n$; if we now write the probability of this measurement conditional on all preceding measurements $x_{n-1}, x_{n-2}, \ldots x_1$ the following principle must hold:
 
 \begin{equation}
   \label{eq:stoch-joint}
-  p(x_1, t_1; x_2, t_2; \ldots | y_1, \tau_1; y_2,\tau_2, \ldots).
+  p(x_n, t=n | x_{n-1}, t={n-1}; x_{n-2} t={n-2}, \ldots x_1 t=1 \ldots) = p(x_{n},t={n}| x_{n-1},t={n-1}),
 \end{equation}
-
-Here we consider a special case of a stochastic process the Markov chain. We can write the Markov assumption in terms of the conditional probability. If the current state at $t_n$ of the system is $x_n$ and we write the probability of this measurement conditional on all preceding measurements $x_{n-1}, x_{n-2}, \ldots x_1$:
+where $t=1 \le t=2 \le \ldots t=n$. This means that the Markov property states; an observation is only conditionally dependant on the observation immediately preceding it. Further, the Markov property eqn. (\ref{eq:stoch-joint}) and an initial distribution $\pi_1 = \pi(1) = p(x_1,t=1)$ uniquely determines a Markov chain in discrete time and with a discrete state space. This only holds because any joint probability can be written as a product subsequent transition probability starting from the initial distribution. If we now write the transition probability as $p_{ij}(t)$ as the transition from state $i$ to state $j$ we can write the distribution of a Markov chain at time $t$, $\pi(t)$ where $t \in \mathbb{N}$ as:
 
 \begin{equation}
-  \label{eq:stoch-joint}
-  p(x_1, t_1 | x_{n-1}, t_{n-1}; x_{n-2} t_{n-2}, \ldots x_1 t_1 \ldots) = p(x_{n},t_{n}| x_{n-1},t_{n-1}),
+  \label{eq:markov-chain}
+  \pi(t) = \pi(1)P^t.
 \end{equation}
 
-where $t_1 \le t_1 \le \ldots t_n$. This means that in a Markov process an observation is only conditionally dependant on the observation immediately preceding it. Using this property it is possible 
+\subsubsection{Continous time}
+\label{sec:continous-time}
 
-UNIQUELY DETERMINED (1.1)
+If we extend the Markov chain to continuous time but still with a discrete state space, we have to introduce the generator matrix $G$. It uniquely defines a continuous time Markov chain together with the initial distribution similar to a Markov chain discrete time. The entries in the generator matrix are the transition rates from state $i$ to state $j$ such that $g_{i,j} \geq 0$. Diagonal entries of the matrix are $g_{i,i} = - \sum_{j \neq i} g_{i,j}$ and $G$ is a stochastic matrix. We can now write the time evolution as:
 
-*CONTINOUS TIME MC*
+\begin{equation}
+  \label{eq:mc-time-ev}
+  \frac{d}{dt} P(t) = G\, P(t) = P(t)\, G,
+\end{equation}
+which are knows the backward and forward equation respectively. If we are now interested in the state occupation as a function of time $\pi(t)$ and define set $\pi(t=0)$ as the initial state distribution we can use eqn. (\ref{eq:mc-time-ev}) and write
 
-1.29
+\begin{equation}
+  \label{eq:state-occ}
+  \frac{d}{dt}\pi(t) = \pi(0) \frac{d}{dt} P(t) = \pi(0) P(t) G = \pi(t)G.
+\end{equation}
+It is often useful to rewrite eqn. (\ref{eq:state-occ}) in parametric form using the definition of the generator matrix such that:
 
-MASTER EQUATION
-
-STATE OCCUPATION
+\begin{equation}
+  \label{eq:mc-master}
+  \frac{d}{dt} = \sum_{j\neq i} \left( \pi_j(t)g_{j,i} - \pi_i(t)g_{i,j} \right),
+\end{equation}
+which is know as the Master equation and is useful in allowing us to derive many results for Markov chains.
 
 \subsection{HMM}
 \label{sec:hmm}
 
-SOME TEXT
+An extension to Markov chains that has found widespread application is the Hidden Markov Model (HMM) initially developed by \cite{Baum:1966cy}. The big difference to a classical Markov chain is that in a HMM the states of the Markov chain are not directly observed instead observations are made on outputs dependant on the hidden states. Each hidden state of the Markov chain has a probability distribution over all possible outputs. The possible observable outputs can be continuous while the hidden Markov has a discrete state space.
 
-\subsection{Aggregated Markov chain}
-\label{sec:aggr-mark-chain}
+More specifically the hidden Markov chains has transition probabilities (as described above) as well as emission probabilities. We can write the hidden state process at time $t$ as $S_t$ in discrete time and discrete states i.e. $S_t \in \lbrace 1, \ldots K \rbrace$ with transition probabilities $p_{i,j} = p(S_{t+1} =j | S_t =i)$ and initial distribution $\pi_1 = p(S_1 = k)$. Now we write the observation from this hidden Markov chain at time $t$ as $X_t$; here we have to distinguish between two types of outputs they can either be discrete or continuous. If the observation is discrete i.e. $X_t \in \lbrace 1, \ldots M \rbrace$ we have emission probabilities  $b_j(m) = p(X_t | S_t = k)$ with $j = 1, \ldots M$. If the observation is continuous i.e. $X_t \in \mathbb{R}^M$ we have to use a continuous probability density function which is usually a weighted sum of Gaussian distributions $b_j(X_t) = \sum_{m=1}^M c_{jm}\mathcal{N}(\mu_{jm}, \Sigma_{jm})$.
 
-SOME TEXT
+More information on HMMs can be found in \cite{MacDonald:1997wm} and in \cite{Zucchini:2009vl} including sample applications.
+
 
 \subsection{Least squares}
 \label{sec:least-squares}
 
-Parameter estimation in such a model is the next question to be addressed. The most widely spread method for this is to maximise the likelihood function $ \mathcal{L}(\theta) = f(X; \theta) $, where $X$ is a random variable and $\theta$ is a set of parameters. Often it is more convenient to work with the log-likelihood function with $\ell (\theta) = \log \mathcal{L}(\theta)$. Since the logarithm is a monotone function the maximum of $\ell (\theta)$ is the same as the maximum of $\mathcal{L} (\theta)$. The advantage of working with the log-likelihood is that it can be easier to work with. In some cases it is possible to obtain the maximum likelihood estimator (MLE) $\hat{\theta}$ that maximises $\mathcal{L}{\theta}$ and $\ell (\theta)$ in closed form. Often, especially in real world applications, this is not possible and in such cases we need to use a more numerical approach. 
+Once the model to be used to analyse data is established the question of parameter estimation arises. The most widely used method in statistics for such a parameter estimation from data is  to write down and maximise the likelihood function $ \mathcal{L}(\theta) = f(X; \theta) $, where $X$ is a random variable and $\theta$ is a set of parameters. Often it is more convenient to work with the log-likelihood function with $l(\theta) = \log \mathcal{L}(\theta)$. Since the logarithm is a monotone function the maximum of $l (\theta)$ is the same as the maximum of $\mathcal{L} (\theta)$. The advantage of the log-likelihood is that it can be easier to work with as the $\log$ transformation can simplify the likelihood. In some cases it is possible to obtain the maximum likelihood estimator (MLE) $\hat{\theta}$ that maximises $\mathcal{L}{\theta}$ and $\ell (\theta)$ in closed form. Especially in real world applications, this can be difficult or there might not exist a closed form solution; in such cases we need to use a more numerical approach. 
 
-Now we present a simple application of these ideas and choose a common statistical model to illustrate the idea. Say there exists a model which predicts variable $Y$ from a set of variables $X_1 \ldots X_n$. For simplicity here we choose the simplest possible case, the simple linear regression model:
-% TODO
-
-{\color{red} CHECK IF LOWER OR UPPER CASE}
+To show one such numerical approach we present a simple application of the principles and choose a common statistical model to illustrate the idea. Say there exists a model which predicts the response variable $Y$ from a set of input variables $X_1 \ldots X_n$. The illustrative model we choose as an example system is the simple linear regression:
 
 \begin{equation}
   \label{eq:simple-regression}
-  y_i = \beta_0 + \beta_1 \, x_i + \epsilon_i,
+  Y = \beta_0 + \beta_1 \, X_i + \epsilon_1,
 \end{equation}
+where $\epsilon_1 \sim \mathcal{N}(0, \sigma_1^2)$ and is independent of observations, $\beta_0$ and $\beta_1$ are parameters. It is often beneficial to write eqn. (\ref{eq:simple-regression}) in a vector form and include a $1$ in the $\mathbf{X}$ vector and the $\beta_0$ in the $\mathbf{\beta}$ vector to write $y = \mathbf{X}^T \mathbf{\beta}$. The least squares method proposes finding estimates of parameters by determining the parameter set that minimises
 
-where $\epsilon_i \sim \mathcal{N}(0, \sigma_i^2)$ and is independent of observations, $\beta_0$ and $\beta_1$ are parameters
+\begin{equation}
+  \label{eq:rss-ls}
+  RSS(\beta) = (Y - \mathbf{X}^T \mathbf{\beta})^2, 
+\end{equation}
+also known as the residual sum of squares. Of course this can be extended to multiple input and response variables by computing the sum over all RSS, written in vector notiation it is:
 
-\subsection{Penalisation}
+\begin{equation}
+  \label{eq:rss-ls}
+  RSS(\beta) = \lVert \mathbf{Y} - \mathbf{X}\mathbf{\beta}\lVert^2_2,
+\end{equation}
+where $Y$ is now a vector over all responses and has length $n$ and $X$ is now a matrix with dimensions $n \times p$. This is a very simple and general way of finding parameters of a model that best describes observations. 
+
+\subsection{Regularisation}
 \label{sec:penalisation}
 
-\begin{itemize}
-\item Why
-\item Possible penalisation
-\item Tibshirani
-\end{itemize}
+It can be of benefit to penalise complex models that contain too many parameters and also to regularise estimation; this will also prevent overfitting. One way of achieving this regularisation to minimising the log-likelihood subject to a constraint on model parameters. An analogous but easier to implement solution is to minimise the log-likelihood with an additional penalty term on parameters. Choosing the example mentioned in Section \ref{sec:least-squares} we write
+
+\begin{equation}
+  \label{eq:pen-log-lik}
+  \hat{\beta} = \underset{\beta}{\operatorname{argmin}}  \left\lbrace \lVert \mathbf{Y} - \mathbf{X}\mathbf{\beta}\lVert^2_2 + \lambda\, g(\beta) \right\rbrace,
+\end{equation}
+where $\lVert  \cdot \rVert_2$ denotes the $\ell_2$ norm, $g(\beta)$ is the penalty function on $\beta$ parameters and is chosen depending on application and $\lambda$ is a parameter controlling the strength of the penalty; a larger value corresponds to a stronger penalty. The strength parameter $\lambda$ is generally set by cross-validation, or any other model selection criteria (see below for a discussion of model selection). The penalty term itself can take several forms each favourable in different applications, with the same primary aim of reducing model complexity but different properties. Here we present two possibilities, Ridge regression and Lasso.
+
+In Ridge regression the added penalty term takes the form of a $\ell_2$ norm over the parameters $g(\beta) = \lVert \beta \rVert_2^2$. It penalises the magnitude of parameters and also shrinks them towards zero but they are never exactly zero. Another method is least absolute shrinkage and selection operator (Lasso) which has been used before but was reintroduced to the statistics community by \cite{Tibshirani:1996wba}. It uses a $\ell_1$ penalty i.e. $g(\beta) = \lVert \beta \rVert_1$. Just like ridge regression Lasso penalises the magnitude of model parameters and therefore larger positive or negative values shrinking parameters. The advantage of Lasso over ridge regression is that in additional to penalising higher values of parameters increasing the strength of the penalty forces more and more parameters to be exactly zero reducing model complexity, see \cite{hastie2001elements} for more details. 
+
 \subsection{Identifiability}
 \label{sec:identifiability-back}
 
-SOME TEXT
+An important concept for models where parameters are of physical importance identifiability plays a crucial role. It is important to remember that the concept of identifiability is a theoretical concept. It does not relate to application of the model to data but rather refers to idealised potentially infinite noise free data. Stating the definition formally, if we have a model $f(\theta_1)$ where $\theta_1$ are parameters from the possible set of parameters $\Theta$ and $\theta_2$ are also parameters from the same set. Then we say the model is identifiable when $f(\theta_1) = f(\theta_2)$ holds if and only if $\theta_1 = \theta_2$ for all possible $\theta_1, \theta_2 \in \Theta$. In other words if the model returns the same output for two different data sets it is not identifiable.
+
+More information on identifiability and some applications can be found in \cite{Saccomani:2003kx},  \cite{Saccomani:2010by} and \cite{Jacquez:1985fz}. It is a widely studied subject especially in the context of linear models, but results for nonlinear models are more difficult to obtain. 
 
 \subsection{Model selection}
 \label{sec:model-selection-1}
 
-Any statistical or even mechanistic model includes in its core some assumptions and simplification of the real world problem it is attempting to describe. The aim of a model is to enable description of a complex (sometimes not even fully understood) phenomenon in way tractable by mathematics. Often experiments are sufficient to distinguish between models and identify the one closest to the real world problem. In some cases of course this is not the case and two distinct models appear feasible. This is a problem very often found when employing statistical models and comparing observed data with predictions from models. The ubiquitous problem encountered is that one wishes to compare models to a set of noisy data. Even in cases where the problem itself is identifiable (see above) the existence of noise in observations poses a real difficulty. In such cases the question that one is really trying to answer is one of prediction. 
+The aim of a model is to enable description of a complex (sometimes not even fully understood) phenomenon in way tractable by mathematics. Statistical or even mechanistic models include in their core assumptions and simplification of the real world problem they are attempting to describe. In some cases this can be the only way to describe properties of the system. Often experiments are sufficient to distinguish between models and identify the one closest to the real world problem. There are also cases where due to insufficient data or the type of data available two distinct models appear feasible. This problem is encountered especially when employing statistical models and comparing observed data with predictions from such models. The universal problem then becomes is the comparison of model predictions to a set of noisy data. Even in cases where the problem itself is identifiable (see discussion above) the existence of noise in observations poses a real difficulty. In such cases the question that one is really trying to answer is one of prediction. Model fit to data is not a sufficient measure, after all the error between model prediction and a specific data set will not carry over to a different data set; but it is still an important indicator and cannot be discarded. 
 
 \subsubsection{Cross-validation}
 \label{sec:cross-validation}
 
-One method that uses this idea in a data driven fashion is cross-validation. The basic principle is quite simple, the data is split into two independent subsets (the training set and the validation set) and model parameters are estimated on the training set and prediction using these parameters are compared with the validation set resulting in a performance score. A practical approach is called k-fold cross-validation. Here the data set is split into $k$ randomly chosen equally sized subsets, one subset is retained as the validation set and the remaining $k-1$ subsets are used as training data. This step is repeated for each of the $k$ subsets and the performance score is combined giving one score for a model. In some applications as the ones discussed in later chapters of this work it is only feasible to leave out one data point at a time due to limitation in data. This procedure is then repeated for every model that is considered and the optimal model is chosen based on the best score. It is clear that such an approach has drawbacks; When dealing with large data sets computation times can quickly become unfeasible since estimations is performed for $k$ subsets and for all possible models. An additional problem can be that due to the random splits in data the choice of this split influences results. Therefore it is advisable to try multiple splits and compare results.
+One method that uses this idea in a data driven fashion is cross-validation. The basic principle is quite simple, data  is split into two independent subsets (the training set and the validation set) and model parameters are estimated on the training set and prediction using these parameters are compared with the validation set resulting in a performance score. A practical approach is called k-fold cross-validation. Here the data set is split into $k$ randomly chosen equally sized subsets, one subset is retained as the validation set and the remaining $k-1$ subsets are used as training data. This step is repeated for each of the $k$ subsets and the performance score is combined giving one score each model. In some applications as the ones discussed in later chapters of this work it due to limitation in data is only feasible to leave out one data point at a time. This procedure is then repeated for every model that is considered and the optimal model is chosen based on the best score. It is clear that such an approach has drawbacks; When dealing with large data sets computation times can quickly become unfeasible since estimations is repeated for $k$ subsets, for all data and for all possible models. An additional problem can be that due to the random splits in data the choice of the split influences results significantly. Therefore it is often advisable to try multiple splits and compare results.
 
 \subsubsection{AIC and BIC}
 \label{sec:aic}
 
-Therefore there are many methods to approximate model selection results based on information obtained when estimating parameters using the whole data set only once. The advantages are obvious since it reduces computation time considerably but it is a further approximation hence one has to be careful interpreting results. In all such approaches the goodness of fit is juxtaposed to model complexity i.e. since more complicated models will perform better we want to penalise these. Such methods are historically referred to as information criteria (IC). Here we will briefly introduce two such models; One of the most widespread is the Akaike information criterion (AIC) formulated by \cite{Akaike:1974ih} and the other is the Bayesian information criterion (BIC) presented by \cite{Schwarz:1978uv}. The derivation of AIC is based on Kullback–Leibler divergence 
+To avoid lengthy computation time there are many methods to approximate model selection results based on information obtained when estimating parameters, reducing the number of computations to one per model and data. This is an obvious advantages but it is a further approximation hence one has to be careful interpreting results and the choice of approximation used. In all such approaches the goodness of fit is juxtaposed to model complexity i.e. since more complicated models will perform better during estimation for a given data set we want to penalise models dependant on the complexity of the model. Such methods are due to historical naming convention referred to as information criteria. Here we will briefly introduce two such models; One of the most widespread is the Akaike information criterion (AIC) formulated by \cite{Akaike:1974ih} and the other is the Bayesian information criterion (BIC) presented by \cite{Schwarz:1978uv}. AIC is computed using the log-likelihood $l(\theta)$ for model parameters $\theta$ and the degrees of freedom $d$:
 
--'information-based'??
+\begin{equation}
+  \label{eq:aic-def}
+  AIC = -2 \;l(\theta) + 2 d. 
+\end{equation}
+It is derived using ideas in information theory namely the Kullback-Leibler divergence between the true model for a data set and the used model. When dealing with small sample sizes this measure is not satisfactory and is replaced by the corrected version the AICc. It adds an additional term dependant on sample size $n$: $(2 * d (d + 1)) / (n - d - 1)$.
 
--AIC KL distence
+The other information criterion, the BIC is derived using a Bayesian approach. It is also applied for a log-likelihood approach just like AIC. The derivation of BIC starts with the assumption that there exists a posterior distribution for models $M_i$ given some data $\mathbf{Y}$ written $P(M_i| \mathbf{Y})$. Using Bayes' theorem we can write the odds of two models as:
 
+\begin{equation}
+  \label{eq:bic-odds}
+  \frac{P(M_i|\mathbf{Y})}{P(M_j|\mathbf{Y})} = \frac{P(M_i)}{P(M_j)} \cdot \frac{p(\mathbf{Y}|M_i)}{p(\mathbf{Y} |M_j)}.
+\end{equation}
+The final term in eqn. (\ref{eq:bic-odds}) the ratio of marginal likelihoods is also known as the Bayes factor. The prior over models is typically assumed to be flat, then $P(M_i) = P(M_j)$ for all $i$, $j$ and the only important in eqn. (\ref{eq:bic-odds}) here is the Bayes factor is the only important term. Approximating the log marginal likelihood $p(\mathbf{Y} | M)$ using the Laplace approximation yields the BIC score for a given model with parameters $\theta$:
 
-
+\begin{equation}
+  \label{eq:bic-def}
+  BIC = -2 \; l(\theta) + \log(n) \,d. 
+\end{equation}
+The penalty for complex models in BIC is larger than in AIC hence it will select for simpler models. Additionally as sample size $n\rightarrow \infty$ and the model space includes the true model BIC will select the correct model, i.e. it is asymptotically consistent unlike AIC. Though AIC will sometimes perform better for smaller sample sizes \citep{hastie2001elements}. Hence the decision of information criterion will be application dependant. 
 
 \subsection{Monte Carlo integration}
 \label{sec:monte-carlo-integr}
 
-SOME TEXT
+In many applications of mathematical models to real world problems one encounters integrals without closed form solutions. For such cases numerical methods which have become particularly wide spread since advancements in computational power allow for large scale computations in relatively short time. Monte Carlo integration is one such example, generally Monte Carlo techniques are ubiquitous for classes of problems which include random numbers.
 
+If we have a function $f(x)$ of a random variable $x$  which is distributed between $a$ and $b$, we can write the expectation of $f(x)$ as the integral
+\begin{equation}
+  \label{eq:mc-integ-def}
+  E(f(x)) = \frac{1}{b-a} \int_a^b f(x) dx,
+\end{equation}
 
+The law of large numbers states that the sum of $n$ random variables divided by $n$ converges to the expected value of the random variable as $n \rightarrow \infty$. This is a very powerful idea and since we know that the function of a random variable is also a random variable we can extend this to the function of a random variable $f(x)$.  As the number of samples $n$ taken from random variable $x$ approaches infinity 
 
-
+\begin{equation}
+  \label{eq:mc-larg-num}
+  \frac{1}{n} \sum_{i=1}^n f(x_i) \rightarrow \frac{1}{b - a}\int_a^b f(x) dx \hspace{1cm}   \text{as } \: n \rightarrow \infty.
+\end{equation}
+The left hand side of eqn. (\ref{eq:mc-larg-num}) is therefore an asymptotically consistent estimator i.e. it converges to the right hand side as $n \rightarrow \infty$. Eqn. (\ref{eq:mc-larg-num}) is the Monte Carlo estimate of an integral and an important issue to always bear in mind for this method is convergence as without the result having converged the results are meaningless. Therefore in applications the shape of the probability distribution of $x$ plays a central role in determining how well the Monte Carlo integral will converge. This means if function $f(x)$ has a large weight for a value of $x$ which is unlikely to be sampled then for fine $n$ the estimate will be bad. More information on Monte Carlo integration can be found in the review article by \cite{James:mc}  and in \cite[Chapter~5]{norris1998markov}. 
 
 %%% Local Variables:
 %%% TeX-master: "warwickthesis"
