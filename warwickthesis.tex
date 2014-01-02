@@ -81,30 +81,16 @@
                                      %% of Tables and Figures and the Vita.
                                      %% The default is \centerchapter.
 
-%\renewcommand{\familydefault}{cmss}  %! removed April 2009 because the default times font reads more easily
-                                     %! for larger blocks of text.%!
-                                     %! Added March 2003.
-                                     %! This alternative is to use a sans serif font as in
-                                     %!  the Warwick Corporate style.
-                                     %! The default is Times, which is still acceptable.
-
-
 \onehalfspacing                      %! This is the default and gives an acceptable "double spaced" thesis
                                      %! It is the minimum spacing accepted by the graduate school, and there is no reason to increase the spacing.
 % \singlespacing                     %! Uncomment if you want single-spacing, 
 % \doublespacing                     %! uncomment if you want real double-spacing for some perverse reason. 
-
-%\setlength{\textheight}{9.0in}      %! Uncomment this for a slightly
-                                     %! longer page. The default is now 8.5in (from Feb 2010)
-                                     %! regulations require page numbers to be at least 1.5cm into the page.
-                                     %! You can even try a longer page to save paper.
 
 %! Double sided printing is no longer allowed (March 2008), it caused too many problems at binding,
                               %\setlength{\evensidemargin}{0.15in}  %! Uncomment this line for double sided printing
                                       %! Double-sided printing has recently been
                                       %! allowed by the Graduate School (March 2003)
                                       %! The default is {0.7in} for single sided.
-%! Double sided printing is no longer allowed (March 2008), it caused too many problems at binding,
 \newcommand{\bibfont}{\normalsize}
 
 \DeclareMathOperator{\arcsinh}{arcsinh}
@@ -127,9 +113,9 @@
 
 \renewcommand{\thesisauthor}{Anas A. Rana}    %% Your official name.
 
-\renewcommand{\thesismonth}{...}     %% Your month of graduation.
+\renewcommand{\thesismonth}{January}     %% Your month of graduation.
 
-\renewcommand{\thesisyear}{....}      %% Your year of graduation.
+\renewcommand{\thesisyear}{2014}      %% Your year of graduation.
 
 \renewcommand{\thesistitle}{Stochastic models for cell populations undergoing transitions}     %% The title of your thesis; use
                                      %% mixed-case.
@@ -137,7 +123,7 @@
 %! \renewcommand{\thesistitletypesize}{\LARGE}   %! Put this in if you
                                   %!   want a Large title the default is \large
 
-\renewcommand{\thesisauthorpreviousdegrees}{....}
+\renewcommand{\thesisauthorpreviousdegrees}{}
                                      %% Your previous degrees, abbreviated;
                                      %% separate multiple degrees by commas.
 
@@ -145,7 +131,7 @@
                                      %% Your thesis supervisor; use mixed-case
                                      %% and don't use any titles or degrees.
 
-\renewcommand{\thesisauthoraddress}{....}
+\renewcommand{\thesisauthoraddress}{}
                                      %% Your permanent address; use "\\" for
                                      %% linebreaks.
 %! For the library declaration page only
@@ -241,13 +227,13 @@
 \begin{thesisabstract}               %% Use this to write your thesis
                                      %% abstract; it can be anything
                                      %% allowed in LaTeX2e par-mode.
-%!  \begin{singlespace}       %! uncomment this if you need single spacing
-%   \input abstract.tex       %!           don't forget the end spacing!
+ \begin{singlespace}       %! uncomment this if you need single spacing
+   \input abstract.tex       %!           don't forget the end spacing!
                                      %! It must fit on one page.
                                      %! single spacing and smaller
                                      %! font size
                                      %!  is allowed here.
-%!   \end{singlespace}
+  \end{singlespace}
 \end{thesisabstract}
 
 %\begin{thesisabbreviations}       %! Use this to give a list of
@@ -260,10 +246,7 @@
                      %!\end{itemize}
 
 %\end{thesisabbreviations}
-%!!!!!!!!!!!!!!!                     %% Begin your thesis text here; follow
-                                     %% the report style and group your text
-                                     %% in chapters, sections, etc. eg:
-%%* don't need this with one-sided printing
+
 %\newpage{\pagestyle{empty}\cleardoublepage} %! ensure that Chapter 1 starts on an odd
                                            %! page when using double sided printing.
 %%* Start arabic numbering of main text here
@@ -298,20 +281,6 @@
 
 \input discussion.tex
 
-%!
-%! There are a few variations of reference
-% \begin{verbatim}\citet[chap. 2]{ballentine82}|
-% \end{verbatim}
-% for a textual one, as \citet[chap. 2]{ballentine82}.\\
-%  \\
-% \begin{verbatim}\citep{abraham_etal}
-%  \end{verbatim}
-%  for a parenthetical citation \citep{abraham_etal},\\
-
-%  \begin{verbatim}\citep*{MTW}
-%  \end{verbatim}
-%  for a full list of authors use a * parenthetical citation \citep*{MTW},\\
-%  \\
 %!!!!!!!!!!!!!!!
 
 \begin{appendices}
@@ -322,8 +291,9 @@
 
 
 
-\bibliographystyle{plainnat}
-\bibliography{fullbib}            %% Start your bibliography here;
+% \bibliographystyle{plainnat}
+\bibliographystyle{apa-good}
+\bibliography{thesis-new}            %% Start your bibliography here;
                                  %! with sample.bib as your bibliography file. You can
                                %% also use:
                 %! \begin{thebibliography}

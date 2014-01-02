@@ -1,0 +1,1032 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: MacRoman
+
+@ARTICLE{Akaike:1974ih,
+  author = {Akaike, H},
+  title = {{A new look at the statistical model identification}},
+  journal = {Automatic Control, IEEE Transactions on},
+  year = {1974},
+  volume = {19},
+  pages = {716--723},
+  number = {6}
+}
+
+@BOOK{Alberts:2007tv,
+  title = {{Molecular Biology of the Cell, Fifth Edition}},
+  publisher = {Garland Science},
+  year = {2007},
+  author = {Alberts, Bruce and Johnson, Alexander and Lewis, Julian and Raff,
+	Martin and Roberts, Keith and Walter, Peter},
+  month = nov
+}
+
+@ARTICLE{Armond:2013,
+  author = {Armond, Jonathan W and Saha, Krishanu and Rana, Anas A and Oates,
+	Chris J and Jaenisch, Rudolf and Nicodemi, Mario and Mukherjee, Sach},
+  title = {{A stochastic model dissects cell states in biological transition
+	processes}},
+  journal = {Scientific Reports (accepted)},
+  year = {2013}
+}
+
+@ARTICLE{Bagci:2013ey,
+  author = {Bagci, Hakan and Fisher, Amanda G},
+  title = {{DNA Demethylation in Pluripotency and Reprogramming: The Role of
+	Tet Proteins and Cell Division}},
+  journal = {Stem Cell},
+  year = {2013},
+  volume = {13},
+  pages = {265--269},
+  number = {3},
+  month = sep
+}
+
+@ARTICLE{Bar-Joseph04082004,
+  author = {Bar-Joseph, Ziv and Farkash, Shlomit and Gifford, David K. and Simon,
+	Itamar and Rosenfeld, Roni},
+  title = {Deconvolving cell cycle expression data with complementary information},
+  journal = {Bioinformatics},
+  year = {2004},
+  volume = {20},
+  pages = {i23-i30},
+  number = {suppl 1}
+}
+
+@ARTICLE{BarJoseph:2008bx,
+  author = {Bar-Joseph, Ziv and Siegfried, Zahava and Brandeis, Michael and Brors,
+	Benedikt and Lu, Yong and Eils, Roland and Dynlacht, Brian D and
+	Simon, Itamar},
+  title = {{Genome-wide transcriptional analysis of the human cell cycle identifies
+	genes differentially regulated in normal and cancer cells}},
+  journal = {Proceedings of the National Academy of Sciences},
+  year = {2008},
+  volume = {105},
+  pages = {955--960},
+  number = {3},
+  month = jan
+}
+
+@ARTICLE{Baum:1966cy,
+  author = {Baum, Leonard E and Petrie, Ted},
+  title = {{Statistical Inference for Probabilistic Functions of Finite State
+	{Markov} Chains}},
+  journal = {Ann. Math. Statist.},
+  year = {1966},
+  volume = {37},
+  pages = {1554--1563},
+  number = {6},
+  month = dec
+}
+
+@ARTICLE{Bock:2011kx,
+  author = {Bock, Christoph and Kiskinis, Evangelos and Verstappen, Griet and
+	Gu, Hongcang and Boulting, Gabriella and Smith, Zachary D and Ziller,
+	Michael and Croft, Gist F and Amoroso, Mackenzie W and Oakley, Derek
+	H and Gnirke, Andreas and Eggan, Kevin and Meissner, Alexander},
+  title = {{Reference Maps of Human ES and iPS Cell Variation Enable High-Throughput
+	Characterization of Pluripotent Cell Lines}},
+  journal = {Cell},
+  year = {2011},
+  volume = {144},
+  pages = {439--452},
+  number = {3},
+  month = feb
+}
+
+@ARTICLE{Brown:1999bk,
+  author = {Brown, Patrick O and Botstein, David},
+  title = {{Exploring the new world of the genome with {DNA} microarrays}},
+  journal = {Nat Genet},
+  year = {1999},
+  volume = {21},
+  pages = {33--37},
+  month = jan
+}
+
+@ARTICLE{Buganim:2012hp,
+  author = {Buganim, Yosef and Faddah, Dina A and Cheng, Albert W and Itskovich,
+	Elena and Markoulaki, Styliani and Ganz, Kibibi and Klemm, Sandy
+	L and van Oudenaarden, Alexander and Jaenisch, Rudolf},
+  title = {{Single-Cell Expression Analyses during Cellular Reprogramming Reveal
+	an Early Stochastic and a Late Hierarchic Phase}},
+  journal = {Cell},
+  year = {2012},
+  volume = {150},
+  pages = {1209--1222},
+  number = {6},
+  month = sep
+}
+
+@ARTICLE{Bullard:2010go,
+  author = {Bullard, James H and Purdom, Elizabeth and Hansen, Kasper D and Dudoit,
+	Sandrine},
+  title = {{Evaluation of statistical methods for normalization and differential
+	expression in mRNA-Seq experiments}},
+  journal = {BMC Bioinformatics},
+  year = {2010},
+  volume = {11},
+  pages = {94},
+  number = {1}
+}
+
+@ARTICLE{Carey:2011bs,
+  author = {Carey, Bryce W and Markoulaki, Styliani and Hanna, Jacob H and Faddah,
+	Dina A and Buganim, Yosef and Kim, Jongpil and Ganz, Kibibi and Steine,
+	Eveline J and Cassady, John P and Creyghton, Menno P and Welstead,
+	G Grant and Gao, Qing and Jaenisch, Rudolf},
+  title = {{Reprogramming Factor Stoichiometry Influences the Epigenetic State
+	and Biological Properties of Induced Pluripotent Stem Cells}},
+  journal = {Stem Cell},
+  year = {2011},
+  volume = {9},
+  pages = {588--598},
+  number = {6},
+  month = dec
+}
+
+@ARTICLE{Casale:2013,
+  author = {Casale, FP and Giurato, G and Nassa, G and Armond, Jonathan W and
+	Oates, CJ and Cor\'a, D and Gamba, A and Mukherjee, S and Weisz,
+	A and Nicodemi, M},
+  title = {{Single-Cell States in the Estrogen Response of Breast Cancer Cell
+	Lines}},
+  journal = {submitted},
+  year = {2013}
+}
+
+@ARTICLE{Cleveland:2012fu,
+  author = {Cleveland, William S},
+  title = {{Robust Locally Weighted Regression and Smoothing Scatterplots}},
+  journal = {Journal of the American statistical {\ldots}},
+  year = {2012},
+  volume = {74},
+  pages = {829--836},
+  number = {368},
+  month = apr
+}
+
+@ARTICLE{Clifford:1977wa,
+  author = {Clifford, Peter},
+  title = {{Nonidentifiability in stochastic models of illness and death}},
+  journal = {Proceedings of the National Academy of Sciences of the United States
+	of America},
+  year = {1977},
+  volume = {74},
+  pages = {1338--1340},
+  number = {4}
+}
+
+@ARTICLE{Dalerba:2011cc,
+  author = {Dalerba, Piero and Kalisky, Tomer and Sahoo, Debashis and Rajendran,
+	Pradeep S and Rothenberg, Michael E and Leyrat, Anne A and Sim, Sopheak
+	and Okamoto, Jennifer and Johnston, Darius M and Qian, Dalong and
+	Zabala, Maider and Bueno, Janet and Neff, Norma F and Wang, Jianbin
+	and Shelton, Andrew A and Visser, Brendan and Hisamori, Shigeo and
+	Shimono, Yohei and van de Wetering, Marc and Clevers, Hans and Clarke,
+	Michael F and Quake, Stephen R},
+  title = {{Single-cell dissection of transcriptional heterogeneity in human
+	colon tumors}},
+  journal = {Nat Biotech},
+  year = {2011},
+  volume = {29},
+  pages = {1120--1127},
+  number = {12},
+  month = dec
+}
+
+@ARTICLE{Debnath:2003km,
+  author = {Debnath, Jayanta and Muthuswamy, Senthil K and Brugge, Joan S},
+  title = {{Morphogenesis and oncogenesis of {MC}F-10A mammary epithelial acini
+	grown in three-dimensional basement membrane cultures}},
+  journal = {Methods},
+  year = {2003},
+  volume = {30},
+  pages = {256--268},
+  number = {3},
+  month = jul
+}
+
+@ARTICLE{Debnath:2003kma,
+  author = {Debnath, Jayanta and Muthuswamy, Senthil K and Brugge, Joan S},
+  title = {{Morphogenesis and oncogenesis of {MC}F-10A mammary epithelial acini
+	grown in three-dimensional basement membrane cultures}},
+  journal = {Methods},
+  year = {2003},
+  volume = {30},
+  pages = {256--268},
+  number = {3},
+  month = jul
+}
+
+@ARTICLE{Dehm:2013fr,
+  author = {Dehm, Scott M and Bonham, Keith},
+  title = {{SRC gene expression in human cancer: the role of transcriptional
+	activation}},
+  journal = {Biochem. Cell Biol.},
+  year = {2013},
+  volume = {82},
+  pages = {263--274},
+  number = {2},
+  month = jan
+}
+
+@ARTICLE{DeRisi:1997dw,
+  author = {DeRisi, Joseph L and Iyer, Vishwanath R and Brown, Patrick O},
+  title = {{Exploring the Metabolic and Genetic Control of Gene Expression on
+	a Genomic Scale}},
+  journal = {Science},
+  year = {1997},
+  volume = {278},
+  pages = {680--686},
+  number = {5338},
+  month = oct
+}
+
+@ARTICLE{Dudoit:2002va,
+  author = {Dudoit, S and Yang, Y H and Callow, M J and Speed, T P},
+  title = {{Statistical methods for identifying differentially expressed genes
+	in replicated cDNA microarray experiments}},
+  journal = {Statistica Sinica},
+  year = {2002}
+}
+
+@ARTICLE{Dudoit:2002vaa,
+  author = {Dudoit, Sandrine and Yang, Y H and Callow, M J and Speed, T P},
+  title = {{Statistical methods for identifying differentially expressed genes
+	in replicated cDNA microarray experiments}},
+  journal = {Statistica Sinica},
+  year = {2002}
+}
+
+@ARTICLE{Efe:2011bpa,
+  author = {Efe, Jem A and Hilcove, Simon and Kim, Janghwan and Zhou, Hongyan
+	and Ouyang, Kunfu and Wang, Gang and Chen, Ju and Ding, Sheng},
+  title = {{Conversion of mouse fibroblasts into cardiomyocytes using a direct
+	reprogramming strategy}},
+  journal = {Nat Cell Biol},
+  year = {2011},
+  volume = {13},
+  pages = {215--222},
+  number = {3},
+  month = mar
+}
+
+@ARTICLE{Einstein:2005ww,
+  author = {Einstein, Albert},
+  title = {{{\"U}ber die von der molekularkinetischen theorie der w{\"a}rme
+	gerforderte Bewegung von in ruhenden }},
+  journal = {Annalen der Physik},
+  year = {1905},
+  volume = {322},
+  pages = {549--560},
+  number = {8}
+}
+
+@ARTICLE{Eisen:1999uw,
+  author = {Eisen, M B and Brown, P O},
+  title = {{DNA arrays for analysis of gene expression}},
+  journal = {Methods in enzymology},
+  year = {1999}
+}
+
+@ARTICLE{Elgar:2008dm,
+  author = {Elgar, Greg and Vavouri, Tanya},
+  title = {{Tuning in to the signals: noncoding sequence conservation in vertebrate
+	genomes}},
+  journal = {Trends in Genetics},
+  year = {2008},
+  volume = {24},
+  pages = {344--352},
+  number = {7},
+  month = jul
+}
+
+@ARTICLE{Elowitz:2002hb,
+  author = {Elowitz, Michael B and Levine, Arnold J and Siggia, Eric D and Swain,
+	Peter S},
+  title = {{Stochastic Gene Expression in a Single Cell}},
+  journal = {Science},
+  year = {2002},
+  volume = {297},
+  pages = {1183--1186},
+  number = {5584},
+  month = aug
+}
+
+@ARTICLE{Gentile:2003in,
+  author = {Gentile, Massimiliano and Latonen, Leena and Laiho, Marikki},
+  title = {{Cell cycle arrest and apoptosis provoked by {UV} radiation‐induced
+	{DNA} damage are transcriptionally highly divergent responses}},
+  journal = {Nucleic Acids Research},
+  year = {2003},
+  volume = {31},
+  pages = {4779--4790},
+  number = {16},
+  month = aug
+}
+
+@ARTICLE{Gerlinger:2012wu,
+  author = {Gerlinger, M and Futreal, P A and Pusztai, L and Swanton, C},
+  title = {{Intratumor heterogeneity: seeing the wood for the trees}},
+  journal = {Sci Transl {\ldots}},
+  year = {2012}
+}
+
+@ARTICLE{Gibney:2010ws,
+  author = {Gibney, E R and Nolan, C M},
+  title = {{Epigenetics and gene expression}},
+  journal = {Heredity},
+  year = {2010}
+}
+
+@ARTICLE{Goldberg:2007tl,
+  author = {Goldberg, A D and Allis, C D and Bernstein, E},
+  title = {{Epigenetics: a landscape takes shape}},
+  journal = {Cell},
+  year = {2007}
+}
+
+@ARTICLE{Hannah:2000wo,
+  author = {Hanahan, Douglas and Weinberg, Robert},
+  title = {{The Hallmarks of Cancer}},
+  journal = {Cell},
+  year = {2000},
+  volume = {100},
+  pages = {57--70},
+  number = {1},
+  month = jan
+}
+
+@ARTICLE{Hanahan:2011gu,
+  author = {Hanahan, Douglas and Weinberg, Robert A},
+  title = {{Hallmarks of Cancer: The Next Generation}},
+  journal = {Cell},
+  year = {2011},
+  volume = {144},
+  pages = {646--674},
+  number = {5},
+  month = mar
+}
+
+@ARTICLE{Hanna:2009ix,
+  author = {Hanna, Jacob and Saha, Krishanu and Pando, Bernardo and van Zon,
+	Jeroen and Lengner, Christopher J and Creyghton, Menno P and van
+	Oudenaarden, Alexander and Jaenisch, Rudolf},
+  title = {{Direct cell reprogramming is a stochastic process amenable to acceleration
+	}},
+  journal = {Nature},
+  year = {2009},
+  volume = {462},
+  pages = {595--601},
+  number = {7273},
+  month = mar
+}
+
+@ARTICLE{Hanna:2010jy,
+  author = {Hanna, Jacob H and Saha, Krishanu and Jaenisch, Rudolf},
+  title = {{Pluripotency and Cellular Reprogramming: Facts, Hypotheses, Unresolved
+	Issues}},
+  journal = {Cell},
+  year = {2010},
+  volume = {143},
+  pages = {508--525},
+  number = {4},
+  month = nov
+}
+
+@BOOK{hastie2001elements,
+  title = {{The Elements of Statistical Learning: Data Mining, Inference, and
+	Prediction}},
+  publisher = {Springer},
+  year = {2001},
+  author = {Hastie, T and Tibshirani, R and Friedman, J H},
+  series = {Springer series in statistics}
+}
+
+@ARTICLE{Heng:2009em,
+  author = {Heng, Henry H Q and Bremer, Steven W and Stevens, Joshua B and Ye,
+	Karen J and Liu, Guo and Ye, Christine J},
+  title = {{Genetic and epigenetic heterogeneity in cancer: A genome‐centric
+	perspective}},
+  journal = {J. Cell. Physiol.},
+  year = {2009},
+  volume = {220},
+  pages = {538--547},
+  number = {3}
+}
+
+@ARTICLE{Herce:kq,
+  author = {Herce, Henry D and Deng, Wen and Helma, Jonas and Leonhardt, Heinrich
+	and Cardoso, M Cristina},
+  title = {{Visualization and targeted disruption of protein interactions in
+	living cells}},
+  journal = {Nature Communications},
+  year = {2013},
+  volume = {4},
+  month = oct,
+  annote = {Supplementary information available for this article at http://www.nature.com/ncomms/2013/131024/ncomms3660/suppinfo/ncomms3660{\_}S1.html}
+}
+
+@ARTICLE{Hirsch:2010ec,
+  author = {Hirsch, Heather A and Iliopoulos, Dimitrios and Joshi, Amita and
+	Zhang, Yong and Jaeger, Savina A and Bulyk, Martha and Tsichlis,
+	Philip N and Liu, X Shirley and Struhl, Kevin},
+  title = {{A Transcriptional Signature and Common Gene Networks Link Cancer
+	with Lipid Metabolism and Diverse Human Diseases}},
+  journal = {Cancer Cell},
+  year = {2010},
+  volume = {17},
+  pages = {348--361},
+  number = {4},
+  month = apr
+}
+
+@ARTICLE{Hodgkin:1952td,
+  author = {Hodgkin, A L and Huxley, A F},
+  title = {{A quantitative description of membrane current and its application
+	to conduction and excitation in nerve}},
+  journal = {J Physiol},
+  year = {1952},
+  volume = {117},
+  pages = {500--544},
+  number = {4},
+  month = aug
+}
+
+@ARTICLE{Hoffman:2012gn,
+  author = {Hoffman, Michael M and Buske, Orion J and Wang, Jie and Weng, Zhiping
+	and Bilmes, Jeff A and Noble, William Stafford},
+  title = {{Unsupervised pattern discovery in human chromatin structure through
+	genomic segmentation}},
+  journal = {Nat Meth},
+  year = {2012},
+  volume = {9},
+  pages = {473--476},
+  number = {5}
+}
+
+@ARTICLE{Hughes:2001ho,
+  author = {Hughes, Timothy R and Mao, Mao and Jones, Allan R and Burchard, Julja
+	and Marton, Matthew J and Shannon, Karen W and Lefkowitz, Steven
+	M and Ziman, Michael and Schelter, Janell M and Meyer, Michael R
+	and Kobayashi, Sumire and Davis, Colleen and Dai, Hongyue and He,
+	Yudong D and Stephaniants, Sergey B and Cavet, Guy and Walker, Wynn
+	L and West, Anne and Coffey, Ernest and Shoemaker, Daniel D and Stoughton,
+	Roland and Blanchard, Alan P and Friend, Stephen H and Linsley, Peter
+	S},
+  title = {{Expression profiling using microarrays fabricated by an ink-jet
+	oligonucleotide synthesizer}},
+  journal = {Nat Biotech},
+  year = {2001},
+  volume = {19},
+  pages = {342--347},
+  number = {4},
+  month = apr
+}
+
+@ARTICLE{Ieda:2010ir,
+  author = {Ieda, Masaki and Fu, Ji-Dong and Delgado-Olguin, Paul and Vedantham,
+	Vasanth and Hayashi, Yohei and Bruneau, Benoit G and Srivastava,
+	Deepak},
+  title = {{Direct Reprogramming of Fibroblasts into Functional Cardiomyocytes
+	by Defined Factors}},
+  journal = {Cell},
+  year = {2010},
+  volume = {142},
+  pages = {375--386},
+  number = {3},
+  month = aug
+}
+
+@ARTICLE{Iliopoulos:2009do,
+  author = {Iliopoulos, Dimitrios and Hirsch, Heather A and Struhl, Kevin},
+  title = {{An Epigenetic Switch Involving {NF}-kB, Lin28, Let-7 MicroRNA, and
+	IL6 Links Inflammation to Cell Transformation}},
+  journal = {Cell},
+  year = {2009},
+  volume = {139},
+  pages = {693--706},
+  number = {4},
+  month = nov
+}
+
+@ARTICLE{Jacquez:1985fz,
+  author = {Jacquez, John A and Greif, Peter},
+  title = {{Numerical parameter identifiability and estimability: Integrating
+	identifiability, estimability, and optimal sampling design}},
+  journal = {Mathematical Biosciences},
+  year = {1985},
+  volume = {77},
+  pages = {201--227},
+  number = {1-2},
+  month = dec
+}
+
+@ARTICLE{Jaenisch:2008cz,
+  author = {Jaenisch, Rudolf and Young, Richard},
+  title = {{Stem Cells, the Molecular Circuitry of Pluripotency and Nuclear
+	Reprogramming}},
+  journal = {Cell},
+  year = {2008},
+  volume = {132},
+  pages = {567--582},
+  number = {4},
+  month = feb
+}
+
+@ARTICLE{James:mc,
+  author = {James, F},
+  title = {{Monte {Carlo} theory and practice}},
+  journal = {Rep. Prog. Phys.},
+  year = {1980},
+  volume = {43},
+  pages = {1145},
+  number = {9}
+}
+
+@ARTICLE{Johnson:1949uq,
+  author = {Johnson, N L},
+  title = {{Systems of Frequency Curves Generated by Methods of Translation}},
+  journal = {Biometrika},
+  year = {1949},
+  volume = {36},
+  pages = {149--176},
+  number = {1/2},
+  month = jan
+}
+
+@ARTICLE{Kalbfleisch:1985tw,
+  author = {Kalbfleisch, JD and Lawless, J.F.},
+  title = {{The analysis of panel data under a {Markov} assumption}},
+  journal = {Journal of the American Statistical Association},
+  year = {1985},
+  volume = {80},
+  pages = {863--871}
+}
+
+@ARTICLE{Kalbfleisch:1984wz,
+  author = {Kalbfleisch, J.D. and Lawless, J.F.},
+  title = {{Least-squares estimation of transition probabilities from aggregate
+	data}},
+  journal = {Canadian Journal of Statistics},
+  year = {1984},
+  volume = {12},
+  pages = {169--182}
+}
+
+@ARTICLE{Kalbfleisch:1983vd,
+  author = {Kalbfleisch, John David and Lawless, Jerald Franklin and Vollmer,
+	William M},
+  title = {{Estimation in {Markov} models from aggregate data}},
+  journal = {Biometrics},
+  year = {1983},
+  pages = {907--919}
+}
+
+@ARTICLE{Lahdesmaki:2005fh,
+  author = {L{\"a}hdesm{\"a}ki, Harri and Shmulevich, llya and Dunmire, Valerie
+	and Yli-Harja, Olli and Zhang, Wei},
+  title = {{In silico microdissection of microarray data from heterogeneous
+	cell populations}},
+  journal = {BMC Bioinformatics},
+  year = {2005},
+  volume = {6},
+  pages = {54},
+  number = {1}
+}
+
+@BOOK{Lanza:2013uk,
+  title = {{Essentials of Stem Cell Biology}},
+  publisher = {Elsevier Science},
+  year = {2013},
+  author = {Lanza, R and Atala, A}
+}
+
+@BOOK{lanza2009essentials,
+  title = {{Essentials of Stem Cell Biology}},
+  publisher = {Elsevier Science},
+  year = {2009},
+  author = {Lanza, R and Gearhart, J and Hogan, B and Melton, D and Pedersen,
+	R and Thomas, E D and Thomson, J A and Wilmut, I S}
+}
+
+@ARTICLE{Li:2012ea,
+  author = {Li, J and Witten, D M and Johnstone, I M and Tibshirani, R},
+  title = {{Normalization, testing, and false discovery rate estimation for
+	RNA-sequencing data}},
+  journal = {Biostatistics},
+  year = {2012},
+  volume = {13},
+  pages = {523--538},
+  number = {3},
+  month = jun
+}
+
+@ARTICLE{Lockhart:1996jw,
+  author = {Lockhart, David J and Dong, Helin and Byrne, Michael C and Follettie,
+	Maximillian T and Gallo, Michael V and Chee, Mark S and Mittmann,
+	Michael and Wang, Chunwei and Kobayashi, Michiko and Norton, Heidi
+	and Brown, Eugene L},
+  title = {{Expression monitoring by hybridization to high-density oligonucleotide
+	arrays}},
+  journal = {Nat Biotech},
+  year = {1996},
+  volume = {14},
+  pages = {1675--1680},
+  number = {13},
+  month = dec
+}
+
+@BOOK{MacDonald:1997wm,
+  title = {{Hidden {Markov} and Other Models for Discrete- valued Time Series}},
+  publisher = {Taylor {\&} Francis},
+  year = {1997},
+  author = {MacDonald, I L and Zucchini, W}
+}
+
+@ARTICLE{Martin:2001jx,
+  author = {Martin, G Steven},
+  title = {{The hunting of the Src}},
+  journal = {Nature Reviews Molecular Cell Biology},
+  year = {2001},
+  volume = {2},
+  pages = {467--475},
+  number = {6},
+  month = jun
+}
+
+@ARTICLE{McCarthy:2012wg,
+  author = {McCarthy, D J and Chen, Y and Smyth, G K},
+  title = {{Differential expression analysis of multifactor RNA-Seq experiments
+	with respect to biological variation}},
+  journal = {Nucleic Acids Research},
+  year = {2012},
+  volume = {40},
+  pages = {4288--4297},
+  number = {10}
+}
+
+@ARTICLE{Mortazavi:2008jj,
+  author = {Mortazavi, Ali and Williams, Brian A and McCue, Kenneth and Schaeffer,
+	Lorian and Wold, Barbara},
+  title = {{Mapping and quantifying mammalian transcriptomes by RNA-Seq}},
+  journal = {Nat Meth},
+  year = {2008},
+  volume = {5},
+  pages = {621--628},
+  number = {7},
+  month = jul
+}
+
+@ARTICLE{Nagalakshmi:2008cj,
+  author = {Nagalakshmi, Ugrappa and Wang, Zhong and Waern, Karl and Shou, Chong
+	and Raha, Debasish and Gerstein, Mark and Snyder, Michael},
+  title = {{The Transcriptional Landscape of the Yeast Genome Defined by RNA
+	Sequencing}},
+  journal = {Science},
+  year = {2008},
+  volume = {320},
+  pages = {1344--1349},
+  number = {5881},
+  month = jun
+}
+
+@ARTICLE{Neal:2001ed,
+  author = {Neal, Radford M},
+  title = {{Annealed importance sampling}},
+  journal = {Statistics and Computing},
+  year = {2001},
+  volume = {11},
+  pages = {125--139},
+  number = {2}
+}
+
+@BOOK{norris1998markov,
+  title = {{Markov Chains}},
+  publisher = {Cambridge University Press},
+  year = {1998},
+  author = {Norris, J R},
+  series = {Cambridge Series in Statistical and Probabilistic Mathematics}
+}
+
+@ARTICLE{Oshlack:2010kr,
+  author = {Oshlack, Alicia and Robinson, Mark D and Young, Matthew D},
+  title = {{From RNA-seq reads to differential expression results}},
+  journal = {Genome Biology},
+  year = {2010},
+  volume = {11},
+  pages = {1--10},
+  number = {12},
+  month = dec
+}
+
+@ARTICLE{Pang:2011ce,
+  author = {Pang, Zhiping P and Yang, Nan and Vierbuchen, Thomas and Ostermeier,
+	Austin and Fuentes, Daniel R and Yang, Troy Q and Citri, Ami and
+	Sebastiano, Vittorio and Marro, Samuele and S{\"u}dhof, Thomas C
+	and Wernig, Marius},
+  title = {{Induction of human neuronal cells by defined transcription factors}},
+  journal = {Nature},
+  year = {2011},
+  volume = {476},
+  pages = {220--223},
+  number = {7359},
+  month = aug
+}
+
+@ARTICLE{Pawlik2004928,
+  author = {Timothy M. Pawlik and Khandan Keyomarsi},
+  title = {Role of cell cycle in mediating sensitivity to radiotherapy},
+  journal = {International Journal of Radiation Oncology Biology Physics },
+  year = {2004},
+  volume = {59},
+  pages = {928--942},
+  number = {4},
+  issn = {0360-3016}
+}
+
+@BOOKLET{phimister1999chipping,
+  title = {{The Chipping Forecast}},
+  author = {Phimister, B},
+  year = {1999}
+}
+
+@ARTICLE{Robinson:2010cw,
+  author = {Robinson, Mark D and McCarthy, Davis J and Smyth, Gordon K},
+  title = {{edgeR: a Bioconductor package for differential expression analysis
+	of digital gene expression data}},
+  journal = {Bioinformatics},
+  year = {2010},
+  volume = {26},
+  pages = {139--140},
+  number = {1},
+  month = jan
+}
+
+@ARTICLE{Robinson:2010dd,
+  author = {Robinson, Mark D and Oshlack, Alicia},
+  title = {{A scaling normalization method for differential expression analysis
+	of RNA-seq data}},
+  journal = {Genome Biology},
+  year = {2010},
+  volume = {11},
+  pages = {R25},
+  number = {3}
+}
+
+@ARTICLE{Rous:1911uf,
+  author = {Rous, Peyton},
+  title = {{A {SAR}COMA OF THE FOWL TRANSMISSIBLE BY AN AGENT SEPARABLE FROM
+	THE TUMOR CELLS}},
+  journal = {The Journal of Experimental Medicine},
+  year = {1911},
+  volume = {13},
+  pages = {397--411},
+  number = {4},
+  month = jan
+}
+
+@ARTICLE{Roy:2006ik,
+  author = {Roy, Sushmita and Lane, Terran and Allen, Chris and Aragon, Anthony
+	D and Werner-Washburne, Margaret},
+  title = {{A Hidden-State {Markov} Model for Cell Population Deconvolution}},
+  journal = {Journal of Computational Biology},
+  year = {2006},
+  volume = {13},
+  pages = {1749--1774},
+  number = {10},
+  month = dec
+}
+
+@INCOLLECTION{Saccomani:2003kx,
+  author = {Saccomani, Mariapia and Audoly, Stefania and Bellu, Giuseppina and
+	D'Angi{\`o}, Leontina},
+  title = {{Parameter Identifiability of Nonlinear Biological Systems}},
+  booktitle = {Lecture Notes in Control and Information Science},
+  publisher = {Springer Berlin Heidelberg},
+  year = {2003},
+  editor = {Benvenuti, Luca and Santis, Alberto and Farina, Lorenzo},
+  pages = {87--93}
+}
+
+@ARTICLE{Saccomani:2010by,
+  author = {Saccomani, Maria Pia and Audoly, Stefania and Bellu, Giuseppina and
+	D'Angi{\`o}, Leontina},
+  title = {{Examples of testing global identifiability of biological and biomedical
+	models with the DAISY software}},
+  journal = {Computers in Biology and Medicine},
+  year = {2010},
+  volume = {40},
+  pages = {402--407},
+  number = {4},
+  month = mar
+}
+
+@ARTICLE{SamavarchiTehrani:2010cp,
+  author = {Samavarchi-Tehrani, Payman and Golipour, Azadeh and David, Laurent
+	and Sung, Hoon-Ki and Beyer, Tobias A and Datti, Alessandro and Woltjen,
+	Knut and Nagy, Andras and Wrana, Jeffrey L},
+  title = {{Functional Genomics Reveals a BMP-Driven Mesenchymal-to-Epithelial
+	Transition in the Initiation of Somatic Cell Reprogramming}},
+  journal = {Stem Cell},
+  year = {2010},
+  volume = {7},
+  pages = {64--77},
+  number = {1},
+  month = jul
+}
+
+@ARTICLE{Sasieni:2011,
+  author = {Sasieni, P D and Shelton, J and Ormiston-Smith, N and Thomson, C
+	S and Silcocks, P B},
+  title = {{What is the lifetime risk of developing cancer[quest]: the effect
+	of adjusting for multiple primaries}},
+  journal = {Br J Cancer},
+  year = {2011},
+  volume = {105},
+  pages = {460--465},
+  number = {3},
+  month = jul,
+  day = {26},
+  doi = {10.1038/bjc.2011.250},
+  publisher = {Cancer Research UK}
+}
+
+@ARTICLE{Schwarz:1978uv,
+  author = {Schwarz, Gideon},
+  title = {{Estimating the Dimension of a Model}},
+  journal = {Ann. Statist.},
+  year = {1978},
+  volume = {6},
+  pages = {461--464},
+  number = {2}
+}
+
+@ARTICLE{deSouza:2012dz,
+  author = {de Souza, Natalie},
+  title = {{Single-cell methods}},
+  journal = {Nature Methods},
+  year = {2012},
+  volume = {9},
+  pages = {35},
+  number = {1}
+}
+
+@ARTICLE{Souza2012,
+  author = {de Souza, Natalie},
+  title = {{Single-cell methods}},
+  journal = {Nature Methods},
+  year = {2012},
+  volume = {9},
+  pages = {35},
+  number = {1}
+}
+
+@ARTICLE{Spellman:1998wj,
+  author = {Spellman, Paul T and Sherlock, Gavin and Zhang, Michael Q and Iyer,
+	Vishwanath R and Anders, Kirk and Eisen, Michael B and Brown, Patrick
+	O and Botstein, David and Futcher, Bruce},
+  title = {{Comprehensive Identification of Cell Cycle--regulated Genes of the
+	Yeast Saccharomyces cerevisiae by Microarray Hybridization}},
+  year = {1998}
+}
+
+@ARTICLE{Takahashi:2006hi,
+  author = {Takahashi, Kazutoshi and Yamanaka, Shinya},
+  title = {{Induction of Pluripotent Stem Cells from Mouse Embryonic and Adult
+	Fibroblast Cultures by Defined Factors}},
+  journal = {Cell},
+  year = {2006},
+  volume = {126},
+  pages = {663--676},
+  number = {4},
+  month = aug
+}
+
+@ARTICLE{Tang:2010ed,
+  author = {Tang, Fuchou and Barbacioru, Catalin and Bao, Siqin and Lee, Caroline
+	and Nordman, Ellen and Wang, Xiaohui and Lao, Kaiqin and Surani,
+	M Azim},
+  title = {{Tracing the Derivation of Embryonic Stem Cells from the Inner Cell
+	Mass by Single-Cell RNA-Seq Analysis}},
+  journal = {Stem Cell},
+  year = {2010},
+  volume = {6},
+  pages = {468--478},
+  number = {5},
+  month = may
+}
+
+@ARTICLE{Tang:2011gt,
+  author = {Tang, Fuchou and Lao, Kaiqin and Surani, M Azim},
+  title = {{Development and applications of single-cell transcriptome analysis}},
+  journal = {Nature Methods},
+  year = {2011},
+  volume = {8}
+}
+
+@ARTICLE{Tennyson:1995dl,
+  author = {Tennyson, Christine N and Klamut, Henry J and Worton, Ronald G},
+  title = {{The human dystrophin gene requires 16 hours to be transcribed and
+	is cotranscriptionally spliced}},
+  journal = {Nat Genet},
+  year = {1995},
+  volume = {9},
+  pages = {184--190},
+  number = {2},
+  month = feb
+}
+
+@ARTICLE{Tibshirani:1996wba,
+  author = {Tibshirani, Robert},
+  title = {{Regression Shrinkage and Selection via the Lasso}},
+  journal = {Journal of the Royal Statistical Society. Series B (Methodological)},
+  year = {1996},
+  volume = {58},
+  pages = {267--288},
+  number = {1},
+  month = jan
+}
+
+@ARTICLE{Vierbuchen:2010fa,
+  author = {Vierbuchen, Thomas and Ostermeier, Austin and Pang, Zhiping P and
+	Kokubu, Yuko and S{\"u}dhof, Thomas C and Wernig, Marius},
+  title = {{Direct conversion of fibroblasts to functional neurons by defined
+	factors}},
+  journal = {Nature},
+  year = {2010},
+  volume = {463},
+  pages = {1035--1041},
+  number = {7284},
+  month = jan
+}
+
+@ARTICLE{Vogel:2010jb,
+  author = {Vogel, Gretchen},
+  title = {{Diseases in a Dish Take Off}},
+  journal = {Science},
+  year = {2010},
+  volume = {330},
+  pages = {1172--1173},
+  number = {6008},
+  month = jan
+}
+
+@ARTICLE{Wang:2010ew,
+  author = {Wang, Daojing and Bodovitz, Steven},
+  title = {{Single cell analysis: the new frontier in `omics'}},
+  journal = {Trends in Biotechnology},
+  year = {2010},
+  volume = {28},
+  pages = {281--290},
+  number = {6},
+  month = jun
+}
+
+@ARTICLE{Wang:2009ur,
+  author = {Wang, Z. and Gerstein, M. and Snyder, M.},
+  title = {{RNA-Seq: a revolutionary tool for transcriptomics}},
+  journal = {Nat Rev Genet},
+  year = {2009},
+  volume = {10},
+  pages = {57--63}
+}
+
+@BOOK{Weinberg:2013uu,
+  title = {{The Biology of Cancer, Second Edition}},
+  publisher = {Garland Science.},
+  year = {2013},
+  author = {Weinberg, R}
+}
+
+@ARTICLE{Wheeler:2003ka,
+  author = {Wheeler, Aaron R and Throndset, William R and Whelan, Rebecca J and
+	Leach, Andrew M and Zare, Richard N and Liao, Yish Hann and Farrell,
+	Kevin and Manger, Ian D and Daridon, Antoine},
+  title = {{Microfluidic Device for Single-Cell Analysis}},
+  journal = {Anal. Chem.},
+  year = {2003},
+  volume = {75},
+  pages = {3581--3586},
+  number = {14},
+  month = may
+}
+
+@ARTICLE{Williams:2012eg,
+  author = {Williams, Gareth H and Stoeber, Kai},
+  title = {{The cell cycle and cancer}},
+  journal = {The Journal of Pathology},
+  year = {2012},
+  volume = {226},
+  pages = {352--364},
+  number = {2},
+  month = jan
+}
+
+@BOOK{Zucchini:2009vl,
+  title = {{Hidden {Markov} Models for Time Series: An Introduction Using R}},
+  publisher = {Taylor {\&} Francis},
+  year = {2009},
+  author = {Zucchini, W and MacDonald, I L}
+}
+
