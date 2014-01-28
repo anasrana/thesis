@@ -36,10 +36,11 @@
 %\documentclass[11pt,a4paper,twoside]{report}      %% LaTeX2e document.
 %%* Removed twoside option
 \documentclass[11pt,a4paper]{report}      %% LaTeX2e document.
+
 \usepackage{warwickthesis,setspace,subfigure,graphicx}     %!  setspace is used to control linepacing
 \usepackage[square]{natbib}                    %! needed for Harvard style of references.
 % ! for more notes see the bibliography section below
-
+\usepackage[nographicx]{incgraph}
 \usepackage{xcolor}
 \usepackage{algorithm}
 \usepackage{algorithmicx}
@@ -182,11 +183,20 @@
 % \setlength{\parindent}{0cm}
 
 %%* Made default
-\thesiscopyrightpage                 %! Generate the copyright page.
+% \thesiscopyrightpage                 %! Generate the copyright page.
 
 %%* Uncomment a ttitle page.
  \thesistitlepage                     %% Generate the title page.
 %\thesistitlecolourpage           %! Generates a COLOUR title page.
+
+\newpage
+\thispagestyle{empty}
+\vfill
+  \begin{figure*}
+  \centering
+  \includegraphics[width=1\textwidth]{pics/Verse.pdf}
+  \end{figure*}
+  \vfill
 
 %%* Start roman page numbering here for contents, etc
 \pagenumbering{roman} %! Begins roman numerals start from page i.
@@ -197,9 +207,13 @@
 % \listoffigures                     %% Uncomment this to generate list
                                      %% of figures.
 
+
 \begin{thesisacknowledgments}        %% Use this to write your
 \input ack.tex                    %% acknowledgments; it can be anything
                                      %% allowed in LaTeX2e par-mode.
+
+\incgraph[paper=current]{pics/Acknowledgements.png}
+
 
                                      %! This following is not needed, but you may like to add it.
 %This \lowercase\expandafter{\thesistype} was typeset with
@@ -216,7 +230,7 @@
   \begin{itemize}
   \item All experimental data analysed in this thesis was obtained by others and excluding Chapter \ref{cha:oncog-transf} is all separately published work.
   \item The work in Chapter \ref{cha:stamm} and the analysis of data in Chapter \ref{cha:oncog-transf} has been submitted for publication.
-  \item The work in Chapter \ref{cha:stem-cells} has been published in \emph{Scientific Reports} and my contributions to the work with some additional information are included here.
+  \item The work in Chapter \ref{cha:stem-cells} has been published in \cite{Armond:2013} and my contributions to the work with some additional information are included here.
   \end{itemize}
 
 \end{thesisdeclaration}
