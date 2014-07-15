@@ -36,21 +36,23 @@
 %\documentclass[11pt,a4paper,twoside]{report}      %% LaTeX2e document.
 %%* Removed twoside option
 \documentclass[11pt,a4paper]{report}      %% LaTeX2e document.
-
+\usepackage[table]{xcolor}
 \usepackage{warwickthesis,setspace,subfigure,graphicx}     %!  setspace is used to control linepacing
 \usepackage[square]{natbib}                    %! needed for Harvard style of references.
 % ! for more notes see the bibliography section below
 \usepackage[nographicx]{incgraph}
-\usepackage{xcolor}
 \usepackage{algorithm}
 \usepackage{algorithmicx}
 \usepackage{algpseudocode}
 \usepackage{amsmath, amsfonts}
 \usepackage{enumerate}
 \usepackage{amssymb}
+\usepackage{geometry}
 \renewcommand{\labelitemi}{\tiny$\blacksquare$}
 \usepackage{algorithm,algorithmicx,algpseudocode}
 \usepackage[toc,page]{appendix}
+
+
  % \usepackage[T1]{fontenc}
  % Choose one of the following (if not choosing the default,
 %% viz., Computer Modern, font family):
@@ -212,7 +214,7 @@
 \input ack.tex                    %% acknowledgments; it can be anything
                                      %% allowed in LaTeX2e par-mode.
 
-\incgraph[paper=current]{pics/Acknowledgements.png}
+\incgraph[paper=current]{pics/Acknowledgements_final.pdf}
 
 
                                      %! This following is not needed, but you may like to add it.
