@@ -1,0 +1,24 @@
+;; RefTeX parse info file
+;; File: /Users/anas/Dropbox/complexity/phd/final/thesis/background.tex
+;; User: anas (anas ahmad rana)
+
+(set reftex-docstruct-symbol '(
+
+
+(xr nil "\\\\\\\\\\\\")
+
+(index-tags)
+
+(is-multi nil)
+
+(bibview-cache)
+
+(master-dir . "/Users/anas/Dropbox/complexity/phd/final/thesis/")
+
+(label-numbers)
+
+(bof "/Users/anas/Dropbox/complexity/phd/final/thesis/background.tex")
+
+(eof "/Users/anas/Dropbox/complexity/phd/final/thesis/background.tex")
+))
+

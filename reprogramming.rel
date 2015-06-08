@@ -1,0 +1,30 @@
+;; RefTeX parse info file
+;; File: /Users/anas/Dropbox/complexity/phd/final/thesis/reprogramming.tex
+;; User: anas (anas ahmad rana)
+
+(set reftex-docstruct-symbol '(
+
+
+(xr nil "\\\\\\\\\\\\")
+
+(index-tags)
+
+(is-multi nil)
+
+(bibview-cache)
+
+(master-dir . "/Users/anas/Dropbox/complexity/phd/final/thesis/")
+
+(label-numbers)
+
+(bof "/Users/anas/Dropbox/complexity/phd/final/thesis/reprogramming.tex")
+
+(toc "toc" "    1 Introduction" "/Users/anas/Dropbox/complexity/phd/final/thesis/reprogramming.tex" nil 2 "1" "\\section{Introduction}" 1)
+
+("sec:introduction-rep" "s" nil "/Users/anas/Dropbox/complexity/phd/final/thesis/reprogramming.tex" nil "")
+
+(toc "toc" "    1 Introduction" "/Users/anas/Dropbox/complexity/phd/final/thesis/reprogramming.tex" nil 2 "1" "\\section{Introduction}" 1)
+
+(eof "/Users/anas/Dropbox/complexity/phd/final/thesis/reprogramming.tex")
+))
+

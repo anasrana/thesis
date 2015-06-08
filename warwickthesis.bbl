@@ -1,0 +1,680 @@
+\begin{thebibliography}{104}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{{\tt #1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Akaike(1974)}]{Akaike:1974ih}
+Akaike, H. (1974).
+\newblock {A new look at the statistical model identification}.
+\newblock {\em IEEE Transactions on Automatic Control\/}, {\em 19\/}(6),
+  716--723.
+
+\bibitem[{Alberts et~al.(2007)Alberts, Johnson, Lewis, Raff, Roberts, \&
+  Walter}]{Alberts:2007tv}
+Alberts, B., Johnson, A., Lewis, J., Raff, M., Roberts, K., \& Walter, P.
+  (2007).
+\newblock {\em {Molecular Biology of the Cell, Fifth Edition}\/}.
+\newblock Garland Science.
+
+\bibitem[{Amari(2013)}]{Amari201348}
+Amari, S. (2013).
+\newblock Dreaming of mathematical neuroscience for half a century.
+\newblock {\em Neural Networks\/}, {\em 37\/}(0), 48 -- 51.
+
+\bibitem[{Armond et~al.(2014)Armond, Saha, Rana, Oates, Jaenisch, Nicodemi, \&
+  Mukherjee}]{Armond:2013}
+Armond, J.~W., Saha, K., Rana, A.~A., Oates, C.~J., Jaenisch, R., Nicodemi, M.,
+  \& Mukherjee, S. (2014).
+\newblock {A stochastic model dissects cell states in biological transition
+  processes}.
+\newblock {\em Scientific Reports\/}, {\em 4\/}.
+
+\bibitem[{Bagci \& Fisher(2013)}]{Bagci:2013ey}
+Bagci, H., \& Fisher, A.~G. (2013).
+\newblock {DNA Demethylation in Pluripotency and Reprogramming: The Role of Tet
+  Proteins and Cell Division}.
+\newblock {\em Stem Cell\/}, {\em 13\/}(3), 265--269.
+
+\bibitem[{Bar-Joseph et~al.(2004)Bar-Joseph, Farkash, Gifford, Simon, \&
+  Rosenfeld}]{Bar-Joseph04082004}
+Bar-Joseph, Z., Farkash, S., Gifford, D.~K., Simon, I., \& Rosenfeld, R.
+  (2004).
+\newblock Deconvolving cell cycle expression data with complementary
+  information.
+\newblock {\em Bioinformatics\/}, {\em 20\/}(suppl 1), i23--i30.
+
+\bibitem[{Bar-Joseph et~al.(2008)Bar-Joseph, Siegfried, Brandeis, Brors, Lu,
+  Eils, Dynlacht, \& Simon}]{BarJoseph:2008bx}
+Bar-Joseph, Z., Siegfried, Z., Brandeis, M., Brors, B., Lu, Y., Eils, R.,
+  Dynlacht, B.~D., \& Simon, I. (2008).
+\newblock {Genome-wide transcriptional analysis of the human cell cycle
+  identifies genes differentially regulated in normal and cancer cells}.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {\em
+  105\/}(3), 955--960.
+
+\bibitem[{Baum \& Petrie(1966)}]{Baum:1966cy}
+Baum, L.~E., \& Petrie, T. (1966).
+\newblock {Statistical Inference for Probabilistic Functions of Finite State
+  Markov Chains}.
+\newblock {\em The Annals of Mathematical Statistics\/}, {\em 37\/}(6),
+  1554--1563.
+
+\bibitem[{Bock et~al.(2011)Bock, Kiskinis, Verstappen, Gu, Boulting, Smith,
+  Ziller, Croft, Amoroso, Oakley, Gnirke, Eggan, \& Meissner}]{Bock:2011kx}
+Bock, C., Kiskinis, E., Verstappen, G., Gu, H., Boulting, G., Smith, Z.~D.,
+  Ziller, M., Croft, G.~F., Amoroso, M.~W., Oakley, D.~H., Gnirke, A., Eggan,
+  K., \& Meissner, A. (2011).
+\newblock {Reference Maps of Human ES and iPS Cell Variation Enable
+  High-Throughput Characterization of Pluripotent Cell Lines}.
+\newblock {\em Cell\/}, {\em 144\/}(3), 439--452.
+
+\bibitem[{Brown \& Botstein(1999)}]{Brown:1999bk}
+Brown, P.~O., \& Botstein, D. (1999).
+\newblock {Exploring the new world of the genome with {DNA} microarrays}.
+\newblock {\em Nature Genetics\/}, {\em 21\/}, 33--37.
+
+\bibitem[{Buganim et~al.(2012)Buganim, Faddah, Cheng, Itskovich, Markoulaki,
+  Ganz, Klemm, van Oudenaarden, \& Jaenisch}]{Buganim:2012hp}
+Buganim, Y., Faddah, D.~A., Cheng, A.~W., Itskovich, E., Markoulaki, S., Ganz,
+  K., Klemm, S.~L., van Oudenaarden, A., \& Jaenisch, R. (2012).
+\newblock {Single-Cell Expression Analyses during Cellular Reprogramming Reveal
+  an Early Stochastic and a Late Hierarchic Phase}.
+\newblock {\em Cell\/}, {\em 150\/}(6), 1209--1222.
+
+\bibitem[{Bullard et~al.(2010)Bullard, Purdom, Hansen, \&
+  Dudoit}]{Bullard:2010go}
+Bullard, J.~H., Purdom, E., Hansen, K.~D., \& Dudoit, S. (2010).
+\newblock {Evaluation of statistical methods for normalization and differential
+  expression in mRNA-Seq experiments}.
+\newblock {\em BMC Bioinformatics\/}, {\em 11\/}, 94.
+
+\bibitem[{Carey et~al.(2011)Carey, Markoulaki, Hanna, Faddah, Buganim, Kim,
+  Ganz, Steine, Cassady, Creyghton, Welstead, Gao, \& Jaenisch}]{Carey:2011bs}
+Carey, B.~W., Markoulaki, S., Hanna, J.~H., Faddah, D.~A., Buganim, Y., Kim,
+  J., Ganz, K., Steine, E.~J., Cassady, J.~P., Creyghton, M.~P., Welstead,
+  G.~G., Gao, Q., \& Jaenisch, R. (2011).
+\newblock {Reprogramming Factor Stoichiometry Influences the Epigenetic State
+  and Biological Properties of Induced Pluripotent Stem Cells}.
+\newblock {\em Cell Stem Cell\/}, {\em 9\/}(6), 588--598.
+
+\bibitem[{Casale et~al.(2013)Casale, Giurato, Nassa, Armond, Oates, Cor\'a,
+  Gamba, Mukherjee, Weisz, \& Nicodemi}]{Casale:2013}
+Casale, F., Giurato, G., Nassa, G., Armond, J.~W., Oates, C., Cor\'a, D.,
+  Gamba, A., Mukherjee, S., Weisz, A., \& Nicodemi, M. (2013).
+\newblock {Single-Cell States in the Estrogen Response of Breast Cancer Cell
+  Lines}.
+\newblock {\em submitted\/}.
+
+\bibitem[{Cleveland(1979)}]{Cleveland:2012fu}
+Cleveland, W.~S. (1979).
+\newblock {Robust Locally Weighted Regression and Smoothing Scatterplots}.
+\newblock {\em Journal of the American Statistical Association\/}, {\em
+  74\/}(368), 829--836.
+
+\bibitem[{Clifford(1977)}]{Clifford:1977wa}
+Clifford, P. (1977).
+\newblock {Nonidentifiability in stochastic models of illness and death}.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America\/}, {\em 74\/}(4), 1338--1340.
+
+\bibitem[{Dalerba et~al.(2011)Dalerba, Kalisky, Sahoo, Rajendran, Rothenberg,
+  Leyrat, Sim, Okamoto, Johnston, Qian, Zabala, Bueno, Neff, Wang, Shelton,
+  Visser, Hisamori, Shimono, van~de Wetering, Clevers, Clarke, \&
+  Quake}]{Dalerba:2011cc}
+Dalerba, P., Kalisky, T., Sahoo, D., Rajendran, P.~S., Rothenberg, M.~E.,
+  Leyrat, A.~A., Sim, S., Okamoto, J., Johnston, D.~M., Qian, D., Zabala, M.,
+  Bueno, J., Neff, N.~F., Wang, J., Shelton, A.~A., Visser, B., Hisamori, S.,
+  Shimono, Y., van~de Wetering, M., Clevers, H., Clarke, M.~F., \& Quake, S.~R.
+  (2011).
+\newblock {Single-cell dissection of transcriptional heterogeneity in human
+  colon tumors}.
+\newblock {\em Nature Biotechnology\/}, {\em 29\/}(12), 1120--1127.
+
+\bibitem[{de~Souza(2012)}]{deSouza:2012dz}
+de~Souza, N. (2012).
+\newblock {Single-cell methods}.
+\newblock {\em Nature Methods\/}, {\em 9\/}(1), 35.
+
+\bibitem[{Debnath et~al.(2003)Debnath, Muthuswamy, \& Brugge}]{Debnath:2003km}
+Debnath, J., Muthuswamy, S.~K., \& Brugge, J.~S. (2003).
+\newblock {Morphogenesis and oncogenesis of {MC}F-10A mammary epithelial acini
+  grown in three-dimensional basement membrane cultures}.
+\newblock {\em Methods\/}, {\em 30\/}(3), 256--268.
+
+\bibitem[{Dehm \& Bonham(2013)}]{Dehm:2013fr}
+Dehm, S.~M., \& Bonham, K. (2013).
+\newblock {SRC gene expression in human cancer: the role of transcriptional
+  activation}.
+\newblock {\em Biochemistry and Cell Biology\/}, {\em 82\/}(2), 263--274.
+
+\bibitem[{DeRisi et~al.(1997)DeRisi, Iyer, \& Brown}]{DeRisi:1997dw}
+DeRisi, J.~L., Iyer, V.~R., \& Brown, P.~O. (1997).
+\newblock {Exploring the Metabolic and Genetic Control of Gene Expression on a
+  Genomic Scale}.
+\newblock {\em Science\/}, {\em 278\/}(5338), 680--686.
+
+\bibitem[{Dudoit et~al.(2002)Dudoit, Yang, Callow, \& Speed}]{Dudoit:2002va}
+Dudoit, S., Yang, Y.~H., Callow, M.~J., \& Speed, T.~P. (2002).
+\newblock Statistical methods for identifying differentially expressed genes in
+  replicated cdna microarray experiments.
+\newblock {\em Statistica sinica\/}, {\em 12\/}(1), 111--140.
+
+\bibitem[{Efe et~al.(2011)Efe, Hilcove, Kim, Zhou, Ouyang, Wang, Chen, \&
+  Ding}]{Efe:2011bpa}
+Efe, J.~A., Hilcove, S., Kim, J., Zhou, H., Ouyang, K., Wang, G., Chen, J., \&
+  Ding, S. (2011).
+\newblock {Conversion of mouse fibroblasts into cardiomyocytes using a direct
+  reprogramming strategy}.
+\newblock {\em Nature Cell Biology\/}, {\em 13\/}(3), 215--222.
+
+\bibitem[{Einstein(1905)}]{Einstein:2005ww}
+Einstein, A. (1905).
+\newblock {{\"U}ber die von der molekularkinetischen theorie der w{\"a}rme
+  gerforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen}.
+\newblock {\em Annalen der Physik\/}, {\em 322\/}(8), 549--560.
+
+\bibitem[{Eisen \& Brown(1999)}]{Eisen:1999uw}
+Eisen, M.~B., \& Brown, P.~O. (1999).
+\newblock {DNA arrays for analysis of gene expression}.
+\newblock In S.~M. Weissman (Ed.) {\em cDNA Preparation and
+  Characterization\/}, vol. 303 of {\em Methods in Enzymology\/}, (pp. 179 --
+  205). Academic Press.
+
+\bibitem[{Elgar \& Vavouri(2008)}]{Elgar:2008dm}
+Elgar, G., \& Vavouri, T. (2008).
+\newblock {Tuning in to the signals: noncoding sequence conservation in
+  vertebrate genomes}.
+\newblock {\em Trends in Genetics\/}, {\em 24\/}(7), 344--352.
+
+\bibitem[{Elowitz et~al.(2002)Elowitz, Levine, Siggia, \&
+  Swain}]{Elowitz:2002hb}
+Elowitz, M.~B., Levine, A.~J., Siggia, E.~D., \& Swain, P.~S. (2002).
+\newblock {Stochastic Gene Expression in a Single Cell}.
+\newblock {\em Science\/}, {\em 297\/}(5584), 1183--1186.
+
+\bibitem[{Ernst \& Kellis(2010)}]{Ernst:2010bh}
+Ernst, J., \& Kellis, M. (2010).
+\newblock {Discovery and characterization of chromatin states for systematic
+  annotation of the human genome}.
+\newblock {\em Nature biotechnology\/}, {\em 28\/}(8), 817--825.
+
+\bibitem[{Ernst \& Kellis(2012)}]{Ernst:2012iia}
+Ernst, J., \& Kellis, M. (2012).
+\newblock {ChromHMM: automating chromatin-state discovery and
+  characterization}.
+\newblock {\em Nature Methods\/}, {\em 9\/}(3), 215--216.
+
+\bibitem[{Gentile et~al.(2003)Gentile, Latonen, \& Laiho}]{Gentile:2003in}
+Gentile, M., Latonen, L., \& Laiho, M. (2003).
+\newblock {Cell cycle arrest and apoptosis provoked by {UV} radiation‐induced
+  {DNA} damage are transcriptionally highly divergent responses}.
+\newblock {\em Nucleic Acids Research\/}, {\em 31\/}(16), 4779--4790.
+
+\bibitem[{Gerlinger et~al.(2012)Gerlinger, Rowan, Horswell, Larkin,
+  Endesfelder, Gronroos, Martinez, Matthews, Stewart, Tarpey
+  et~al.}]{Gerlinger:2012wu}
+Gerlinger, M., Rowan, A.~J., Horswell, S., Larkin, J., Endesfelder, D.,
+  Gronroos, E., Martinez, P., Matthews, N., Stewart, A., Tarpey, P., et~al.
+  (2012).
+\newblock Intratumor heterogeneity and branched evolution revealed by
+  multiregion sequencing.
+\newblock {\em New England Journal of Medicine\/}, {\em 366\/}(10), 883--892.
+
+\bibitem[{Gibney \& Nolan(2010)}]{Gibney:2010ws}
+Gibney, E.~R., \& Nolan, C.~M. (2010).
+\newblock {Epigenetics and gene expression}.
+\newblock {\em Heredity\/}, {\em 105\/}(1), 4--13.
+
+\bibitem[{Goldberg et~al.(2007)Goldberg, Allis, \& Bernstein}]{Goldberg:2007tl}
+Goldberg, A.~D., Allis, C.~D., \& Bernstein, E. (2007).
+\newblock {Epigenetics: A Landscape Takes Shape}.
+\newblock {\em Cell\/}, {\em 128\/}(4), 635--638.
+
+\bibitem[{Gupta et~al.(2011)Gupta, Fillmore, Jiang, Shapira, Tao, Kuperwasser,
+  \& Lander}]{Gupta:2011fk}
+Gupta, P.~B., Fillmore, C.~M., Jiang, G., Shapira, S.~D., Tao, K., Kuperwasser,
+  C., \& Lander, E.~S. (2011).
+\newblock {Stochastic State Transitions Give Rise to Phenotypic Equilibrium in
+  Populations of Cancer Cells}.
+\newblock {\em Cell\/}, {\em 146\/}(4), 633--644.
+
+\bibitem[{Hanahan \& Weinberg(2000)}]{Hannah:2000wo}
+Hanahan, D., \& Weinberg, R. (2000).
+\newblock {The Hallmarks of Cancer}.
+\newblock {\em Cell\/}, {\em 100\/}(1), 57--70.
+
+\bibitem[{Hanahan \& Weinberg(2011)}]{Hanahan:2011gu}
+Hanahan, D., \& Weinberg, R.~A. (2011).
+\newblock {Hallmarks of Cancer: The Next Generation}.
+\newblock {\em Cell\/}, {\em 144\/}(5), 646--674.
+
+\bibitem[{Hanna et~al.(2009)Hanna, Saha, Pando, van Zon, Lengner, Creyghton,
+  van Oudenaarden, \& Jaenisch}]{Hanna:2009ix}
+Hanna, J., Saha, K., Pando, B., van Zon, J., Lengner, C.~J., Creyghton, M.~P.,
+  van Oudenaarden, A., \& Jaenisch, R. (2009).
+\newblock {Direct cell reprogramming is a stochastic process amenable to
+  acceleration }.
+\newblock {\em Nature\/}, {\em 462\/}(7273), 595--601.
+
+\bibitem[{Hanna et~al.(2010)Hanna, Saha, \& Jaenisch}]{Hanna:2010jy}
+Hanna, J.~H., Saha, K., \& Jaenisch, R. (2010).
+\newblock {Pluripotency and Cellular Reprogramming: Facts, Hypotheses,
+  Unresolved Issues}.
+\newblock {\em Cell\/}, {\em 143\/}(4), 508--525.
+
+\bibitem[{Hastie et~al.(2001)Hastie, Tibshirani, \&
+  Friedman}]{hastie2001elements}
+Hastie, T., Tibshirani, R., \& Friedman, J.~H. (2001).
+\newblock {\em {The Elements of Statistical Learning: Data Mining, Inference,
+  and Prediction}\/}.
+\newblock Springer series in statistics. Springer.
+
+\bibitem[{Heng et~al.(2009)Heng, Bremer, Stevens, Ye, Liu, \& Ye}]{Heng:2009em}
+Heng, H. H.~Q., Bremer, S.~W., Stevens, J.~B., Ye, K.~J., Liu, G., \& Ye, C.~J.
+  (2009).
+\newblock {Genetic and epigenetic heterogeneity in cancer: A genome‐centric
+  perspective}.
+\newblock {\em Journal of Cellular Physiology\/}, {\em 220\/}(3), 538--547.
+
+\bibitem[{Herce et~al.(2013)Herce, Deng, Helma, Leonhardt, \&
+  Cardoso}]{Herce:kq}
+Herce, H.~D., Deng, W., Helma, J., Leonhardt, H., \& Cardoso, M.~C. (2013).
+\newblock {Visualization and targeted disruption of protein interactions in
+  living cells}.
+\newblock {\em Nature Communications\/}, {\em 4\/}.
+
+\bibitem[{Hirsch et~al.(2010)Hirsch, Iliopoulos, Joshi, Zhang, Jaeger, Bulyk,
+  Tsichlis, Liu, \& Struhl}]{Hirsch:2010ec}
+Hirsch, H.~A., Iliopoulos, D., Joshi, A., Zhang, Y., Jaeger, S.~A., Bulyk, M.,
+  Tsichlis, P.~N., Liu, X.~S., \& Struhl, K. (2010).
+\newblock {A Transcriptional Signature and Common Gene Networks Link Cancer
+  with Lipid Metabolism and Diverse Human Diseases}.
+\newblock {\em Cancer Cell\/}, {\em 17\/}(4), 348--361.
+
+\bibitem[{Hodgkin \& Huxley(1952)}]{Hodgkin:1952td}
+Hodgkin, A.~L., \& Huxley, A.~F. (1952).
+\newblock {A quantitative description of membrane current and its application
+  to conduction and excitation in nerve}.
+\newblock {\em The Journal of physiology\/}, {\em 117\/}(4), 500--544.
+
+\bibitem[{Hoffman et~al.(2012)Hoffman, Buske, Wang, Weng, Bilmes, \&
+  Noble}]{Hoffman:2012gn}
+Hoffman, M.~M., Buske, O.~J., Wang, J., Weng, Z., Bilmes, J.~A., \& Noble,
+  W.~S. (2012).
+\newblock {Unsupervised pattern discovery in human chromatin structure through
+  genomic segmentation}.
+\newblock {\em Nature Methods\/}, {\em 9\/}(5), 473--476.
+
+\bibitem[{Ieda et~al.(2010)Ieda, Fu, Delgado-Olguin, Vedantham, Hayashi,
+  Bruneau, \& Srivastava}]{Ieda:2010ir}
+Ieda, M., Fu, J.-D., Delgado-Olguin, P., Vedantham, V., Hayashi, Y., Bruneau,
+  B.~G., \& Srivastava, D. (2010).
+\newblock {Direct Reprogramming of Fibroblasts into Functional Cardiomyocytes
+  by Defined Factors}.
+\newblock {\em Cell\/}, {\em 142\/}(3), 375--386.
+
+\bibitem[{Iliopoulos et~al.(2009)Iliopoulos, Hirsch, \&
+  Struhl}]{Iliopoulos:2009do}
+Iliopoulos, D., Hirsch, H.~A., \& Struhl, K. (2009).
+\newblock {An Epigenetic Switch Involving {NF}-$\kappa$B, Lin28, Let-7
+  MicroRNA, and IL6 Links Inflammation to Cell Transformation}.
+\newblock {\em Cell\/}, {\em 139\/}(4), 693--706.
+
+\bibitem[{Jacquez \& Greif(1985)}]{Jacquez:1985fz}
+Jacquez, J.~A., \& Greif, P. (1985).
+\newblock {Numerical parameter identifiability and estimability: Integrating
+  identifiability, estimability, and optimal sampling design}.
+\newblock {\em Mathematical Biosciences\/}, {\em 77\/}(1-2), 201--227.
+
+\bibitem[{Jaenisch \& Young(2008)}]{Jaenisch:2008cz}
+Jaenisch, R., \& Young, R. (2008).
+\newblock {Stem Cells, the Molecular Circuitry of Pluripotency and Nuclear
+  Reprogramming}.
+\newblock {\em Cell\/}, {\em 132\/}(4), 567--582.
+
+\bibitem[{James(1980)}]{James:mc}
+James, F. (1980).
+\newblock {Monte {Carlo} theory and practice}.
+\newblock {\em Reports on Progress in Physics\/}, {\em 43\/}(9), 1145.
+
+\bibitem[{Johnson(1949)}]{Johnson:1949uq}
+Johnson, N.~L. (1949).
+\newblock {Systems of Frequency Curves Generated by Methods of Translation}.
+\newblock {\em Biometrika\/}, {\em 36\/}(1/2), 149--176.
+
+\bibitem[{Kalbfleisch \& Lawless(1984)}]{Kalbfleisch:1984wz}
+Kalbfleisch, J., \& Lawless, J. (1984).
+\newblock {Least-squares estimation of transition probabilities from aggregate
+  data}.
+\newblock {\em The Canadian Journal of Statistics\/}, {\em 12\/}(3), 169--182.
+
+\bibitem[{Kalbfleisch \& Lawless(1985)}]{Kalbfleisch:1985tw}
+Kalbfleisch, J., \& Lawless, J. (1985).
+\newblock {The analysis of panel data under a {Markov} assumption}.
+\newblock {\em Journal of the American Statistical Association\/}, {\em
+  80\/}(392), 863--871.
+
+\bibitem[{Kalbfleisch et~al.(1983)Kalbfleisch, Lawless, \&
+  Vollmer}]{Kalbfleisch:1983vd}
+Kalbfleisch, J.~D., Lawless, J.~F., \& Vollmer, W.~M. (1983).
+\newblock {Estimation in {Markov} models from aggregate data}.
+\newblock {\em Biometrics\/}, {\em 9\/}(4), 907--919.
+
+\bibitem[{Kuhn et~al.(2004)Kuhn, Baker, Chudin, Lieu, Oeser, Bennett, Rigault,
+  Barker, McDaniel, \& Chee}]{Kuhn:2004gf}
+Kuhn, K., Baker, S.~C., Chudin, E., Lieu, M.-H., Oeser, S., Bennett, H.,
+  Rigault, P., Barker, D., McDaniel, T.~K., \& Chee, M.~S. (2004).
+\newblock {A novel, high-performance random array platform for quantitative
+  gene expression profiling}.
+\newblock {\em Genome Research\/}, {\em 14\/}(11), 2347--2356.
+
+\bibitem[{L{\"a}hdesm{\"a}ki et~al.(2005)L{\"a}hdesm{\"a}ki, Shmulevich,
+  Dunmire, Yli-Harja, \& Zhang}]{Lahdesmaki:2005fh}
+L{\"a}hdesm{\"a}ki, H., Shmulevich, l., Dunmire, V., Yli-Harja, O., \& Zhang,
+  W. (2005).
+\newblock {In silico microdissection of microarray data from heterogeneous cell
+  populations}.
+\newblock {\em BMC Bioinformatics\/}, {\em 6\/}(1), 54.
+
+\bibitem[{Lanza \& Atala(2013)}]{Lanza:2013uk}
+Lanza, R., \& Atala, A. (2013).
+\newblock {\em {Essentials of Stem Cell Biology}\/}.
+\newblock Elsevier Science.
+
+\bibitem[{Lanza et~al.(2009)Lanza, Gearhart, Hogan, Melton, Pedersen, Thomas,
+  Thomson, \& Wilmut}]{lanza2009essentials}
+Lanza, R., Gearhart, J., Hogan, B., Melton, D., Pedersen, R., Thomas, E.~D.,
+  Thomson, J.~A., \& Wilmut, I.~S. (2009).
+\newblock {\em {Essentials of Stem Cell Biology}\/}.
+\newblock Elsevier Science.
+
+\bibitem[{Lee et~al.(2010)Lee, Shim, Cho, Jung, Lee, \& Oh}]{Lee:2010kz}
+Lee, G.-Y., Shim, J.-S., Cho, B., Jung, J.-Y., Lee, D.-S., \& Oh, I.-H. (2010).
+\newblock {Stochastic acquisition of a stem cell-like state and drug tolerance
+  in leukemia cells stressed by radiation}.
+\newblock {\em International Journal of Hematology\/}, {\em 93\/}(1), 27--35.
+
+\bibitem[{Li \& Fraumeni(1969)}]{Li:1969kl}
+Li, F.~P., \& Fraumeni, J.~F., Jr. (1969).
+\newblock Soft-tissue sarcomas, breast cancer, and other neoplasms: A familial
+  syndrome?
+\newblock {\em Annals of Internal Medicine\/}, {\em 71\/}(4), 747--752.
+
+\bibitem[{Li et~al.(2012)Li, Witten, Johnstone, \& Tibshirani}]{Li:2012ea}
+Li, J., Witten, D.~M., Johnstone, I.~M., \& Tibshirani, R. (2012).
+\newblock {Normalization, testing, and false discovery rate estimation for
+  RNA-sequencing data}.
+\newblock {\em Biostatistics\/}, {\em 13\/}(3), 523--538.
+
+\bibitem[{Lockhart et~al.(1996)Lockhart, Dong, Byrne, Follettie, Gallo, Chee,
+  Mittmann, Wang, Kobayashi, Norton, \& Brown}]{Lockhart:1996jw}
+Lockhart, D.~J., Dong, H., Byrne, M.~C., Follettie, M.~T., Gallo, M.~V., Chee,
+  M.~S., Mittmann, M., Wang, C., Kobayashi, M., Norton, H., \& Brown, E.~L.
+  (1996).
+\newblock {Expression monitoring by hybridization to high-density
+  oligonucleotide arrays}.
+\newblock {\em Nat Biotech\/}, {\em 14\/}(13), 1675--1680.
+
+\bibitem[{Lotka(1925)}]{Lotka:1925tu}
+Lotka, A.~J. (1925).
+\newblock {\em {Elements of physical biology}\/}.
+\newblock Baltimore: Williams {\&} Wilkins.
+
+\bibitem[{MacDonald \& Zucchini(1997)}]{MacDonald:1997wm}
+MacDonald, I.~L., \& Zucchini, W. (1997).
+\newblock {\em {Hidden {Markov} and Other Models for Discrete- valued Time
+  Series}\/}.
+\newblock Taylor {\&} Francis.
+
+\bibitem[{Martin(2001)}]{Martin:2001jx}
+Martin, G.~S. (2001).
+\newblock {The hunting of the Src}.
+\newblock {\em Nature Reviews Molecular Cell Biology\/}, {\em 2\/}(6),
+  467--475.
+
+\bibitem[{McCarthy et~al.(2012)McCarthy, Chen, \& Smyth}]{McCarthy:2012wg}
+McCarthy, D.~J., Chen, Y., \& Smyth, G.~K. (2012).
+\newblock {Differential expression analysis of multifactor RNA-Seq experiments
+  with respect to biological variation}.
+\newblock {\em Nucleic Acids Research\/}, {\em 40\/}(10), 4288--4297.
+
+\bibitem[{Mortazavi et~al.(2008)Mortazavi, Williams, McCue, Schaeffer, \&
+  Wold}]{Mortazavi:2008jj}
+Mortazavi, A., Williams, B.~A., McCue, K., Schaeffer, L., \& Wold, B. (2008).
+\newblock {Mapping and quantifying mammalian transcriptomes by RNA-Seq}.
+\newblock {\em Nature Methods\/}, {\em 5\/}(7), 621--628.
+
+\bibitem[{Nagalakshmi et~al.(2008)Nagalakshmi, Wang, Waern, Shou, Raha,
+  Gerstein, \& Snyder}]{Nagalakshmi:2008cj}
+Nagalakshmi, U., Wang, Z., Waern, K., Shou, C., Raha, D., Gerstein, M., \&
+  Snyder, M. (2008).
+\newblock {The Transcriptional Landscape of the Yeast Genome Defined by RNA
+  Sequencing}.
+\newblock {\em Science\/}, {\em 320\/}(5881), 1344--1349.
+
+\bibitem[{Neal(2001)}]{Neal:2001ed}
+Neal, R.~M. (2001).
+\newblock {Annealed importance sampling}.
+\newblock {\em Statistics and Computing\/}, {\em 11\/}(2), 125--139.
+
+\bibitem[{Norris(1998)}]{norris1998markov}
+Norris, J.~R. (1998).
+\newblock {\em {Markov Chains}\/}.
+\newblock Cambridge Series in Statistical and Probabilistic Mathematics.
+  Cambridge University Press.
+
+\bibitem[{Ohgushi \& Sasai(2011)}]{Ohgushi:2011em}
+Ohgushi, M., \& Sasai, Y. (2011).
+\newblock {Lonely death dance of human pluripotent stem cells: ROCKing between
+  metastable cell states}.
+\newblock {\em Trends in Cell Biology\/}, {\em 21\/}(5), 274--282.
+
+\bibitem[{Oshlack et~al.(2010)Oshlack, Robinson, \& Young}]{Oshlack:2010kr}
+Oshlack, A., Robinson, M.~D., \& Young, M.~D. (2010).
+\newblock {From RNA-seq reads to differential expression results}.
+\newblock {\em Genome Biology\/}, {\em 11\/}(12), 1--10.
+
+\bibitem[{Pang et~al.(2011)Pang, Yang, Vierbuchen, Ostermeier, Fuentes, Yang,
+  Citri, Sebastiano, Marro, S{\"u}dhof, \& Wernig}]{Pang:2011ce}
+Pang, Z.~P., Yang, N., Vierbuchen, T., Ostermeier, A., Fuentes, D.~R., Yang,
+  T.~Q., Citri, A., Sebastiano, V., Marro, S., S{\"u}dhof, T.~C., \& Wernig, M.
+  (2011).
+\newblock {Induction of human neuronal cells by defined transcription factors}.
+\newblock {\em Nature\/}, {\em 476\/}(7359), 220--223.
+
+\bibitem[{Pawlik \& Keyomarsi(2004)}]{Pawlik2004928}
+Pawlik, T.~M., \& Keyomarsi, K. (2004).
+\newblock Role of cell cycle in mediating sensitivity to radiotherapy.
+\newblock {\em International Journal of Radiation Oncology Biology Physics\/},
+  {\em 59\/}(4), 928--942.
+
+\bibitem[{Pennisi(2012)}]{Pennisi:2012wl}
+Pennisi, E. (2012).
+\newblock {ENCODE Project Writes Eulogy for Junk DNA}.
+\newblock {\em Science\/}, {\em 337\/}(6099), 1159--1161.
+
+\bibitem[{Phimister(1999)}]{phimister1999chipping}
+Phimister, B. (1999).
+\newblock {The Chipping Forecast}.
+
+\bibitem[{Plath \& Lowry(2011)}]{Plath:2011is}
+Plath, K., \& Lowry, W.~E. (2011).
+\newblock {Progress in understanding reprogramming to the induced pluripotent
+  state}.
+\newblock {\em Nature Publishing Group\/}, {\em 12\/}(4), 253--265.
+
+\bibitem[{Rashevsky(1935)}]{Rashevsky:1935jt}
+Rashevsky, N. (1935).
+\newblock {Mathmatical Biophysics}.
+\newblock {\em Nature\/}, {\em 135\/}(3414).
+
+\bibitem[{Robinson et~al.(2010)Robinson, McCarthy, \& Smyth}]{Robinson:2010cw}
+Robinson, M.~D., McCarthy, D.~J., \& Smyth, G.~K. (2010).
+\newblock {edgeR: a Bioconductor package for differential expression analysis
+  of digital gene expression data}.
+\newblock {\em Bioinformatics\/}, {\em 26\/}(1), 139--140.
+
+\bibitem[{Robinson \& Oshlack(2010)}]{Robinson:2010dd}
+Robinson, M.~D., \& Oshlack, A. (2010).
+\newblock {A scaling normalization method for differential expression analysis
+  of RNA-seq data}.
+\newblock {\em Genome Biology\/}, {\em 11\/}(3), R25.
+
+\bibitem[{Rous(1911)}]{Rous:1911uf}
+Rous, P. (1911).
+\newblock {A sarcoma of the fowl transmissible by an agent separable from the
+  tumor cells}.
+\newblock {\em The Journal of Experimental Medicine\/}, {\em 13\/}(4),
+  397--411.
+
+\bibitem[{Roy et~al.(2006)Roy, Lane, Allen, Aragon, \&
+  Werner-Washburne}]{Roy:2006ik}
+Roy, S., Lane, T., Allen, C., Aragon, A.~D., \& Werner-Washburne, M. (2006).
+\newblock {A Hidden-State {Markov} Model for Cell Population Deconvolution}.
+\newblock {\em Journal of Computational Biology\/}, {\em 13\/}(10), 1749--1774.
+
+\bibitem[{Saccomani et~al.(2003)Saccomani, Audoly, Bellu, \&
+  D'Angi{\`o}}]{Saccomani:2003kx}
+Saccomani, M., Audoly, S., Bellu, G., \& D'Angi{\`o}, L. (2003).
+\newblock {Parameter Identifiability of Nonlinear Biological Systems}.
+\newblock In L.~Benvenuti, A.~Santis, \& L.~Farina (Eds.) {\em Lecture Notes in
+  Control and Information Science\/}, (pp. 87--93). Springer Berlin Heidelberg.
+
+\bibitem[{Saccomani et~al.(2010)Saccomani, Audoly, Bellu, \&
+  D'Angi{\`o}}]{Saccomani:2010by}
+Saccomani, M.~P., Audoly, S., Bellu, G., \& D'Angi{\`o}, L. (2010).
+\newblock {Examples of testing global identifiability of biological and
+  biomedical models with the DAISY software}.
+\newblock {\em Computers in Biology and Medicine\/}, {\em 40\/}(4), 402--407.
+
+\bibitem[{Samavarchi-Tehrani et~al.(2010)Samavarchi-Tehrani, Golipour, David,
+  Sung, Beyer, Datti, Woltjen, Nagy, \& Wrana}]{SamavarchiTehrani:2010cp}
+Samavarchi-Tehrani, P., Golipour, A., David, L., Sung, H.-K., Beyer, T.~A.,
+  Datti, A., Woltjen, K., Nagy, A., \& Wrana, J.~L. (2010).
+\newblock {Functional Genomics Reveals a BMP-Driven Mesenchymal-to-Epithelial
+  Transition in the Initiation of Somatic Cell Reprogramming}.
+\newblock {\em Stem Cell\/}, {\em 7\/}(1), 64--77.
+
+\bibitem[{Sasieni et~al.(2011)Sasieni, Shelton, Ormiston-Smith, Thomson, \&
+  Silcocks}]{Sasieni:2011}
+Sasieni, P.~D., Shelton, J., Ormiston-Smith, N., Thomson, C.~S., \& Silcocks,
+  P.~B. (2011).
+\newblock {What is the lifetime risk of developing cancer[quest]: the effect of
+  adjusting for multiple primaries}.
+\newblock {\em British Journal of Cancer\/}, {\em 105\/}(3), 460--465.
+
+\bibitem[{Schadt et~al.(2010)Schadt, Linderman, Sorenson, Lee, \&
+  Nolan}]{Schadt:2010dp}
+Schadt, E.~E., Linderman, M.~D., Sorenson, J., Lee, L., \& Nolan, G.~P. (2010).
+\newblock {Computational solutions to large-scale data management and
+  analysis}.
+\newblock {\em Nature Reviews Genetics\/}, {\em 11\/}(9), 647--657.
+
+\bibitem[{Schreiber \& Bernstein(2002)}]{schreiber2002signaling}
+Schreiber, S.~L., \& Bernstein, B.~E. (2002).
+\newblock Signaling network model of chromatin.
+\newblock {\em Cell\/}, {\em 111\/}(6), 771--778.
+
+\bibitem[{Schwarz(1978)}]{Schwarz:1978uv}
+Schwarz, G. (1978).
+\newblock {Estimating the Dimension of a Model}.
+\newblock {\em The Annals of Statistics\/}, {\em 6\/}(2), 461--464.
+
+\bibitem[{Spellman et~al.(1998)Spellman, Sherlock, Zhang, Iyer, Anders, Eisen,
+  Brown, Botstein, \& Futcher}]{Spellman:1998wj}
+Spellman, P.~T., Sherlock, G., Zhang, M.~Q., Iyer, V.~R., Anders, K., Eisen,
+  M.~B., Brown, P.~O., Botstein, D., \& Futcher, B. (1998).
+\newblock Comprehensive identification of cell cycle--regulated genes of the
+  yeast saccharomyces cerevisiae by microarray hybridization.
+\newblock {\em Molecular biology of the cell\/}, {\em 9\/}(12), 3273--3297.
+
+\bibitem[{Strahl \& Allis(2000)}]{strahl2000language}
+Strahl, B.~D., \& Allis, C.~D. (2000).
+\newblock The language of covalent histone modifications.
+\newblock {\em Nature\/}, {\em 403\/}(6765), 41--45.
+
+\bibitem[{Takahashi \& Yamanaka(2006)}]{Takahashi:2006hi}
+Takahashi, K., \& Yamanaka, S. (2006).
+\newblock {Induction of Pluripotent Stem Cells from Mouse Embryonic and Adult
+  Fibroblast Cultures by Defined Factors}.
+\newblock {\em Cell\/}, {\em 126\/}(4), 663--676.
+
+\bibitem[{Tang et~al.(2010)Tang, Barbacioru, Bao, Lee, Nordman, Wang, Lao, \&
+  Surani}]{Tang:2010ed}
+Tang, F., Barbacioru, C., Bao, S., Lee, C., Nordman, E., Wang, X., Lao, K., \&
+  Surani, M.~A. (2010).
+\newblock {Tracing the Derivation of Embryonic Stem Cells from the Inner Cell
+  Mass by Single-Cell RNA-Seq Analysis}.
+\newblock {\em Stem Cell\/}, {\em 6\/}(5), 468--478.
+
+\bibitem[{Tang et~al.(2011)Tang, Lao, \& Surani}]{Tang:2011gt}
+Tang, F., Lao, K., \& Surani, M.~A. (2011).
+\newblock {Development and applications of single-cell transcriptome analysis}.
+\newblock {\em Nature Methods\/}, {\em 8\/}.
+
+\bibitem[{Tennyson et~al.(1995)Tennyson, Klamut, \& Worton}]{Tennyson:1995dl}
+Tennyson, C.~N., Klamut, H.~J., \& Worton, R.~G. (1995).
+\newblock {The human dystrophin gene requires 16 hours to be transcribed and is
+  cotranscriptionally spliced}.
+\newblock {\em Nature Genetics\/}, {\em 9\/}(2), 184--190.
+
+\bibitem[{Tibshirani(1996)}]{Tibshirani:1996wba}
+Tibshirani, R. (1996).
+\newblock {Regression Shrinkage and Selection via the Lasso}.
+\newblock {\em Journal of the Royal Statistical Society. Series B
+  (Methodological)\/}, {\em 58\/}(1), 267--288.
+
+\bibitem[{Vierbuchen et~al.(2010)Vierbuchen, Ostermeier, Pang, Kokubu,
+  S{\"u}dhof, \& Wernig}]{Vierbuchen:2010fa}
+Vierbuchen, T., Ostermeier, A., Pang, Z.~P., Kokubu, Y., S{\"u}dhof, T.~C., \&
+  Wernig, M. (2010).
+\newblock {Direct conversion of fibroblasts to functional neurons by defined
+  factors}.
+\newblock {\em Nature\/}, {\em 463\/}(7284), 1035--1041.
+
+\bibitem[{Vogel(2010)}]{Vogel:2010jb}
+Vogel, G. (2010).
+\newblock {Diseases in a Dish Take Off}.
+\newblock {\em Science\/}, {\em 330\/}(6008), 1172--1173.
+
+\bibitem[{Wang \& Bodovitz(2010)}]{Wang:2010ew}
+Wang, D., \& Bodovitz, S. (2010).
+\newblock {Single cell analysis: the new frontier in `omics'}.
+\newblock {\em Trends in Biotechnology\/}, {\em 28\/}(6), 281--290.
+
+\bibitem[{Wang et~al.(2009)Wang, Gerstein, \& Snyder}]{Wang:2009ur}
+Wang, Z., Gerstein, M., \& Snyder, M. (2009).
+\newblock {RNA-Seq: a revolutionary tool for transcriptomics}.
+\newblock {\em Nature Reviews. Genetics\/}, {\em 10\/}(1), 57--63.
+
+\bibitem[{Weinberg(2013)}]{Weinberg:2013uu}
+Weinberg, R. (2013).
+\newblock {\em {The Biology of Cancer, Second Edition}\/}.
+\newblock Garland Science.
+
+\bibitem[{Wheeler et~al.(2003)Wheeler, Throndset, Whelan, Leach, Zare, Liao,
+  Farrell, Manger, \& Daridon}]{Wheeler:2003ka}
+Wheeler, A.~R., Throndset, W.~R., Whelan, R.~J., Leach, A.~M., Zare, R.~N.,
+  Liao, Y.~H., Farrell, K., Manger, I.~D., \& Daridon, A. (2003).
+\newblock {Microfluidic Device for Single-Cell Analysis}.
+\newblock {\em Analytical Chemistry\/}, {\em 75\/}(14), 3581--3586.
+
+\bibitem[{Williams \& Stoeber(2012)}]{Williams:2012eg}
+Williams, G.~H., \& Stoeber, K. (2012).
+\newblock {The cell cycle and cancer}.
+\newblock {\em The Journal of Pathology\/}, {\em 226\/}(2), 352--364.
+
+\bibitem[{Yoon(2009)}]{Yoon:2009dl}
+Yoon, B.-J. (2009).
+\newblock {Hidden Markov Models and their Applications in Biological Sequence
+  Analysis}.
+\newblock {\em Current Genomics\/}, {\em 10\/}(6), 402.
+
+\bibitem[{Zucchini \& MacDonald(2009)}]{Zucchini:2009vl}
+Zucchini, W., \& MacDonald, I.~L. (2009).
+\newblock {\em {Hidden {Markov} Models for Time Series: An Introduction Using
+  R}\/}.
+\newblock Taylor {\&} Francis.
+
+\end{thebibliography}

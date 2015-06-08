@@ -1,0 +1,1355 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.18)  20 OCT 2014 10:52
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**/Users/anas/Dropbox/complexity/phd/final/thesis/warwickthesis.tex
+(/Users/anas/Dropbox/complexity/phd/final/thesis/warwickthesis.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen103
+\extrarowheight=\dimen104
+\NC@list=\toks14
+\extratabsurround=\skip43
+\backup@length=\skip44
+)
+\everycr=\toks15
+\minrowclearance=\skip45
+)
+\rownum=\count89
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+) (/Users/anas/Dropbox/complexity/phd/final/thesis/warwickthesis.sty
+*************************************************************
+** Warwick Thesis Style File Sept 1996 
+*************************************************************
+\hour=\count90
+\minute=\count91
+\dow=\count92
+\leap=\count93
+\x=\count94
+\y=\count95
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip46
+\subfigcapskip=\skip47
+\subfigcaptopadj=\dimen105
+\subfigbottomskip=\skip48
+\subfigcapmargin=\dimen106
+\subfiglabelskip=\skip49
+\c@subfigure=\count96
+\c@lofdepth=\count97
+\c@subtable=\count98
+\c@lotdepth=\count99
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2014/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip50
+\subfig@bottom=\skip51
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen107
+\Gin@req@width=\dimen108
+) (/Users/anas/Dropbox/complexity/phd/final/thesis/natbib.sty
+Package: natbib 1998/07/14 6.8c (PWD)
+\bibhang=\skip52
+\bibsep=\skip53
+LaTeX Info: Redefining \cite on input line 467.
+\c@NAT@ctr=\count100
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/incgraph/incgraph.sty
+Package: incgraph 2013/01/16 version 1.11 LaTeX special graphics inclusion
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/l
+ocal/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks17
+\pgfkeys@temptoks=\toks18
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
+\pgfkeys@tmptoks=\toks19
+))) (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/
+local/texlive/2014/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks20
+\pgfutil@tempdima=\dimen109
+\pgfutil@tempdimb=\dimen110
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+sts.tex))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box26
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.te
+x
+Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
+))
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/
+local/texlive/2014/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+\pgf@x=\dimen111
+\pgf@y=\dimen112
+\pgf@xa=\dimen113
+\pgf@ya=\dimen114
+\pgf@xb=\dimen115
+\pgf@yb=\dimen116
+\pgf@xc=\dimen117
+\pgf@yc=\dimen118
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count101
+\c@pgf@countb=\count102
+\c@pgf@countc=\count103
+\c@pgf@countd=\count104
+\t@pgf@toka=\toks21
+\t@pgf@tokb=\toks22
+\t@pgf@tokc=\toks23
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count105
+\pgfsyssoftpath@bigbuffer@items=\count106
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr
+/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/
+local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen119
+\pgfmath@count=\count107
+\pgfmath@box=\box27
+\pgfmath@toks=\toks24
+\pgfmath@stack@operand=\toks25
+\pgfmath@stack@operation=\toks26
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex))) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/m
+ath/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count108
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen120
+\pgf@picmaxx=\dimen121
+\pgf@picminy=\dimen122
+\pgf@picmaxy=\dimen123
+\pgf@pathminx=\dimen124
+\pgf@pathmaxx=\dimen125
+\pgf@pathminy=\dimen126
+\pgf@pathmaxy=\dimen127
+\pgf@xx=\dimen128
+\pgf@xy=\dimen129
+\pgf@yx=\dimen130
+\pgf@yy=\dimen131
+\pgf@zx=\dimen132
+\pgf@zy=\dimen133
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen134
+\pgf@path@lasty=\dimen135
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
+\pgf@shorten@end@additional=\dimen136
+\pgf@shorten@start@additional=\dimen137
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
+\pgfpic=\box28
+\pgf@hbox=\box29
+\pgf@layerbox@main=\box30
+\pgf@picture@serial@count=\count109
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
+\pgflinewidth=\dimen138
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
+\pgf@pt@x=\dimen139
+\pgf@pt@y=\dimen140
+\pgf@pt@temp=\dimen141
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
+\pgfarrowsep=\dimen142
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen143
+\pgf@sys@shading@range@num=\count110
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
+\pgfexternal@startupbox=\box31
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box32
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen144
+\pgf@nodesepend=\dimen145
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+)) (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr
+/local/texlive/2014/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texli
+ve/2014/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/
+2014/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen146
+\pgffor@skip=\dimen147
+\pgffor@stack=\toks27
+\pgffor@toks=\toks28
+)) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/bookmark.sty
+Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdfescape.sty
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
+Package hobsub Info: Skipping package `pdfescape' (already loaded).
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen148
+\Hy@linkcounter=\count111
+\Hy@pagecounter=\count112
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count113
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count114
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen149
+\Fld@menulength=\count115
+\Field@Width=\dimen150
+\Fld@charsize=\dimen151
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count116
+\c@Item=\count117
+\c@Hfootnote=\count118
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count119
+\c@bookmark@seq@number=\count120
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip54
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/bkm-pdftex.def
+File: bkm-pdftex.def 2011/12/02 v1.24 bookmark driver for pdfTeX (HO)
+\BKM@id=\count121
+))
+\igrbox=\box33
+\igr@length=\dimen152
+\c@igrtarget=\count122
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count123
+\float@exts=\toks29
+\float@box=\box34
+\@float@everytoks=\toks30
+\@floatcapt=\box35
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks31
+\c@algorithm=\count124
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count125
+\c@ALG@rem=\count126
+\c@ALG@nested=\count127
+\ALG@tlm=\skip55
+\ALG@thistlm=\skip56
+\c@ALG@Lnr=\count128
+\c@ALG@blocknr=\count129
+\c@ALG@storecount=\count130
+\c@ALG@tmpcounter=\count131
+\ALG@tmplength=\skip57
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip58
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks32
+\ex@=\dimen153
+)) (/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen154
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count132
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count133
+\leftroot@=\count134
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count135
+\DOTSCASE@=\count136
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box36
+\strutbox@=\box37
+\big@size=\dimen155
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count137
+\c@MaxMatrixCols=\count138
+\dotsspace@=\muskip11
+\c@parentequation=\count139
+\dspbrk@lvl=\count140
+\tag@help=\toks33
+\row@=\count141
+\column@=\count142
+\maxfields@=\count143
+\andhelp@=\toks34
+\eqnshift@=\dimen156
+\alignsep@=\dimen157
+\tagshift@=\dimen158
+\tagwidth@=\dimen159
+\totwidth@=\dimen160
+\lineht@=\dimen161
+\@envbody=\toks35
+\multlinegap=\skip59
+\multlinetaggap=\skip60
+\mathdisplay@stack=\toks36
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks37
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+\Gm@cnth=\count144
+\Gm@cntv=\count145
+\c@Gm@tempcnt=\count146
+\Gm@bindingoffset=\dimen162
+\Gm@wd@mp=\dimen163
+\Gm@odd@mp=\dimen164
+\Gm@even@mp=\dimen165
+\Gm@layoutwidth=\dimen166
+\Gm@layoutheight=\dimen167
+\Gm@layouthoffset=\dimen168
+\Gm@layoutvoffset=\dimen169
+\Gm@dimlist=\toks38
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count147
+\c@@ppsavesec=\count148
+\c@@ppsaveapp=\count149
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen170
+\captionmargin@=\dimen171
+\captionwidth=\dimen172
+\caption@tempdima=\dimen173
+\caption@indent=\dimen174
+\caption@parindent=\dimen175
+\caption@hangindent=\dimen176
+)
+\c@ContinuedFloat=\count150
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: subfigure package is loaded.
+) (/Users/anas/Dropbox/complexity/phd/final/thesis/warwickthesis.aux)
+\openout1 = `warwickthesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count151
+\scratchdimen=\dimen177
+\scratchbox=\box38
+\nofMPsegments=\count152
+\nofMParguments=\count153
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count154
+\MPscratchDim=\dimen178
+\MPnumerator=\count155
+\makeMPintoPDFobject=\count156
+\everyMPtoPDFconversion=\toks40
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)) ABD: EveryShipout initializing macros
+\AtBeginShipoutBox=\box39
+Package hyperref Info: Link coloring OFF on input line 184.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count157
+)
+LaTeX Info: Redefining \ref on input line 184.
+LaTeX Info: Redefining \pageref on input line 184.
+LaTeX Info: Redefining \nameref on input line 184.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=418.25368pt
+* \textheight=591.5302pt
+* \oddsidemargin=17.3571pt
+* \evensidemargin=17.3571pt
+* \topmargin=29.13666pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+<crest_black.pdf, id=7, 64.24pt x 80.3pt>
+File: crest_black.pdf Graphic file (type pdf)
+<use crest_black.pdf>
+Package pdftex.def Info: crest_black.pdf used on input line 191.
+(pdftex.def)             Requested size: 142.26378pt x 177.84413pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 191.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 191.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) <the_warwick_uni_black.pdf, id=8, 157.58875pt x 46.1725pt>
+File: the_warwick_uni_black.pdf Graphic file (type pdf)
+<use the_warwick_uni_black.pdf>
+Package pdftex.def Info: the_warwick_uni_black.pdf used on input line 191.
+(pdftex.def)             Requested size: 170.71652pt x 50.02193pt.
+
+Overfull \hbox (8.53542pt too wide) in paragraph at lines 191--191
+ [][] 
+ []
+
+[1
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/
+anas/Dropbox/complexity/phd/final/thesis/crest_black.pdf> </Users/anas/Dropbox/
+complexity/phd/final/thesis/the_warwick_uni_black.pdf>] <pics/Verse.pdf, id=23,
+ 990.53038pt x 554.76688pt>
+File: pics/Verse.pdf Graphic file (type pdf)
+<use pics/Verse.pdf>
+Package pdftex.def Info: pics/Verse.pdf used on input line 199.
+(pdftex.def)             Requested size: 418.25368pt x 234.25333pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.206 \tableofcontents
+                                           %% Generate table of contents. [1 </
+Users/anas/Dropbox/complexity/phd/final/thesis/pics/Verse.pdf>] (/Users/anas/Dr
+opbox/complexity/phd/final/thesis/warwickthesis.toc [2
+
+] [3])
+\tf@toc=\write4
+\openout4 = `warwickthesis.toc'.
+
+[4] (/Users/anas/Dropbox/complexity/phd/final/thesis/ack.tex [5
+
+]) <pics/Acknowledgements_finalv2.pdf, id=197, 597.23125pt x 845.1575pt>
+File: pics/Acknowledgements_finalv2.pdf Graphic file (type pdf)
+<use pics/Acknowledgements_finalv2.pdf>
+Package pdftex.def Info: pics/Acknowledgements_finalv2.pdf used on input line 2
+17.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+[6] [7
+
+ </Users/anas/Dropbox/complexity/phd/final/thesis/pics/Acknowledgements_finalv2
+.pdf>] <pics/Acknowledgements_finalv2p2.pdf, id=235, 597.23125pt x 845.1575pt>
+File: pics/Acknowledgements_finalv2p2.pdf Graphic file (type pdf)
+<use pics/Acknowledgements_finalv2p2.pdf>
+Package pdftex.def Info: pics/Acknowledgements_finalv2p2.pdf used on input line
+ 218.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+[8
+
+ </Users/anas/Dropbox/complexity/phd/final/thesis/pics/Acknowledgements_finalv2
+p2.pdf>] [9
+
+] (/Users/anas/Dropbox/complexity/phd/final/thesis/abstract.tex) [10
+
+] (/Users/anas/Dropbox/complexity/phd/final/thesis/introduction.tex
+Chapter 1.
+[1
+
+] [2] [3] [4] [5] [6] [7] [8]) [9]
+Chapter 2.
+(/Users/anas/Dropbox/complexity/phd/final/thesis/background.tex) (/Users/anas/D
+ropbox/complexity/phd/final/thesis/background-math.tex [10
+
+] [11] [12] <pics/hmm-schem.pdf, id=520, 799.62944pt x 713.42572pt>
+File: pics/hmm-schem.pdf Graphic file (type pdf)
+<use pics/hmm-schem.pdf>
+Package pdftex.def Info: pics/hmm-schem.pdf used on input line 62.
+(pdftex.def)             Requested size: 334.60422pt x 298.52638pt.
+[13 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/hmm-schem.pdf>] [14] 
+[15] [16] [17] [18]) (/Users/anas/Dropbox/complexity/phd/final/thesis/backgroun
+d-bio.tex [19] [20] <pics/dogma-bio.pdf, id=653, 932.0054pt x 361.54402pt>
+File: pics/dogma-bio.pdf Graphic file (type pdf)
+<use pics/dogma-bio.pdf>
+Package pdftex.def Info: pics/dogma-bio.pdf used on input line 15.
+(pdftex.def)             Requested size: 288.59605pt x 111.95059pt.
+[21 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/dogma-bio.pdf>] [22]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+[23] [24] [25] [26] [27] <pics/li-biostats12.jpg, id=815, 1284.8pt x 582.175pt>
+File: pics/li-biostats12.jpg Graphic file (type jpg)
+<use pics/li-biostats12.jpg>
+Package pdftex.def Info: pics/li-biostats12.jpg used on input line 97.
+(pdftex.def)             Requested size: 376.42575pt x 170.56754pt.
+[28] <pics/ma-plot.png, id=828, 794.97pt x 794.97pt>
+File: pics/ma-plot.png Graphic file (type png)
+<use pics/ma-plot.png>
+Package pdftex.def Info: pics/ma-plot.png used on input line 111.
+(pdftex.def)             Requested size: 334.60422pt x 334.61295pt.
+[29 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/li-biostats12.jpg>] [
+30 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/ma-plot.png>]) [31]
+Chapter 3.
+(/Users/anas/Dropbox/complexity/phd/final/thesis/stamm.tex [32
+
+] <pics/model_fig.pdf, id=896, 390.793pt x 528.14012pt>
+File: pics/model_fig.pdf Graphic file (type pdf)
+<use pics/model_fig.pdf>
+Package pdftex.def Info: pics/model_fig.pdf used on input line 18.
+(pdftex.def)             Requested size: 250.95476pt x 339.16092pt.
+[33] [34 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/model_fig.pdf>] 
+[35] [36] <pics/assmptn11.pdf, id=966, 578.16pt x 433.62pt>
+File: pics/assmptn11.pdf Graphic file (type pdf)
+<use pics/assmptn11.pdf>
+Package pdftex.def Info: pics/assmptn11.pdf used on input line 87.
+(pdftex.def)             Requested size: 188.21288pt x 141.1564pt.
+<pics/assmptn12.pdf, id=967, 578.16pt x 433.62pt>
+File: pics/assmptn12.pdf Graphic file (type pdf)
+<use pics/assmptn12.pdf>
+Package pdftex.def Info: pics/assmptn12.pdf used on input line 90.
+(pdftex.def)             Requested size: 188.21288pt x 141.1564pt.
+<pics/assmptn13.pdf, id=968, 578.16pt x 433.62pt>
+File: pics/assmptn13.pdf Graphic file (type pdf)
+<use pics/assmptn13.pdf>
+Package pdftex.def Info: pics/assmptn13.pdf used on input line 93.
+(pdftex.def)             Requested size: 188.21288pt x 141.1564pt.
+<pics/assmptn14.pdf, id=969, 578.16pt x 433.62pt>
+File: pics/assmptn14.pdf Graphic file (type pdf)
+<use pics/assmptn14.pdf>
+Package pdftex.def Info: pics/assmptn14.pdf used on input line 96.
+(pdftex.def)             Requested size: 188.21288pt x 141.1564pt.
+[37] [38 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/assmptn11.pdf> <
+/Users/anas/Dropbox/complexity/phd/final/thesis/pics/assmptn12.pdf> </Users/ana
+s/Dropbox/complexity/phd/final/thesis/pics/assmptn13.pdf> </Users/anas/Dropbox/
+complexity/phd/final/thesis/pics/assmptn14.pdf>] [39] [40]
+Missing character: There is no ∆ in font cmr10!
+Missing character: There is no í in font cmr10!
+[41] <pics/pipeline.pdf, id=1061, 845.1575pt x 597.23125pt>
+File: pics/pipeline.pdf Graphic file (type pdf)
+<use pics/pipeline.pdf>
+Package pdftex.def Info: pics/pipeline.pdf used on input line 158.
+(pdftex.def)             Requested size: 376.42575pt x 266.00856pt.
+[42 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/pipeline.pdf>]
+
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 190.
+
+[43] <pics/trans-rates.pdf, id=1194, 722.7pt x 578.16pt>
+File: pics/trans-rates.pdf Graphic file (type pdf)
+<use pics/trans-rates.pdf>
+Package pdftex.def Info: pics/trans-rates.pdf used on input line 211.
+(pdftex.def)             Requested size: 292.77629pt x 234.22409pt.
+
+Overfull \hbox (0.98969pt too wide) in paragraph at lines 218--219
+ []\OT1/cmr/bx/n/10.95 State tran-si-tions.[] \OT1/cmr/m/n/10.95 When set-ting 
+tran-si-tion rates be-tween dis-crete states of the Markov
+ []
+
+[44] [45 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/trans-rates.pdf>
+] [46]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 232.
+[47] <pics/traj-comp.pdf, id=1267, 650.43pt x 505.89pt>
+File: pics/traj-comp.pdf Graphic file (type pdf)
+<use pics/traj-comp.pdf>
+Package pdftex.def Info: pics/traj-comp.pdf used on input line 277.
+(pdftex.def)             Requested size: 250.95476pt x 195.18893pt.
+<pics/beta-comp.pdf, id=1268, 650.43pt x 505.89pt>
+File: pics/beta-comp.pdf Graphic file (type pdf)
+<use pics/beta-comp.pdf>
+Package pdftex.def Info: pics/beta-comp.pdf used on input line 281.
+(pdftex.def)             Requested size: 250.95476pt x 195.18893pt.
+[48] [49 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/traj-comp.pdf> <
+/Users/anas/Dropbox/complexity/phd/final/thesis/pics/beta-comp.pdf
+
+pdfTeX warning: pdflatex (file /Users/anas/Dropbox/complexity/phd/final/thesis/
+pics/beta-comp.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>] <pics/correlation.pdf, id=2001, 596.28772pt x 362.41397pt>
+File: pics/correlation.pdf Graphic file (type pdf)
+<use pics/correlation.pdf>
+Package pdftex.def Info: pics/correlation.pdf used on input line 321.
+(pdftex.def)             Requested size: 196.57973pt x 119.47531pt.
+<pics/mean-diff.pdf, id=2002, 604.78952pt x 362.41397pt>
+File: pics/mean-diff.pdf Graphic file (type pdf)
+<use pics/mean-diff.pdf>
+Package pdftex.def Info: pics/mean-diff.pdf used on input line 325.
+(pdftex.def)             Requested size: 196.57973pt x 117.79419pt.
+[50 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/correlation.pdf> </Us
+ers/anas/Dropbox/complexity/phd/final/thesis/pics/mean-diff.pdf>] <pics/hist-al
+l.pdf, id=2084, 722.7pt x 505.89pt>
+File: pics/hist-all.pdf Graphic file (type pdf)
+<use pics/hist-all.pdf>
+Package pdftex.def Info: pics/hist-all.pdf used on input line 339.
+(pdftex.def)             Requested size: 376.42575pt x 263.49658pt.
+[51] [52 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/hist-all.pdf>] <
+pics/realist-dupl.pdf, id=2104, 856.79594pt x 933.0388pt>
+File: pics/realist-dupl.pdf Graphic file (type pdf)
+<use pics/realist-dupl.pdf>
+Package pdftex.def Info: pics/realist-dupl.pdf used on input line 368.
+(pdftex.def)             Requested size: 334.60422pt x 364.38196pt.
+
+LaTeX Warning: Float too large for page by 15.6036pt on input line 371.
+
+<pics/n-cell.pdf, id=2105, 1029.20508pt x 593.29356pt>
+File: pics/n-cell.pdf Graphic file (type pdf)
+<use pics/n-cell.pdf>
+Package pdftex.def Info: pics/n-cell.pdf used on input line 374.
+(pdftex.def)             Requested size: 418.25368pt x 241.10638pt.
+<pics/back-trans.pdf, id=2112, 838.0198pt x 861.35301pt>
+File: pics/back-trans.pdf Graphic file (type pdf)
+<use pics/back-trans.pdf>
+Package pdftex.def Info: pics/back-trans.pdf used on input line 389.
+(pdftex.def)             Requested size: 418.25368pt x 429.9pt.
+[53] [54 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/realist-dupl.pdf
+>] [55 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/n-cell.pdf>] [56 <
+/Users/anas/Dropbox/complexity/phd/final/thesis/pics/back-trans.pdf>] <pics/stu
+dent-t.pdf, id=2391, 875.35933pt x 903.23347pt>
+File: pics/student-t.pdf Graphic file (type pdf)
+<use pics/student-t.pdf>
+Package pdftex.def Info: pics/student-t.pdf used on input line 402.
+(pdftex.def)             Requested size: 334.60422pt x 345.25827pt.
+<pics/kmeans-sim.pdf, id=2396, 722.7pt x 578.16pt>
+File: pics/kmeans-sim.pdf Graphic file (type pdf)
+<use pics/kmeans-sim.pdf>
+Package pdftex.def Info: pics/kmeans-sim.pdf used on input line 419.
+(pdftex.def)             Requested size: 196.57973pt x 157.26096pt.
+<pics/w_m_clust.pdf, id=2397, 722.7pt x 578.16pt>
+File: pics/w_m_clust.pdf Graphic file (type pdf)
+<use pics/w_m_clust.pdf>
+Package pdftex.def Info: pics/w_m_clust.pdf used on input line 423.
+(pdftex.def)             Requested size: 196.57973pt x 157.26096pt.
+[57] [58 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/student-t.pdf>] 
+[59 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/kmeans-sim.pdf> </Use
+rs/anas/Dropbox/complexity/phd/final/thesis/pics/w_m_clust.pdf>] <pics/no-pen-s
+im.pdf, id=2539, 505.89pt x 505.89pt>
+File: pics/no-pen-sim.pdf Graphic file (type pdf)
+<use pics/no-pen-sim.pdf>
+Package pdftex.def Info: pics/no-pen-sim.pdf used on input line 436.
+(pdftex.def)             Requested size: 250.95476pt x 250.96053pt.
+<pics/loocv-sim.pdf, id=2540, 722.7pt x 578.16pt>
+File: pics/loocv-sim.pdf Graphic file (type pdf)
+<use pics/loocv-sim.pdf>
+Package pdftex.def Info: pics/loocv-sim.pdf used on input line 446.
+(pdftex.def)             Requested size: 192.39949pt x 153.91742pt.
+<pics/stab-m-sim.pdf, id=2541, 762.91022pt x 585.2314pt>
+File: pics/stab-m-sim.pdf Graphic file (type pdf)
+<use pics/stab-m-sim.pdf>
+Package pdftex.def Info: pics/stab-m-sim.pdf used on input line 450.
+(pdftex.def)             Requested size: 192.39949pt x 147.58446pt.
+<pics/sim_permute.pdf, id=2542, 722.7pt x 505.89pt>
+File: pics/sim_permute.pdf Graphic file (type pdf)
+<use pics/sim_permute.pdf>
+Package pdftex.def Info: pics/sim_permute.pdf used on input line 454.
+(pdftex.def)             Requested size: 200.75996pt x 140.52893pt.
+[60 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/no-pen-sim.pdf>] [61 
+</Users/anas/Dropbox/complexity/phd/final/thesis/pics/loocv-sim.pdf> </Users/an
+as/Dropbox/complexity/phd/final/thesis/pics/stab-m-sim.pdf> </Users/anas/Dropbo
+x/complexity/phd/final/thesis/pics/sim_permute.pdf>] <pics/beta-sim.pdf, id=148
+72, 722.7pt x 578.16pt>
+File: pics/beta-sim.pdf Graphic file (type pdf)
+<use pics/beta-sim.pdf>
+Package pdftex.def Info: pics/beta-sim.pdf used on input line 471.
+(pdftex.def)             Requested size: 334.60422pt x 267.68593pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[62] [63 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/beta-sim.pdf>]) 
+[64]
+Chapter 4.
+(/Users/anas/Dropbox/complexity/phd/final/thesis/mcf10a.tex <pics/mcf10a-experi
+ment.pdf, id=14926, 948.95128pt x 553.4045pt>
+File: pics/mcf10a-experiment.pdf Graphic file (type pdf)
+<use pics/mcf10a-experiment.pdf>
+Package pdftex.def Info: pics/mcf10a-experiment.pdf used on input line 9.
+(pdftex.def)             Requested size: 418.25368pt x 243.91249pt.
+[65
+
+] [66 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/mcf10a-experiment.p
+df>] [67] <pics/no-pen-data.png, id=14996, 2107.875pt x 2107.875pt>
+File: pics/no-pen-data.png Graphic file (type png)
+<use pics/no-pen-data.png>
+Package pdftex.def Info: pics/no-pen-data.png used on input line 58.
+(pdftex.def)             Requested size: 376.42575pt x 376.40993pt.
+[68] <pics/kmeans-dat.pdf, id=15003, 722.7pt x 578.16pt>
+File: pics/kmeans-dat.pdf Graphic file (type pdf)
+<use pics/kmeans-dat.pdf>
+Package pdftex.def Info: pics/kmeans-dat.pdf used on input line 65.
+(pdftex.def)             Requested size: 292.77629pt x 234.22409pt.
+<pics/loocv-dat.pdf, id=15007, 722.7pt x 578.16pt>
+File: pics/loocv-dat.pdf Graphic file (type pdf)
+<use pics/loocv-dat.pdf>
+Package pdftex.def Info: pics/loocv-dat.pdf used on input line 77.
+(pdftex.def)             Requested size: 188.21288pt x 150.56506pt.
+<pics/stab-m-dat.pdf, id=15008, 679.59897pt x 512.96042pt>
+File: pics/stab-m-dat.pdf Graphic file (type pdf)
+<use pics/stab-m-dat.pdf>
+Package pdftex.def Info: pics/stab-m-dat.pdf used on input line 81.
+(pdftex.def)             Requested size: 188.21288pt x 142.0625pt.
+<pics/traj-dat1.pdf, id=15013, 722.7pt x 578.16pt>
+File: pics/traj-dat1.pdf Graphic file (type pdf)
+<use pics/traj-dat1.pdf>
+Package pdftex.def Info: pics/traj-dat1.pdf used on input line 91.
+(pdftex.def)             Requested size: 313.69025pt x 250.9506pt.
+<pics/traj-dat2.pdf, id=15014, 722.7pt x 578.16pt>
+File: pics/traj-dat2.pdf Graphic file (type pdf)
+<use pics/traj-dat2.pdf>
+Package pdftex.def Info: pics/traj-dat2.pdf used on input line 95.
+(pdftex.def)             Requested size: 334.60422pt x 267.68593pt.
+
+LaTeX Warning: Float too large for page by 80.00638pt on input line 98.
+
+[69] [70 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/no-pen-data.png>
+] [71 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/kmeans-dat.pdf>] [7
+2 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/loocv-dat.pdf> </Users/
+anas/Dropbox/complexity/phd/final/thesis/pics/stab-m-dat.pdf>] [73 </Users/anas
+/Dropbox/complexity/phd/final/thesis/pics/traj-dat1.pdf> </Users/anas/Dropbox/c
+omplexity/phd/final/thesis/pics/traj-dat2.pdf>]) [74]
+Chapter 5.
+(/Users/anas/Dropbox/complexity/phd/final/thesis/reprogramming.tex [75
+
+] [76] <pics/rss.pdf, id=15269, 505.89pt x 505.89pt>
+File: pics/rss.pdf Graphic file (type pdf)
+<use pics/rss.pdf>
+Package pdftex.def Info: pics/rss.pdf used on input line 42.
+(pdftex.def)             Requested size: 125.47737pt x 125.4764pt.
+<pics/rcond.pdf, id=15270, 505.89pt x 505.89pt>
+File: pics/rcond.pdf Graphic file (type pdf)
+<use pics/rcond.pdf>
+Package pdftex.def Info: pics/rcond.pdf used on input line 45.
+(pdftex.def)             Requested size: 125.47737pt x 125.4764pt.
+<pics/rep_bayes.pdf, id=15271, 505.89pt x 505.89pt>
+File: pics/rep_bayes.pdf Graphic file (type pdf)
+<use pics/rep_bayes.pdf>
+Package pdftex.def Info: pics/rep_bayes.pdf used on input line 48.
+(pdftex.def)             Requested size: 125.47737pt x 125.4764pt.
+[77] <pics/supp_fig_randomised3.pdf, id=15288, 361.35pt x 289.08pt>
+File: pics/supp_fig_randomised3.pdf Graphic file (type pdf)
+<use pics/supp_fig_randomised3.pdf>
+Package pdftex.def Info: pics/supp_fig_randomised3.pdf used on input line 60.
+(pdftex.def)             Requested size: 125.47737pt x 100.38112pt.
+<pics/supp_fig_randomised4.pdf, id=15289, 361.35pt x 289.08pt>
+File: pics/supp_fig_randomised4.pdf Graphic file (type pdf)
+<use pics/supp_fig_randomised4.pdf>
+Package pdftex.def Info: pics/supp_fig_randomised4.pdf used on input line 64.
+(pdftex.def)             Requested size: 125.47737pt x 100.38112pt.
+<pics/supp_fig_randomised1.pdf, id=15290, 361.35pt x 289.08pt>
+File: pics/supp_fig_randomised1.pdf Graphic file (type pdf)
+<use pics/supp_fig_randomised1.pdf>
+Package pdftex.def Info: pics/supp_fig_randomised1.pdf used on input line 68.
+(pdftex.def)             Requested size: 125.47737pt x 100.38112pt.
+[78 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/rss.pdf> </Users/anas
+/Dropbox/complexity/phd/final/thesis/pics/rcond.pdf> </Users/anas/Dropbox/compl
+exity/phd/final/thesis/pics/rep_bayes.pdf>] [79 </Users/anas/Dropbox/complexity
+/phd/final/thesis/pics/supp_fig_randomised3.pdf> </Users/anas/Dropbox/complexit
+y/phd/final/thesis/pics/supp_fig_randomised4.pdf> </Users/anas/Dropbox/complexi
+ty/phd/final/thesis/pics/supp_fig_randomised1.pdf>] <pics/yossi_mclust.pdf, id=
+15417, 433.62pt x 289.08pt>
+File: pics/yossi_mclust.pdf Graphic file (type pdf)
+<use pics/yossi_mclust.pdf>
+Package pdftex.def Info: pics/yossi_mclust.pdf used on input line 90.
+(pdftex.def)             Requested size: 250.95476pt x 167.30481pt.
+
+Underfull \hbox (badness 2142) in paragraph at lines 91--91
+[][]|\OT1/cmr/m/n/10.95 Single-cell ex-pres-sion lev-els in dif-fer-ent ex-per-
+i-men-tal set-tings from
+ []
+
+[80 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/yossi_mclust.pdf>] <p
+ics/Heat_single_cells.pdf, id=15436, 790.16292pt x 413.14099pt>
+File: pics/Heat_single_cells.pdf Graphic file (type pdf)
+<use pics/Heat_single_cells.pdf>
+Package pdftex.def Info: pics/Heat_single_cells.pdf used on input line 99.
+(pdftex.def)             Requested size: 376.42575pt x 196.81136pt.
+[81] [82 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/Heat_single_cell
+s.pdf>]) [83]
+Chapter 6.
+(/Users/anas/Dropbox/complexity/phd/final/thesis/cell-cycle.tex <pics/cell-cycl
+e-model.pdf, id=15519, 756.8275pt x 347.26938pt>
+File: pics/cell-cycle-model.pdf Graphic file (type pdf)
+<use pics/cell-cycle-model.pdf>
+Package pdftex.def Info: pics/cell-cycle-model.pdf used on input line 15.
+(pdftex.def)             Requested size: 292.77629pt x 134.33763pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[84
+
+] [85 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/cell-cycle-model.pd
+f>] [86] [87] [88]
+Overfull \hbox (5.00336pt too wide) in paragraph at lines 112--113
+[]\OT1/cmr/m/n/10.95 In this ap-pli-ca-tion we have a few sim-ple re-la-tion-sh
+ips that our choice of $\OML/cmm/m/it/10.95 f\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/n/
+10.95 X[]\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 r; ^^R\OT1/cmr/m/n/10.95 )$
+ []
+
+<pics/cell-cycle-sim1.png, id=15581, 868.2036pt x 590.205pt>
+File: pics/cell-cycle-sim1.png Graphic file (type png)
+<use pics/cell-cycle-sim1.png>
+Package pdftex.def Info: pics/cell-cycle-sim1.png used on input line 127.
+(pdftex.def)             Requested size: 418.25368pt x 284.33084pt.
+[89] <pics/cc-4gn-1.pdf, id=15589, 505.89pt x 505.89pt>
+File: pics/cc-4gn-1.pdf Graphic file (type pdf)
+<use pics/cc-4gn-1.pdf>
+Package pdftex.def Info: pics/cc-4gn-1.pdf used on input line 161.
+(pdftex.def)             Requested size: 188.21288pt x 188.21074pt.
+<pics/cc-4gn-2.pdf, id=15590, 505.89pt x 505.89pt>
+File: pics/cc-4gn-2.pdf Graphic file (type pdf)
+<use pics/cc-4gn-2.pdf>
+Package pdftex.def Info: pics/cc-4gn-2.pdf used on input line 165.
+(pdftex.def)             Requested size: 188.21288pt x 188.21074pt.
+[90 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/cell-cycle-sim1.png>]
+[91] [92 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/cc-4gn-1.pdf> </
+Users/anas/Dropbox/complexity/phd/final/thesis/pics/cc-4gn-2.pdf>]) (/Users/ana
+s/Dropbox/complexity/phd/final/thesis/discussion.tex [93]
+Chapter 7.
+
+Overfull \hbox (14.53098pt too wide) in paragraph at lines 8--10
+[]\OT1/cmr/m/n/10.95 Chapter []3[] is fo-cused on state tran-si-tions, us-ing a
+g-gre-gated Markov mod-els (STAMM)
+ []
+
+[94
+
+] [95]) [96] [97
+
+
+] (/Users/anas/Dropbox/complexity/phd/final/thesis/appendix-stamm.tex
+Appendix A.
+<pics/devide-b.pdf, id=15671, 650.43pt x 578.16pt>
+File: pics/devide-b.pdf Graphic file (type pdf)
+<use pics/devide-b.pdf>
+Package pdftex.def Info: pics/devide-b.pdf used on input line 8.
+(pdftex.def)             Requested size: 292.77629pt x 260.249pt.
+<pics/devide-p.pdf, id=15672, 650.43pt x 578.16pt>
+File: pics/devide-p.pdf Graphic file (type pdf)
+<use pics/devide-p.pdf>
+Package pdftex.def Info: pics/devide-p.pdf used on input line 18.
+(pdftex.def)             Requested size: 292.77629pt x 260.249pt.
+<pics/devide-w1.pdf, id=15673, 686.33011pt x 585.2314pt>
+File: pics/devide-w1.pdf Graphic file (type pdf)
+<use pics/devide-w1.pdf>
+Package pdftex.def Info: pics/devide-w1.pdf used on input line 22.
+(pdftex.def)             Requested size: 292.77629pt x 249.65323pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.26 \clearpage
+                [1
+
+ </Users/anas/Dropbox/complexity/phd/final/thesis/pics/devide-b.pdf>]pdfTeX war
+ning (ext4): destination with the same identifier (name{page.2}) has been alrea
+dy used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.26 \clearpage
+                [2 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/devide
+-p.pdf> </Users/anas/Dropbox/complexity/phd/final/thesis/pics/devide-w1.pdf>] <
+pics/devide-w2.pdf, id=15727, 678.08937pt x 585.2314pt>
+File: pics/devide-w2.pdf Graphic file (type pdf)
+<use pics/devide-w2.pdf>
+Package pdftex.def Info: pics/devide-w2.pdf used on input line 34.
+(pdftex.def)             Requested size: 292.77629pt x 252.68939pt.
+<pics/devide-w3.pdf, id=15728, 676.08186pt x 585.2314pt>
+File: pics/devide-w3.pdf Graphic file (type pdf)
+<use pics/devide-w3.pdf>
+Package pdftex.def Info: pics/devide-w3.pdf used on input line 38.
+(pdftex.def)             Requested size: 292.77629pt x 253.4395pt.
+
+LaTeX Warning: Float too large for page by 81.09874pt on input line 41.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.42 \clearpage
+                [3 </Users/anas/Dropbox/complexity/phd/final/thesis/pics/devide
+-w2.pdf> </Users/anas/Dropbox/complexity/phd/final/thesis/pics/devide-w3.pdf>] 
+<pics/wrong_w.pdf, id=15791, 904.40387pt x 733.7864pt>
+File: pics/wrong_w.pdf Graphic file (type pdf)
+<use pics/wrong_w.pdf>
+Package pdftex.def Info: pics/wrong_w.pdf used on input line 46.
+(pdftex.def)             Requested size: 376.42575pt x 305.41142pt.
+) (/Users/anas/Dropbox/complexity/phd/final/thesis/appendix-oncogenic.texpdfTeX
+ warning (ext4): destination with the same identifier (name{page.4}) has been a
+lready used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3 \chapter
+            {RNA-seq pre-processing} [4 </Users/anas/Dropbox/complexity/phd/fin
+al/thesis/pics/wrong_w.pdf>]
+Appendix B.
+<pics/sequencing-depth.pdf, id=15826, 722.7pt x 505.89pt>
+File: pics/sequencing-depth.pdf Graphic file (type pdf)
+<use pics/sequencing-depth.pdf>
+Package pdftex.def Info: pics/sequencing-depth.pdf used on input line 9.
+(pdftex.def)             Requested size: 334.60422pt x 234.22519pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14 \newgeometry{left=2.45cm, top=3cm}
+                                        [5
+
+
+
+ </Users/anas/Dropbox/complexity/phd/final/thesis/pics/sequencing-depth.pdf>]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(69.70915pt, 438.17163pt, 89.62709pt)
+* v-part:(T,H,B)=(85.35826pt, 658.28194pt, 101.40665pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=438.17163pt
+* \textheight=658.28194pt
+* \oddsidemargin=-2.56084pt
+* \evensidemargin=-2.56084pt
+* \topmargin=13.08827pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Overfull \hbox (42.42169pt too wide) in paragraph at lines 19--66
+[][] 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.69 \restoregeometry
+                      [6]) (/Users/anas/Dropbox/complexity/phd/final/thesis/war
+wickthesis.bblpdfTeX warning (ext4): destination with the same identifier (name
+{page.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.84 
+      [7
+
+
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.156 
+       [8]
+Missing character: There is no √ in font cmr10!
+Missing character: There is no º in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.233 
+       [9]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.316 
+       [10]pdfTeX warning (ext4): destination with the same identifier (name{pa
+ge.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.397 
+       [11]pdfTeX warning (ext4): destination with the same identifier (name{pa
+ge.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.467 ...{Ohgushi \& Sasai(2011)}]{Ohgushi:2011em}
+                                                   [12]pdfTeX warning (ext4): d
+estination with the same identifier (name{page.13}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.545   D'Angi{\`o}}]{Saccomani:2010by}
+                                        [13]pdfTeX warning (ext4): destination 
+with the same identifier (name{page.14}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.615 
+       [14])pdfTeX warning (ext4): destination with the same identifier (name{p
+age.15}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.324 \end{document}
+                                           %% Done. [15]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 324.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 324.
+(/Users/anas/Dropbox/complexity/phd/final/thesis/warwickthesis.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 324.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 324.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 324.
+ ) 
+Here is how much of TeX's memory you used:
+ 18007 strings out of 493117
+ 318373 string characters out of 6135432
+ 441022 words of memory out of 5000000
+ 20596 multiletter control sequences out of 15000+600000
+ 17102 words of font info for 63 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 54i,17n,47p,3831b,621s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/201
+4/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on /Users/anas/Dropbox/complexity/phd/final/thesis/warwickthesis
+.pdf (123 pages, 17239589 bytes).
+PDF statistics:
+ 16250 PDF objects out of 18468 (max. 8388607)
+ 8947 compressed objects within 90 object streams
+ 436 named destinations out of 1000 (max. 500000)
+ 815 words of extra memory for PDF output out of 10000 (max. 10000000)
+
